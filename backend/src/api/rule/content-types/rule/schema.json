@@ -1,11 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "courses",
+  "collectionName": "rules",
   "info": {
-    "singularName": "course",
-    "pluralName": "courses",
-    "displayName": "SA_Course",
-    "description": ""
+    "singularName": "rule",
+    "pluralName": "rules",
+    "displayName": "Rule"
   },
   "options": {
     "draftAndPublish": true
@@ -14,8 +13,7 @@
   "attributes": {
     "Path": {
       "type": "string",
-      "required": true,
-      "unique": false
+      "required": true
     },
     "Format": {
       "type": "string",

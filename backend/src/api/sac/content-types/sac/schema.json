@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "sacs",
+  "info": {
+    "singularName": "sac",
+    "pluralName": "sacs",
+    "displayName": "SAC"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string",
+      "required": true
+    },
+    "Priority_No": {
+      "type": "integer",
+      "required": true,
+      "unique": true
+    },
+    "url": {
+      "type": "string",
+      "required": true
+    }
+  }
+}
