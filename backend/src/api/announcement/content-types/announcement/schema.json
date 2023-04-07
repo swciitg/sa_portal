@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "announcements",
+  "info": {
+    "singularName": "announcement",
+    "pluralName": "announcements",
+    "displayName": "Announcement"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string",
+      "required": true
+    },
+    "Description": {
+      "type": "richtext",
+      "required": true
+    },
+    "link": {
+      "type": "string",
+      "required": false
+    },
+    "Important": {
+      "type": "boolean",
+      "required": false
+    },
+    "Category": {
+      "type": "string",
+      "required": true
+    },
+    "Creation": {
+      "type": "date",
+      "required": true
+    }
+  }
+}
