@@ -1,0 +1,52 @@
+{
+  "kind": "collectionType",
+  "collectionName": "navigations",
+  "info": {
+    "singularName": "navigation",
+    "pluralName": "navigations",
+    "displayName": "Navigation"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Path": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "ChairmanName": {
+      "type": "string",
+      "required": true
+    },
+    "BoardName": {
+      "type": "string",
+      "required": true
+    },
+    "BoardShort": {
+      "type": "string",
+      "required": true
+    },
+    "Description": {
+      "type": "richtext",
+      "required": true
+    },
+    "Events": {
+      "type": "richtext",
+      "required": true
+    },
+    "Announcements": {
+      "type": "richtext",
+      "required": true
+    },
+    "Priority_No": {
+      "type": "integer",
+      "required": true
+    },
+    "Notices": {
+      "type": "richtext",
+      "required": true
+    }
+  }
+}
