@@ -4,7 +4,8 @@
   "info": {
     "singularName": "sac",
     "pluralName": "sacs",
-    "displayName": "SAC"
+    "displayName": "SAC",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -13,12 +14,13 @@
   "attributes": {
     "Name": {
       "type": "string",
-      "required": true
+      "required": true,
+      "unique": true
     },
     "Priority_No": {
       "type": "integer",
       "required": true,
-      "unique": true
+      "unique": false
     },
     "url": {
       "type": "string",

@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "events",
+  "info": {
+    "singularName": "event",
+    "pluralName": "events",
+    "displayName": "Event"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "Link": {
+      "type": "string",
+      "required": true
+    },
+    "EventDate": {
+      "type": "date",
+      "required": true
+    },
+    "Category": {
+      "type": "string",
+      "required": true
+    },
+    "ImagePath": {
+      "type": "string",
+      "required": true
+    }
+  }
+}
