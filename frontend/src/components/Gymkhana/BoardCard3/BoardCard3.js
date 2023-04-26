@@ -39,8 +39,7 @@ const Boardcard = (props) => {
 
                     {/* about board */}
                     <div className='text-white text-xs pt-5 pr-2 pb-4 md:pb-2 lg:pt-4 w-2/3 lg:w-full'>
-                    {details.aboutBoard}
-                    {details.aboutBoard}
+                        {details.aboutBoard}
                     </div>
                     <div className={styles.hoverButton}>
                         <Link href='/' className='absolute text-md bottom-6 lg:bottom-6 right-5 lg:right-2/3 bg-white/[0.9] font-medium px-4 lg:px-6 py-1 flex justify-between items-center rounded-full'>
@@ -50,7 +49,7 @@ const Boardcard = (props) => {
                     </div>
                     
                     <div className='absolute right-6 md:right-4 lg:right-6 text-xs top-[-35px] lg:top-[73%] bg-white/[0.9] w-12 lg:w-14 h-12 lg:h-14 flex justify-center items-center rounded-full lg:rounded-none '>
-                            Logo
+                        Logo
                     </div>
                 </div>
                 {/* Right part ends */}
