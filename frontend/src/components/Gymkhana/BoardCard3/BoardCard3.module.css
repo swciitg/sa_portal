@@ -1,0 +1,15 @@
+
+.bsChevronRight{
+    position: absolute;
+    left: 0.5rem;
+}
+
+.hoverButton:hover .bsChevronRight{
+    transform: translateX(290%);
+  }
+
+@media screen and (max-width:1023px) {
+    .bsChevronRight{
+        visibility: hidden;
+    }
+}
