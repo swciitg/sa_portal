@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+
+const defaultTheme = require('tailwindcss/defaultTheme')
 module.exports = {
   content: [
     './src/pages/**/*.{js,ts,jsx,tsx}',
@@ -45,6 +47,17 @@ module.exports = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
+      height : {
+        'laptopimg' : '60vh',
+        'mobileimg' : '40vh'
+      },
+      width : {
+        'lapimg' : '80vh'
+      }
+      screens: {
+        'rag': '840px',
+        ...defaultTheme.screens,
+      },
       boxShadow: {
         '3xl':"rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px"
         },
@@ -52,3 +65,5 @@ module.exports = {
   },
   plugins: [],
 }
+
+      
