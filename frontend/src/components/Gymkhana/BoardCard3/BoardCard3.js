@@ -5,8 +5,6 @@ import {BsChevronRight} from "react-icons/bs"
 import styles from './BoardCard3.module.css'
 
 const Boardcard = (props) => {
-  const {details}=props;
-    
   return (
         <div className='py-5 px-2'>
             <Wrapper>
@@ -15,15 +13,15 @@ const Boardcard = (props) => {
                 <div className='relative lg:flex-[3]'>
 
                     {/* image */}
-                    <img className='w-full lg:w-76 h-[200px] lg:h-[280px] object-cover grayscale rounded-t-2xl lg:rounded-tr-none lg:rounded-l-xl ' src={details.url} />
+                    <img className='w-full lg:w-76 h-[200px] lg:h-[280px] object-cover grayscale rounded-t-2xl lg:rounded-tr-none lg:rounded-l-xl ' src={props.url} />
 
                     {/* name and role  */}
                     <div className='absolute bg-gradient-to-t from-black/80 to-gray/0 md:bg-black/[0.2] py-1 lg:py-2 px-3 lg:px-3 bottom-0 w-full flex flex-col leading-0 lg:rounded-bl-xl'>
                         <div className=' text-white text-lg md:text-md font-semibold text-start pl-4 md:pl-2'>
-                            {details.name}
+                            {props.name}
                         </div>
                         <div className=' text-white text-xs font-small text-start pl-4 md:pl-2 pb-1 '>
-                            {details.role}
+                            {props.role}
                         </div>
                     </div>
                 </div>
@@ -34,12 +32,12 @@ const Boardcard = (props) => {
 
                     {/* board name */}
                     <div className='text-white pt-1 text-2xl md:text-lg lg:text-2xl font-semibold text-start'>
-                        {details.board}
+                        {props.board}
                     </div>
 
                     {/* about board */}
                     <div className='text-white text-xs pt-5 pr-2 pb-4 md:pb-2 lg:pt-4 w-2/3 lg:w-full'>
-                        {details.aboutBoard}
+                        {props.aboutBoard}
                     </div>
                     <div className={styles.hoverButton}>
                         <Link href='/' className='absolute text-md bottom-6 lg:bottom-6 right-5 lg:right-2/3 bg-white/[0.9] font-medium px-4 lg:px-6 py-1 flex justify-between items-center rounded-full'>
