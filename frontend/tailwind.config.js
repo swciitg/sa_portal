@@ -52,8 +52,8 @@ module.exports = {
         'mobileimg' : '40vh'
       },
       width : {
-        'lapimg' : '80vh'
-      }
+        'lapimg' : '80vh',
+      },
       screens: {
         'rag': '840px',
         ...defaultTheme.screens,
