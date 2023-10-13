@@ -40,6 +40,8 @@ module.exports = {
       'silver': '#ecebff',
       'bubble-gum': '#ff77e9',
       'bermuda': '#78dcca',
+      'gray-200':'#E5E7EB',
+      'gray-300':'#D1D5DB'
     },
     extend: {
       backgroundImage: {
