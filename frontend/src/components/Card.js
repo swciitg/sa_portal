@@ -30,24 +30,24 @@ export default function Card ({prop}) {
                 height="200"
                 ></Image>
                 <div className="px-6-py-4">
-                    <p className="font-bold text-2xl px-4 py-2">Prof. Ameresh Dalal</p>
-                    <p className="text-xl-mb-2 text-gray-400 px-4 py-2">Dean of Student Affairs</p>
+                    <p className="font-bold text-2xl px-4 py-2">{prop.name}</p>
+                    <p className="text-xl-mb-2 text-gray-400 px-4 py-2">{prop.designation}</p>
                 </div>
                 <div className=" pb-2 px-4 " >
                     {prop.buttons.map((button)=>{
                         return (
-                            <button key={button.id} className="bg-gray-200 hover:cursor-pointer rounded-full px-3 py-0.5 text-xs font-base mx-0.5 mb-px">{button.value}</button>
+                            <button key={button.id} style={{backgroundColor:"rgb(167 139 250)"}} className=" hover:cursor-pointer rounded-full px-3 py-0.5 text-xs font-base mx-0.5 mb-px">{button.value}</button>
                         )
                     })}
                     <hr className="solid text-gray-500 my-1 " />
                 </div>
                 <div>   
                     <div className="flex" >
-                        <span className="text-gray-400 px-4" >{prop.link}</span>
+                        <span className="text-gray-400 px-4 " >{prop.link}</span>
                         <span className="hover:cursor-pointer" onClick={clickHandler} >{icon}</span>
                     </div>                    
                     <div className="flex" >
-                        <span className="text-gray-400 px-4" >{`+91 ${prop.phone}`}</span>
+                        <span className="text-gray-400 px-4 " >{`+91 ${prop.phone}`}</span>
                         <span className="hover:cursor-pointer" onClick={clickHandler2} >{icon2}</span>
                     </div>
                 </div>
