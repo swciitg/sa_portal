@@ -3,6 +3,7 @@ import Image from "next/image";
 import { Manrope } from "next/font/google";
 import { useRouter } from "next/router";
 import { useState } from "react";
+import Query from "../Query/Query";
 const manrope = Manrope({ subsets: ["latin"], weight: ["500"] });
 const Navbar = () => {
   const router = useRouter();
@@ -10,9 +11,9 @@ const Navbar = () => {
   const [hamburger, setHamburger] = useState(false);
   return (
     <div className={manrope.className}>
-      <div className="w-full flex justify-center p-6">
-        <div className="drop-shadow-lg rounded-[30px] bg-[#1E2532] w-[83vw] flex flex-col items-center justify-evenly  p-3 pr-4 pl-4">
-          <div className="w-full flex items-center justify-evenly ">
+      <div className="w-full flex justify-center items-center gap-4 p-6 ">
+        <div className="drop-shadow-lg rounded-full bg-[#1E2532] w-[83vw] flex flex-col items-center justify-evenly  p-4 pr-4 pl-4">
+          <div className="w-full flex items-center justify-evenly transition ease-in delay-150">
             {/* Mobile Hamburger Icon */}
             <Image
               src="/icons/hamburger.svg"
@@ -186,6 +187,7 @@ const Navbar = () => {
         ) : (
           <></>
         )}
+        <Query/>
       </div>
     </div>
   );
