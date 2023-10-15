@@ -34,7 +34,7 @@ const Card = (props) => {
                     </div>
                     <Link href={details.redirectUrl}>
                         <Image
-                            src = "/icons/arrow.svg"
+                            src = "/icons/arrow2.svg"
                             width={1}
                             height={1}
                             className="flex w-4 h-4"
