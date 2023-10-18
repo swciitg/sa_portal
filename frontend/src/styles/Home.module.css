@@ -1,0 +1,59 @@
+/* CSS for background image */
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap');
+
+.back {
+    background: linear-gradient(0deg, rgba(1, 0, 12, 0.27), rgba(1, 0, 12, 0.27)), url('../../public/Images/BackgroundImageHome.png.png');
+    opacity: 0.8;
+    border-radius: 0px 0px 105px 105px;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    font-family: 'Manrope' sans-serif;
+}
+
+.blur {
+    box-shadow: inset 0 0 0 1000px rgba(0, 21, 35, 0.66);
+    backdrop-filter: blur(3px);
+}
+
+/* CSS for search box */
+.mglass {
+    display: inline-block;
+    pointer-events: none;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+}
+
+.search {
+    width: 0px;
+    transition-duration: 0.5s;
+    -moz-transition-duration: 0.5s;
+    -webkit-transition-duration: 0.5s;
+    -o-transition-duration: 0.5s;
+    background: none;
+    color: white;
+    border: none;
+    outline: none;
+
+}
+
+.search:focus+.searchbutton {
+    transition-duration: 0.5s;
+    -moz-transition-duration: 0.5s;
+    -webkit-transition-duration: 0.5s;
+    -o-transition-duration: 0.5s;
+}
+
+.search:focus {
+    margin-right: 0px;
+    width: 250px;
+    /* Bar width+1px */
+    padding: 8px 16px 0 0;
+}
+
+@media (max-width:768px) {
+    .search {
+        width: 200px;
+    }
+}
