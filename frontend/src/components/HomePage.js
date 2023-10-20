@@ -75,8 +75,8 @@ const HomePage = () => {
                     height={120} alt="Icon not found" /></div>
                     <div   className={`${isOpen ? 'hidden' : 'flex'
                             } flex-col justify-start`} >
-                <div className=" font-medium text-2xl tracking-wider leading-9 mt-8 text-center">INDIAN INSTITUTE OF TECHNOLOGY GUWAHATI</div>
-                <div className=" font-semibold  text-3xl tracking-tighter leading-6 mt-4 text-center pt-2">STUDENTS' AFFAIRS</div>
+                <div className=" font-medium text-2xl tracking-wider leading-9 mt-8 text-center text-white">INDIAN INSTITUTE OF TECHNOLOGY GUWAHATI</div>
+                <div className=" font-semibold  text-3xl tracking-tighter leading-6 mt-4 text-center pt-2 text-white">STUDENTS' AFFAIRS</div>
                 </div>
             </div>
         </header>
