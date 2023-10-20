@@ -10,7 +10,7 @@ module.exports = {
   theme: {
     
     screens: {
-      'sm': '640px',
+      'sm': '340px',
       // => @media (min-width: 640px) { ... }
 
       'md': '768px',
@@ -26,6 +26,7 @@ module.exports = {
        raleway:'Raleway, sans-serif',
        catamaran: 'Catamaran, sans-serif',
        montserrat: 'Montserrat',
+       Manrope : 'Manrope, sans-serif'
     },
     colors: {
       'greyblue':'#515966',
