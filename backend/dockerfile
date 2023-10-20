@@ -6,11 +6,15 @@ ENV NODE_ENV=${NODE_ENV}
 WORKDIR /opt/
 COPY ./package.json ./
 ENV PATH /opt/node_modules/.bin:$PATH
-RUN npm install
+RUN npm install -g node-gyp
+RUN npm config set fetch-retry-maxtimeout 600000 -g && npm install
 RUN npm install pg
+RUN npm install
+ENV PATH /opt/node_modules/.bin:$PATH
 WORKDIR /opt/app
-COPY ./ .
-RUN npm run build
+COPY . .
+RUN chown -R node:node /opt/app
+USER node
+RUN ["npm", "run", "build"]
 EXPOSE 1337
 CMD ["npm", "run", "develop"]
- 
