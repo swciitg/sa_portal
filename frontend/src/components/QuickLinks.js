@@ -29,10 +29,10 @@ function QuickLinks() {
   return (
     <div className='m-10'>
       <Head>
-        <title>Quick Links</title>
+        <title >Quick Links</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
       </Head>
-      <h1 className="text-blue text-3xl mb-4">
+      <h1 className="text-black text-3xl mb-4">
         Quick Links
       </h1>
       <div className="flex flex-wrap">

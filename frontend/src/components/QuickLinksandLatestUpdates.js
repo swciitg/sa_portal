@@ -1,6 +1,6 @@
 import LatestUpdates from './LatestUpdates'
 import QuickLinks from './QuickLinks'
-const QuickLinksAndLatestUpdates = (prop) => {
+const QuickLinksAndLatestUpdates = ({prop}) => {
 return (
     <>
         <div className='flex grid'>
