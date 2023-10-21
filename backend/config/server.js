@@ -5,7 +5,7 @@ module.exports = ({ env }) => ({
     keys: env.array('APP_KEYS'),
   },
   emitErrors: false,
-  url: env('PUBLIC_URL', 'https://api.example.com'),
+  url: 'https://swc.iitg.ac.in/saPortal',
   proxy: env.bool('IS_PROXIED', true),
   cron: {
     enabled: env.bool('CRON_ENABLED', false),
