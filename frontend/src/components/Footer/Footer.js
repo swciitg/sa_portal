@@ -17,8 +17,8 @@ const Footer = () => {
     <>
       <div
         className={`flex md:flex-row flex-col md:h-32 h-48  bg-[#101323] md:items-center md:pt-10 pt-5 `}
+        style={{ overflow: `hidden` }}
       >
-        {/* <div className="flex" style={{ width: `5%` }}></div> */}
         <div className="flex items-center ml-6 md:ml-14 lg:ml-16 md:w-7/12 w-full">
           <Image
             src="/images/IITG_Logo_svg.svg"
@@ -30,11 +30,9 @@ const Footer = () => {
             <div
               style={{
                 color: `white`,
-                // fontSize: `1.5vw`,
                 fontFamily: `manrope`,
                 fontWeight: `500`,
-                letterSpacing: `0.025rem`,
-                // lineHeight: `2rem`,
+                letterSpacing: `0.025rem`
               }}
               className="lg:text-[22px] md:text-[17px] text-[22px] lg:mt-1 lg:mb-0 md:mb-0.5 md:mt-1.5 mt-1 mb-0"
             >
@@ -44,9 +42,8 @@ const Footer = () => {
               style={{
                 color: `white`,
                 fontWeight: `100`,
-                // fontSize: `0.9vw`,
                 fontFamily: `manrope`,
-                letterSpacing: `0.025rem`,
+                letterSpacing: `0.025rem`
               }}
               className="lg:text-[13px] md:text-[10px] text-[13px]"
             >
@@ -88,7 +85,6 @@ const Footer = () => {
               style={{
                 color: `rgba(255, 255, 255, 0.80)`,
                 fontWeight: `50`,
-                // fontSize: `0.8rem`,
                 fontFamily: `manrope`,
                 letterSpacing: `0.025rem`,
               }}
