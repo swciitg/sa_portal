@@ -15,14 +15,16 @@ const manrope = Manrope({
 const Footer = () => {
   return (
     <>
-      <div className={`flex h-32 bg-[#101323] items-center pt-10 `}>
-        <div className="flex" style={{ width: `5%` }}></div>
-        <div className="flex items-center" style={{ width: `58%` }}>
+      <div
+        className={`flex md:flex-row flex-col md:h-32 h-48  bg-[#101323] md:items-center md:pt-10 pt-5 `}
+      >
+        {/* <div className="flex" style={{ width: `5%` }}></div> */}
+        <div className="flex items-center ml-6 md:ml-14 lg:ml-16 md:w-7/12 w-full">
           <Image
             src="/images/IITG_Logo_svg.svg"
             width={1}
             height={1}
-            className="flex lg:w-20 md:w-16 md:h-16 lg:h-20 h-14 w-14 p-1"
+            className="flex lg:w-20 md:w-16 md:h-16 lg:h-20 h-20 w-20 p-1"
           />
           <div className="flex flex-col h-14 px-3">
             <div
@@ -34,7 +36,7 @@ const Footer = () => {
                 letterSpacing: `0.025rem`,
                 // lineHeight: `2rem`,
               }}
-              className="lg:text-[22px] md:text-[17px] text-[15px] lg:mt-1 lg:mb-0 md:mb-0.5 md:mt-1.5 mt-2.5 mb-0"
+              className="lg:text-[22px] md:text-[17px] text-[22px] lg:mt-1 lg:mb-0 md:mb-0.5 md:mt-1.5 mt-1 mb-0"
             >
               Student Affairs IITG
             </div>
@@ -46,58 +48,59 @@ const Footer = () => {
                 fontFamily: `manrope`,
                 letterSpacing: `0.025rem`,
               }}
-              className="lg:text-[13px] md:text-[10px] text-[9px]"
+              className="lg:text-[13px] md:text-[10px] text-[13px]"
             >
               Admin Building, IITG
             </div>
           </div>
         </div>
-        <div
-          className={`flex flex-col h-14 text-white ${manrope.className} lg:text-[17px] md:text-[14px] text-[12px] lg:mt-0 md:mt-0 mt-3`}
-          style={{ width: `19 %` }}
-        >
-          Get Connected
-          <div className="flex flex-row mt-1">
-            <Image
-              src="/icons/Twitter.svg"
-              width={1}
-              height={1}
-              className="flex lg:w-7 lg:h-7 md:w-6 md:h-6 w-4 h-4  md:mr-5 mr-3 "
-            />
-            <Image
-              src="/icons/Linkedin.svg"
-              width={1}
-              height={1}
-              className="flex lg:w-7 lg:h-7 md:w-6 md:h-6 h-4 w-4 md:p-0.5"
-            />
-          </div>
-        </div>
-        <div
-          className={`flex flex-col h-14 lg:mt-0 md:mt-0 mt-3`}
-          style={{ width: `15%` }}
-        >
+        <div className="flex flex-row md:w-4/12  w-full md:ml-0 ml-5 md:mt-0 mt-2">
           <div
-            className={` text-white ${manrope.className} lg:text-[17px] md:text-[14px] text-[12px]`}
+            className={`flex flex-col h-14 text-white ${manrope.className} lg:text-[17px] md:text-[14px] text-[17px] lg:mt-0 md:mt-0 mt-3 md:ml-0 ml-5`}
+            style={{ width: `50%` }}
           >
-            Contact
+            Get Connected
+            <div className="flex flex-row mt-1">
+              <Image
+                src="/icons/Twitter.svg"
+                width={1}
+                height={1}
+                className="flex lg:w-7 lg:h-7 md:w-6 md:h-6 w-7 h-7  md:mr-5 mr-3 "
+              />
+              <Image
+                src="/icons/Linkedin.svg"
+                width={1}
+                height={1}
+                className="flex lg:w-7 lg:h-7 md:w-6 md:h-6 h-7 w-7 md:p-0.5 p-1"
+              />
+            </div>
           </div>
           <div
-            style={{
-              color: `rgba(255, 255, 255, 0.80)`,
-              fontWeight: `50`,
-              // fontSize: `0.8rem`,
-              fontFamily: `manrope`,
-              letterSpacing: `0.025rem`,
-            }}
-            className="lg:text-[14px] md:text-[12px] text-[10px] mt-0.4"
+            className={`flex flex-col h-14 lg:mt-0 md:mt-0 mt-3 md:ml-0 ml-10`}
+            style={{ width: `50%` }}
           >
-            4553678654
+            <div
+              className={` text-white ${manrope.className} lg:text-[17px] md:text-[14px] text-[17px]`}
+            >
+              Contact
+            </div>
+            <div
+              style={{
+                color: `rgba(255, 255, 255, 0.80)`,
+                fontWeight: `50`,
+                // fontSize: `0.8rem`,
+                fontFamily: `manrope`,
+                letterSpacing: `0.025rem`,
+              }}
+              className="lg:text-[14px] md:text-[12px] text-[14px] mt-0.4"
+            >
+              4553678654
+            </div>
           </div>
         </div>
       </div>
       <div className="flex flex-row bg-[#101323] h-16 items-center">
-        <div style={{ width: `6%` }}></div>
-        <div className="flex">
+        <div className="flex lg:ml-20 md:ml-16 ml-10">
           <Image
             src="/icons/SWC_Logo.svg"
             width={1}
