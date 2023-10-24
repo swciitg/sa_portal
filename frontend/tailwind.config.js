@@ -45,7 +45,9 @@ module.exports = {
       'bermuda': '#78dcca',
       'bodygray' : 'rgb(128, 128, 128)',
       "offwhite" : "#F8F8F8",
-      "reddishgray" : "#FCFCFD"
+      "reddishgray" : "#FCFCFD",
+      "skyblue": '#15458F',
+      "lightgray": '#FBFBFB',
     },
     extend: {
       backgroundImage: {
