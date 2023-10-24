@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import RulesListCard from "./RulesListCard";
 
 
-const Form = () => {
+const RulesList = () => {
   //dummy data
   const [data, setData] = useState([
     {
@@ -165,4 +165,4 @@ const Form = () => {
   );
 };
 
-export default Form;
+export default RulesList;
