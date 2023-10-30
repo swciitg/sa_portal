@@ -1,7 +1,17 @@
 import {BsFillArrowRightSquareFill} from 'react-icons/bs'
 import Link from 'next/link'
+import { Menu, Transition } from '@headlessui/react'
+import { useState } from 'react'
+import {IoIosArrowDown} from 'react-icons/io'
+import { Fragment } from 'react'
+
+function classNames(...classes) {
+  return classes.filter(Boolean).join(' ')
+}
+
 
 export default function Announcement ({prop}) {
+  const [opt,setopt] = useState("options")
     return (
         <>
         <div className='flex lg:ms-10 mr-10 mt-5' style={{justifyContent:"space-between"}} >
@@ -68,7 +78,7 @@ export default function Announcement ({prop}) {
                   </Transition>
             </Menu>
         </div>
-        {prop.prop.Announcements.map((item)=>{
+        {prop.Announcements.map((item)=>{
             return(
             <div className="flex grid rounded-3xl shadow-xl lg:ms-10 lg:ml-10 mr-10 p-3 border-solid">
                 <div className="col-start-2 col-end-9">
