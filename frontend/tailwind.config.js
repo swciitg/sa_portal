@@ -48,6 +48,9 @@ module.exports = {
       "reddishgray" : "#FCFCFD",
       "skyblue": '#15458F',
       "lightgray": '#FBFBFB',
+      'gray-200':'#E5E7EB',
+      'gray-300':'#D1D5DB',
+      'gray-500':'#666666'
     },
     extend: {
       backgroundImage: {
