@@ -15,7 +15,6 @@ const RulesList = () => {
     
     const json = await response.json();
     setData(json.data);
-    console.log("hii",data)
   }
 
   useEffect(()=>{
