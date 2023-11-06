@@ -123,10 +123,10 @@ const RulesList = () => {
     setActiveTab(index);
   };
   return (
-    <div>
-      <div className='font-Manrope'>
-        <div className="flex flex-col w-full gap-8 items-center py-6">
-          <div className="flex flex-wrap w-[80%] gap-6 text-xs">
+    <div className="my-4">
+      <div className='min-h-[274px] font-Manrope'>
+        <div className="flex flex-col w-full gap-8 items-center py-2">
+          <div className="flex flex-wrap w-[80%] gap-6 text-xs py-2">
             {data.map((item, index) => {
               return (
                 <button
@@ -152,7 +152,7 @@ const RulesList = () => {
                 >
                   {item.forms.map((form,key) => {
                     return (
-                      <RulesListCard key={key} num={key+1} header={form.header}/>
+                      <RulesListCard key={key} num={key+1} header={form.header} link={form.link}/>
                     );
                   })}
                 </div>
