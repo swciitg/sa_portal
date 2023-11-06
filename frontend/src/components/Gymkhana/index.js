@@ -15,6 +15,7 @@ const Index = () => {
     
     const json = await response.json();
     setData(json.data[0]);
+    // console.log("1111",data.attributes.BoardMembers[0].Logo.data.attributes.url)
   }
 
   useEffect(()=>{
@@ -31,7 +32,7 @@ const Index = () => {
           data
           ?
           data.attributes.BoardMembers.map((entry,key) => {
-            return <GymkhanaCard key={key} url={"https://swc.iitg.ac.in/saPortal" +entry.Image.data.attributes.url} name={entry.Name} role={entry.Role} board={entry.BoardName} aboutBoard={entry.About_Board} link={entry.Link}/>
+            return <GymkhanaCard key={key} url={"https://swc.iitg.ac.in/saPortal" +entry.Image.data.attributes.url} name={entry.Name} role={entry.Role} board={entry.BoardName} aboutBoard={entry.About_Board} link={"https://swc.iitg.ac.in/saPortal" + entry.Image.data.attributes.url} logo={"https://swc.iitg.ac.in/saPortal" + entry.Logo.data.attributes.url}/>
           })
           :
           ""
