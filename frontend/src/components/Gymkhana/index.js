@@ -1,36 +1,41 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import GymkhanaCard from './BoardCard3/BoardCard3.js'
 import Content from './BoardCard3/content.js'
 
 const Index = () => {
-  const [data, setData] = useState([
-      {
-        name : "Dr. Deepak Sharma",
-        role : "Chairperson Sports Board",
-        board : "Hostel Affairs Board",
-        url : "https://swc.iitg.ac.in/saPortal/uploads/Board_profile_Image_9da81ef4e6.png",
-        aboutBoard : "The Hostel Affairs Board is the central coordinating body for all hostel-related matters. One of its key roles is to ensure proper working of Hostel Management Committees, as per the directions laid by the Hostel Constitution and the HAB Procedures And Resolutions (HABPR). Hostel Affairs Board, under the purview of the Students' Affairs Section, is the decision and policy-making body for all Hostels"
-      },
-      {
-        name : "Dr. Deepak Sharma",
-        role : "Chairperson Sports Board",
-        board : "Hostel Affairs Board",
-        url : "https://swc.iitg.ac.in/saPortal/uploads/Board_profile_Image_9da81ef4e6.png",
-        aboutBoard : "The Hostel Affairs Board is the central coordinating body for all hostel-related matters. One of its key roles is to ensure proper working of Hostel Management Committees, as per the directions laid by the Hostel Constitution and the HAB Procedures And Resolutions (HABPR). Hostel Affairs Board, under the purview of the Students' Affairs Section, is the decision and policy-making body for all Hostels"
-      }
-      ]
-    );
+  const [data, setData] = useState("");
+
+  const getItem = async () => {
+    const response = await fetch(`https://swc.iitg.ac.in/saPortal/api/gymkhanas?populate=deep`, {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json',
+        }
+    });
+    
+    const json = await response.json();
+    setData(json.data[0]);
+  }
+
+  useEffect(()=>{
+    getItem();
+  },[])
+
+    
 
   return (
     <div>
-        <Content/>
+        <Content id={data.id} content={data?data.attributes.About:""}/>
         <div className='pl-[10%] pr-[15%] py-12'>
-
-          {
-            data.map((entry,key) => {
-              return <GymkhanaCard key={key} url={entry.url} name={entry.name} role={entry.role} board={entry.board} aboutBoard={entry.aboutBoard}/>
-            })
-          }
+        {
+          data
+          ?
+          data.attributes.BoardMembers.map((entry,key) => {
+            return <GymkhanaCard key={key} url={"https://swc.iitg.ac.in/saPortal" +entry.Image.data.attributes.url} name={entry.Name} role={entry.Role} board={entry.BoardName} aboutBoard={entry.About_Board} link={entry.Link}/>
+          })
+          :
+          ""
+        }
             
         </div>
     </div>

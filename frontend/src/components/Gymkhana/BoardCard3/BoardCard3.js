@@ -40,7 +40,7 @@ const Boardcard = (props) => {
                         {props.aboutBoard}
                     </div>
                     <div className={styles.hoverButton}>
-                        <Link href='/' className='absolute right-4 md:right-auto text-md bottom-6 lg:bottom-6 bg-white/[0.9] font-medium px-2 lg:px-5 py-1 flex justify-end md:justify-between items-center rounded-xl'>
+                        <Link href={props.link} className='absolute right-4 md:right-auto text-md bottom-6 lg:bottom-6 bg-white/[0.9] font-medium px-2 lg:px-5 py-1 flex justify-end md:justify-between items-center rounded-xl'>
                             <div className='text-sm md:text-lg px-1'>Link</div>
                             <div className='text-sm md:text-lg'>
                                 <BsChevronRight className={styles.bsChevronRight}/> 
