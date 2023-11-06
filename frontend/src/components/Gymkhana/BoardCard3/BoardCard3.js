@@ -5,7 +5,6 @@ import {BsChevronRight} from "react-icons/bs"
 import styles from './BoardCard3.module.css'
 
 const Boardcard = (props) => {
-    console.log("bye")
   return (
         <div className='py-5 px-2'>
             <Wrapper>
