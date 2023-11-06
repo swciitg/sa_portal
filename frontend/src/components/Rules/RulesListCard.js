@@ -6,7 +6,7 @@ const RulesListCard = (props) => {
   const [dropDown,setDropDown] = useState(true);
 
   return (
-    <Link href={props.link} className="w-full rounded-lg md:rounded-xl shadow-lg py-0 my-2 font-Manrope flex" style={{"box-shadow" : "rgba(0, 0, 0, 0.25)"}}>
+    <Link href={`https://intranet.iitg.ac.in/sa/api/rules/`+ `${props.link}`} className="w-full rounded-lg md:rounded-xl shadow-lg py-0 my-2 font-Manrope flex" style={{"box-shadow" : "rgba(0, 0, 0, 0.25)"}}>
       <div className='w-24 md:w-28 flex justify-center items-center border-r-2 py-auto' style={{"border-color" : "#D9D9D9"}}>{props.num}</div>
       <div className='w-full h-full flex justify-between items-center mx-8 md:mx-10 py-5'>
         <div className='font-medium text-sm capitalize'>{props.header}</div>  
