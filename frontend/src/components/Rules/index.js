@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import RulesListCard from "./RulesListCard";
+import RulesListCard from "./RulesCard/RulesListCard";
 
 
 const RulesList = () => {
