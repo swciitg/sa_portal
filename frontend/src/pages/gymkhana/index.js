@@ -1,9 +1,16 @@
 import React from 'react'
+import Gymkhana from '../../components/Gymkhana'
+import Footer from '@/components/Footer/Footer.js'
+import Navbar from '@/components/Navbar/Navbar'
 
-export default function index() {
+const index = () => {
   return (
     <div>
-      Gymkhana
+        <Navbar/>
+        <Gymkhana/>
+        <Footer/>
     </div>
   )
 }
+
+export default index
