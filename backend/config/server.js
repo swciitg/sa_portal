@@ -4,7 +4,10 @@ module.exports = ({ env }) => ({
   app: {
     keys: env.array('APP_KEYS'),
   },
-  webhooks: {
-    populateRelations: env.bool('WEBHOOKS_POPULATE_RELATIONS', false),
+  emitErrors: false,
+  url: 'https://swc.iitg.ac.in/saPortal',
+  proxy: env.bool('IS_PROXIED', true),
+  cron: {
+    enabled: env.bool('CRON_ENABLED', false),
   },
 });

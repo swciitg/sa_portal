@@ -10,7 +10,8 @@ module.exports = {
   theme: {
     
     screens: {
-      'sm': '640px',
+      'sm': '340px',
+      'sm': '340px',
       // => @media (min-width: 640px) { ... }
 
       'md': '768px',
@@ -25,13 +26,16 @@ module.exports = {
     fontFamily:{
        raleway:'Raleway, sans-serif',
        catamaran: 'Catamaran, sans-serif',
+       montserrat: 'Montserrat',
+       Manrope : 'Manrope, sans-serif'
     },
     colors: {
       'greyblue':'#515966',
-      'darkblue':'#23395D',
+      'darkblue':'#101323',
       'black':'#000000',
       'blue': '#2157A7',
       'gray':'#808080',
+      'lightgray':'#B0B0B0',
       'white': '#ffffff',
       'purple': '#3f3cbb',
       'midnight': '#121063',
@@ -40,8 +44,14 @@ module.exports = {
       'silver': '#ecebff',
       'bubble-gum': '#ff77e9',
       'bermuda': '#78dcca',
-      'skyblue': '#15458F',
-      'lightgray': '#FBFBFB'
+      'bodygray' : 'rgb(128, 128, 128)',
+      "offwhite" : "#F8F8F8",
+      "reddishgray" : "#FCFCFD",
+      "skyblue": '#15458F',
+      "lightgray": '#FBFBFB',
+      'gray-200':'#E5E7EB',
+      'gray-300':'#D1D5DB',
+      'gray-500':'#666666'
     },
     extend: {
       backgroundImage: {

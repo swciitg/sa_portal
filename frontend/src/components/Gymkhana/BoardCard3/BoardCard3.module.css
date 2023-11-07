@@ -1,15 +1,14 @@
 
-.bsChevronRight{
-    position: absolute;
-    left: 0.5rem;
-}
+
 
 .hoverButton:hover .bsChevronRight{
-    transform: translateX(290%);
+    transform: translateX(60%);
+    transition-duration: 0.3s;
+    transition-timing-function: linear;
   }
 
-@media screen and (max-width:1023px) {
+/* @media screen and (max-width:1023px) {
     .bsChevronRight{
         visibility: hidden;
     }
-}
+} */
