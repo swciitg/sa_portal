@@ -20,13 +20,13 @@ const HomePage = () => {
                      {/* Large Screen View */}
                      <nav className="hidden md:mr-auto md:ml-auto md:flex flex-wrap items-center justify-center font-medium text-xl text-[#FFFFFF] leading-10 transition-all duration-150">
                         <Link href="/" className="mr-5 lg:mr-16 duration-200  hover:text-[#2596BE]">Home</Link>
-                        <Link href="/Gymkhana" className="mr-5 lg:mr-16 duration-200  hover:text-[#2596BE]">Gymkhana</Link>
-                        <Link href="/Services" className="mr-5 lg:mr-16 duration-200  hover:text-[#2596BE]">Services</Link>
-                        <Link href="/Rules" className="mr-5 lg:mr-16 duration-200  hover:text-[#2596BE]">Rules</Link>
-                        <Link href="/Forms" className="mr-5 lg:mr-16 duration-200  hover:text-[#2596BE]">Forms</Link>
-                        <Link href="/SACourses" className="mr-5 lg:mr-16 duration-200  hover:text-[#2596BE]">SA Courses</Link>
-                        <Link href="/Events" className="mr-5 lg:mr-16 duration-200  hover:text-[#2596BE]">Events</Link>
-                        <Link href="/Team" className="mr-5 lg:mr-16 lg:pr-16 duration-200  hover:text-[#2596BE]  border-[#FFFFFF] border-r-0 lg:border-r-2">Team</Link>
+                        <Link href="/gymkhana" className="mr-5 lg:mr-16 duration-200  hover:text-[#2596BE]">Gymkhana</Link>
+                        <Link href="/services" className="mr-5 lg:mr-16 duration-200  hover:text-[#2596BE]">Services</Link>
+                        <Link href="/rules" className="mr-5 lg:mr-16 duration-200  hover:text-[#2596BE]">Rules</Link>
+                        <Link href="/forms" className="mr-5 lg:mr-16 duration-200  hover:text-[#2596BE]">Forms</Link>
+                        <Link href="/sacourses" className="mr-5 lg:mr-16 duration-200  hover:text-[#2596BE]">SA Courses</Link>
+                        <Link href="/events" className="mr-5 lg:mr-16 duration-200  hover:text-[#2596BE]">Events</Link>
+                        <Link href="/team" className="mr-5 lg:mr-16 lg:pr-16 duration-200  hover:text-[#2596BE]  border-[#FFFFFF] border-r-0 lg:border-r-2">Team</Link>
                         <div className={`justify-center flex`}>
                             <form>
                                 <label className={`${styles.searchbutton} cursor-pointer`} htmlFor="searchright"><span className={`${styles.mglass} text-2xl p-4 `}>&#9906;</span>
