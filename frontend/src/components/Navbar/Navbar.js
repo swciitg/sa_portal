@@ -52,77 +52,77 @@ const Navbar = () => {
                 )}
               </Link>
               <Link
-                href="/Gymkhana"
+                href="/gymkhana"
                 className="flex flex-col text-white hover:text-[#afb5d9]"
               >
                 Gymkhana
-                {router.pathname == "/Gymkhana" ? (
+                {router.pathname == "/gymkhana" ? (
                   <div className="h-1 bg-white w-4 rounded-full"></div>
                 ) : (
                   <div className="h-1"></div>
                 )}
               </Link>
               <Link
-                href="/Services"
+                href="/services"
                 className="flex flex-col text-white hover:text-[#afb5d9]"
               >
                 Services
-                {router.pathname == "/Services" ? (
+                {router.pathname == "/services" ? (
                   <div className="h-1 bg-white w-4 rounded-full"></div>
                 ) : (
                   <div className="h-1 "></div>
                 )}
               </Link>
               <Link
-                href="/Rules"
+                href="/rules"
                 className="flex flex-col text-white hover:text-[#afb5d9]"
               >
                 Rules
-                {router.pathname == "/Rules" ? (
+                {router.pathname == "/rules" ? (
                   <div className="h-1 bg-white w-4 rounded-full"></div>
                 ) : (
                   <div className="h-1 "></div>
                 )}
               </Link>
               <Link
-                href="/Forms"
+                href="/forms"
                 className="flex flex-col text-white hover:text-[#afb5d9]"
               >
                 Forms
-                {router.pathname == "/Forms" ? (
+                {router.pathname == "/forms" ? (
                   <div className="h-1 bg-white w-4 rounded-full"></div>
                 ) : (
                   <div className="h-1 "></div>
                 )}
               </Link>
               <Link
-                href="/Sacourses"
+                href="/sacourses"
                 className="flex flex-col text-white hover:text-[#afb5d9]"
               >
                 SA Courses
-                {router.pathname == "/Sacourses" ? (
+                {router.pathname == "/sacourses" ? (
                   <div className="h-1 bg-white w-4 rounded-full"></div>
                 ) : (
                   <div className="h-1 "></div>
                 )}
               </Link>
               <Link
-                href="/Events"
+                href="/events"
                 className="flex flex-col text-white hover:text-[#afb5d9]"
               >
                 Events
-                {router.pathname == "/Events" ? (
+                {router.pathname == "/events" ? (
                   <div className="h-1 bg-white w-4 rounded-full"></div>
                 ) : (
                   <div className="h-1 "></div>
                 )}
               </Link>
               <Link
-                href="/Team"
+                href="/team"
                 className="flex flex-col text-white hover:text-[#afb5d9]"
               >
                 Team
-                {router.pathname == "/Team" ? (
+                {router.pathname == "/team" ? (
                   <div className="h-1 bg-white w-4 rounded-full"></div>
                 ) : (
                   <div className="h-1 "></div>
@@ -175,13 +175,13 @@ const Navbar = () => {
             </div>
             <div className="flex flex-col items-center justify-evenly h-4/5 text-white">
               <Link href="/">Home</Link>
-              <Link href="/Gymkhana">Gymkhana</Link>
-              <Link href="/Services">Services</Link>
-              <Link href="/Rules">Rules</Link>
-              <Link href="/Forms">Forms</Link>
-              <Link href="/Sacourses">SA Courses</Link>
-              <Link href="/Events">Events</Link>
-              <Link href="/Team">Team</Link>
+              <Link href="/gymkhana">Gymkhana</Link>
+              <Link href="/services">Services</Link>
+              <Link href="/rules">Rules</Link>
+              <Link href="/forms">Forms</Link>
+              <Link href="/sacourses">SA Courses</Link>
+              <Link href="/events">Events</Link>
+              <Link href="/team">Team</Link>
             </div>
           </div>
         ) : (

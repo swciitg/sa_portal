@@ -30,11 +30,10 @@ const Footer = () => {
             <div
               style={{
                 color: `white`,
-                fontFamily: `manrope`,
                 fontWeight: `500`,
                 letterSpacing: `0.025rem`
               }}
-              className="lg:text-[22px] md:text-[17px] text-[22px] lg:mt-1 lg:mb-0 md:mb-0.5 md:mt-1.5 mt-1 mb-0"
+              className="lg:text-[22px] md:text-[17px] text-[22px] lg:mt-1 lg:mb-0 md:mb-0.5 md:mt-1.5 mt-1 mb-0 font-Manrope"
             >
               Student Affairs IITG
             </div>
@@ -42,10 +41,9 @@ const Footer = () => {
               style={{
                 color: `white`,
                 fontWeight: `100`,
-                fontFamily: `manrope`,
                 letterSpacing: `0.025rem`
               }}
-              className="lg:text-[13px] md:text-[10px] text-[13px]"
+              className="font-Manrope lg:text-[13px] md:text-[10px] text-[13px]"
             >
               Admin Building, IITG
             </div>
@@ -111,7 +109,7 @@ const Footer = () => {
           <div
             className={`flex ${redhat.className} text-gray pl-3 items-center text-[12px] md:text-[15px]`}
           >
-            @students-web-committee
+            @Students-Web-Committee
           </div>
         </div>
       </div>
