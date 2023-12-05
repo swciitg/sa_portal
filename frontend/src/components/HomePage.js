@@ -58,13 +58,13 @@ const HomePage = () => {
                             } flex-col justify-start`}
                     >
                     <Link href="/" className=" lg:mr-16 duration-200  hover:text-[#2596BE]">Home</Link>
-                    <Link href="/Gymkhana" className="mr-5 lg:mr-16 duration-200  hover:text-[#2596BE]">Gymkhana</Link>
-                    <Link href="/Services" className="mr-5 lg:mr-16 duration-200  hover:text-[#2596BE]">Services</Link>
-                    <Link href="/Rules" className="mr-5 lg:mr-16 duration-200  hover:text-[#2596BE]">Rules</Link>
-                    <Link href="/Forms" className="mr-5 lg:mr-16 duration-200  hover:text-[#2596BE]">Forms</Link>
-                    <Link href="/SACourses" className="mr-5 lg:mr-16 duration-200  hover:text-[#2596BE]">SA Courses</Link>
-                    <Link href="/Events" className="mr-5 lg:mr-16 duration-200  hover:text-[#2596BE]">Events</Link>
-                    <Link href="/Team" className="mr-5 lg:mr-16 lg:pr-16 duration-200  hover:text-[#2596BE]  border-[#FFFFFF] border-r-0 lg:border-r-2">Team</Link>
+                    <Link href="/gymkhana" className="mr-5 lg:mr-16 duration-200  hover:text-[#2596BE]">Gymkhana</Link>
+                    <Link href="/services" className="mr-5 lg:mr-16 duration-200  hover:text-[#2596BE]">Services</Link>
+                    <Link href="/rules" className="mr-5 lg:mr-16 duration-200  hover:text-[#2596BE]">Rules</Link>
+                    <Link href="/forms" className="mr-5 lg:mr-16 duration-200  hover:text-[#2596BE]">Forms</Link>
+                    <Link href="/sacourses" className="mr-5 lg:mr-16 duration-200  hover:text-[#2596BE]">SA Courses</Link>
+                    <Link href="/events" className="mr-5 lg:mr-16 duration-200  hover:text-[#2596BE]">Events</Link>
+                    <Link href="/team" className="mr-5 lg:mr-16 lg:pr-16 duration-200  hover:text-[#2596BE]  border-[#FFFFFF] border-r-0 lg:border-r-2">Team</Link>
                    </div>
                 </nav>
             </div>
