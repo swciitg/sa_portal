@@ -8,7 +8,7 @@ const index = () => {
     <div className='min-h-full absolute w-full'>
       <Navbar/>
       <ServicesList/>
-      <div className='relative bottom-0 w-full'>
+      <div className='absolute bottom-0 w-full'>
         <Footer/>
       </div>
     </div>
