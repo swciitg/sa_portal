@@ -1,4 +1,5 @@
-import useFetch from "@/hooks/useFetch";
+import { useState } from "react";
+import { useEffect } from "react";
 import QuickLinksAndLatestUpdates from "@/components/QuickLinksandLatestUpdates";
 import Announcements from "@/components/Annocements";
 import FAQ from "@/components/FAQ";
@@ -9,9 +10,24 @@ import { Manrope } from "next/font/google";
 const manrope = Manrope({ subsets: ["latin"], weight: ["600", "400"] });
 
 export default function Home() {
-  const { data, error, loading } = useFetch(
-    "https://swc.iitg.ac.in/saPortal/api/homes?populate=deep"
-  );
+  const [data, setData] = useState(null);
+
+  const getItem = async () => {
+    const response = await fetch(`https://swc.iitg.ac.in/saPortal/api/homes?populate=deep`, {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json',
+        }
+    });
+    
+    const json = await response.json();
+    setData(json);
+    // console.log(json.data[0].attributes.SA_course[0].Image.data[0].attributes.url,"hello");
+  }
+
+  useEffect(()=>{
+    getItem();
+  },[])
 
   return (
     <>
