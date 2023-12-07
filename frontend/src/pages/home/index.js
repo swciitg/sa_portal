@@ -1,9 +1,14 @@
-import React from 'react'
-
-export default function index() {
+import Navbar from "@/components/Navbar/Navbar"
+import Footer from "@/components/Footer/Footer.js"
+import Home from "@/components/Home"
+const index = () => {
   return (
     <div>
-      HomePage
+        <Navbar/>
+        <Home/>
+        <Footer/>
     </div>
   )
 }
+
+export default index

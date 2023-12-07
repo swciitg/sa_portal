@@ -187,7 +187,7 @@ const Navbar = () => {
         ) : (
           <></>
         )}
-        <Query/>
+        <Query />
       </div>
     </div>
   );
