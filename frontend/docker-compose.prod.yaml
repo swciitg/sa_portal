@@ -1,12 +1,10 @@
 version: "3.3"
 
 services:
-  web:
+  frontend:
     image: sa_portal_frontend
     container_name: sa_portal_frontend
     restart: always
-    build:
-        context: .
+    build: .
     ports:
-      - "3019:3000"
-    command: sh -c "cd /app && serve -s build"
+      - "3026:3000"
