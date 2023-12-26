@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_form_data_form_data",
+  "info": {
+    "displayName": "Form_data"
+  },
+  "options": {},
+  "attributes": {
+    "Name": {
+      "type": "string",
+      "required": true
+    },
+    "Form": {
+      "displayName": "Form",
+      "type": "component",
+      "repeatable": true,
+      "component": "form.form"
+    }
+  }
+}

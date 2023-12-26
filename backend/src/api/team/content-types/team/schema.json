@@ -4,7 +4,8 @@
   "info": {
     "singularName": "team",
     "pluralName": "teams",
-    "displayName": "Team"
+    "displayName": "Team",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -17,41 +18,11 @@
       "unique": false,
       "minLength": 2
     },
-    "Email": {
-      "type": "email",
-      "required": true,
-      "unique": true
-    },
-    "Contact_No": {
-      "type": "integer",
-      "max": 10,
-      "min": 10,
-      "required": true,
-      "unique": true
-    },
-    "Post": {
-      "type": "string",
-      "required": true
-    },
-    "Post_Desc": {
-      "type": "richtext",
-      "required": true
-    },
-    "Team": {
-      "type": "text",
-      "required": true
-    },
-    "Priority_Number": {
-      "type": "integer",
-      "required": true,
-      "unique": true,
-      "max": 10,
-      "min": 10
-    },
-    "Image_Path": {
-      "type": "string",
-      "required": true,
-      "unique": false
+    "Team_Members": {
+      "displayName": "Team_Members",
+      "type": "component",
+      "repeatable": true,
+      "component": "team-members.team-members"
     }
   }
 }

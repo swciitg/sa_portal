@@ -4,33 +4,29 @@
   "info": {
     "singularName": "event",
     "pluralName": "events",
-    "displayName": "Event"
+    "displayName": "Events",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
   },
   "pluginOptions": {},
   "attributes": {
-    "Title": {
-      "type": "string",
+    "About": {
+      "type": "text",
       "required": true,
       "unique": true
     },
-    "Link": {
-      "type": "string",
-      "required": true
+    "Technical_Events": {
+      "displayName": "Technical_Events",
+      "type": "component",
+      "repeatable": true,
+      "component": "technical-events.technical-events"
     },
-    "EventDate": {
-      "type": "date",
-      "required": true
-    },
-    "Category": {
-      "type": "string",
-      "required": true
-    },
-    "ImagePath": {
-      "type": "string",
-      "required": true
+    "Cultural_Events": {
+      "type": "component",
+      "repeatable": true,
+      "component": "technical-events.technical-events"
     }
   }
 }

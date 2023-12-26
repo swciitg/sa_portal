@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_latest_updates_latest_updaes",
+  "info": {
+    "displayName": "Latest_Updaes"
+  },
+  "options": {},
+  "attributes": {
+    "Text": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

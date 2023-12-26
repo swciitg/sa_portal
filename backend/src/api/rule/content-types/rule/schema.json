@@ -4,24 +4,23 @@
   "info": {
     "singularName": "rule",
     "pluralName": "rules",
-    "displayName": "Rule"
+    "displayName": "Rules",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
   },
   "pluginOptions": {},
   "attributes": {
-    "Path": {
-      "type": "string",
-      "required": true
-    },
-    "Format": {
-      "type": "string",
-      "required": true
-    },
     "Name": {
       "type": "string",
       "required": true
+    },
+    "Rules": {
+      "displayName": "Forms",
+      "type": "component",
+      "repeatable": true,
+      "component": "forms.forms"
     }
   }
 }

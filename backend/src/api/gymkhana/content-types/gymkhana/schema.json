@@ -1,10 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "courses",
+  "collectionName": "gymkhanas",
   "info": {
-    "singularName": "course",
-    "pluralName": "courses",
-    "displayName": "SA_Courses",
+    "singularName": "gymkhana",
+    "pluralName": "gymkhanas",
+    "displayName": "Gymkhana",
     "description": ""
   },
   "options": {
@@ -14,14 +14,13 @@
   "attributes": {
     "About": {
       "type": "text",
-      "required": true,
-      "unique": false
+      "required": true
     },
-    "SA_course": {
-      "displayName": "SA_course",
+    "BoardMembers": {
+      "displayName": "BoardMembers",
       "type": "component",
       "repeatable": true,
-      "component": "sa-course.sa-course"
+      "component": "board-members.board-members"
     }
   }
 }

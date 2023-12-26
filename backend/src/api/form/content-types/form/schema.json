@@ -4,33 +4,22 @@
   "info": {
     "singularName": "form",
     "pluralName": "forms",
-    "displayName": "Form"
+    "displayName": "Forms",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
   },
   "pluginOptions": {},
   "attributes": {
-    "Form_No": {
-      "required": true,
-      "unique": true,
-      "type": "integer"
+    "Name": {
+      "type": "string"
     },
-    "Subject": {
-      "type": "string",
-      "required": true
-    },
-    "Path": {
-      "type": "string",
-      "required": true
-    },
-    "Creation": {
-      "type": "date",
-      "required": true
-    },
-    "Format": {
-      "type": "string",
-      "required": true
+    "Forms": {
+      "displayName": "FormsData",
+      "type": "component",
+      "repeatable": true,
+      "component": "forms.forms-data"
     }
   }
 }

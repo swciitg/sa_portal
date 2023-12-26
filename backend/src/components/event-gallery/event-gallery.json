@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_event_gallery_event_galleries",
+  "info": {
+    "displayName": "EventGallery"
+  },
+  "options": {},
+  "attributes": {
+    "Image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true,
+      "required": true
+    },
+    "Redirect_url": {
+      "type": "string",
+      "required": true
+    },
+    "Info": {
+      "type": "text",
+      "required": true
+    },
+    "Date": {
+      "type": "datetime"
+    }
+  }
+}

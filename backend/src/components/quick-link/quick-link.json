@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_quick_link_quick_links",
+  "info": {
+    "displayName": "Quick_link",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Label": {
+      "type": "string",
+      "required": true
+    },
+    "Icon": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "Link": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

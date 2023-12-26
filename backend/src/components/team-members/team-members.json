@@ -1,0 +1,41 @@
+{
+  "collectionName": "components_team_members_team_members",
+  "info": {
+    "displayName": "Team_Members",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Name": {
+      "type": "string",
+      "required": true
+    },
+    "Designation": {
+      "type": "text",
+      "required": true
+    },
+    "Issues": {
+      "displayName": "Issues",
+      "type": "component",
+      "repeatable": true,
+      "component": "issues.issues"
+    },
+    "Email": {
+      "type": "email",
+      "required": true
+    },
+    "Phone_Number": {
+      "type": "integer"
+    },
+    "Profile_Photo": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

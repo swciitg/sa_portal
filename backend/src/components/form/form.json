@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_form_forms",
+  "info": {
+    "displayName": "Form"
+  },
+  "options": {},
+  "attributes": {
+    "Type": {
+      "type": "string",
+      "required": true
+    },
+    "Heading": {
+      "type": "richtext",
+      "required": true
+    },
+    "Date": {
+      "type": "datetime"
+    }
+  }
+}

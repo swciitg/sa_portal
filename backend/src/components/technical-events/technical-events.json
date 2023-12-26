@@ -1,0 +1,35 @@
+{
+  "collectionName": "components_technical_events_technical_events",
+  "info": {
+    "displayName": "Technical_Events"
+  },
+  "options": {},
+  "attributes": {
+    "Image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    },
+    "Title": {
+      "type": "richtext"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "Icon": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    }
+  }
+}

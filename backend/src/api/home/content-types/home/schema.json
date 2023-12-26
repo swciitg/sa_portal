@@ -1,0 +1,55 @@
+{
+  "kind": "collectionType",
+  "collectionName": "homes",
+  "info": {
+    "singularName": "home",
+    "pluralName": "homes",
+    "displayName": "Home",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "About": {
+      "type": "text",
+      "required": true
+    },
+    "Quick_link": {
+      "type": "component",
+      "repeatable": true,
+      "component": "quick-link.quick-link"
+    },
+    "Latest_Updates": {
+      "type": "component",
+      "repeatable": true,
+      "component": "latest-updates.latest-updaes"
+    },
+    "Achievements": {
+      "type": "component",
+      "repeatable": true,
+      "component": "achievements.achievements"
+    },
+    "FAQs": {
+      "type": "component",
+      "repeatable": true,
+      "component": "faqs.fa-qs"
+    },
+    "Announcements": {
+      "type": "component",
+      "repeatable": true,
+      "component": "announcements.announcements"
+    },
+    "Image_Gallery": {
+      "type": "component",
+      "repeatable": true,
+      "component": "image-gallery.image-gallery"
+    },
+    "Event_Gallery": {
+      "type": "component",
+      "repeatable": true,
+      "component": "event-gallery.event-gallery"
+    }
+  }
+}

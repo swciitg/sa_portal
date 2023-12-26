@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_sa_course_courses",
+  "info": {
+    "displayName": "Courses"
+  },
+  "options": {},
+  "attributes": {
+    "Image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "Name": {
+      "type": "string"
+    }
+  }
+}

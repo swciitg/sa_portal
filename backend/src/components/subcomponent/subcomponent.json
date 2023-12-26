@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_subcomponent_subcomponents",
+  "info": {
+    "displayName": "Subcomponent"
+  },
+  "options": {},
+  "attributes": {
+    "Sub_Header": {
+      "type": "text",
+      "required": true
+    },
+    "URL": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_forms_forms",
+  "info": {
+    "displayName": "Forms"
+  },
+  "options": {},
+  "attributes": {
+    "Header": {
+      "type": "richtext",
+      "required": true
+    },
+    "URL": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

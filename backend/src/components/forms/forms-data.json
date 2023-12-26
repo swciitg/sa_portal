@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_forms_forms_data",
+  "info": {
+    "displayName": "FormsData"
+  },
+  "options": {},
+  "attributes": {
+    "Header": {
+      "type": "string"
+    },
+    "Date": {
+      "type": "date"
+    },
+    "URL": {
+      "type": "string"
+    }
+  }
+}

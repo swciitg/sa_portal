@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_services_services",
+  "info": {
+    "displayName": "Services",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Header": {
+      "type": "richtext",
+      "required": true
+    },
+    "SubServices": {
+      "displayName": "Subcomponent",
+      "type": "component",
+      "repeatable": true,
+      "component": "subcomponent.subcomponent"
+    }
+  }
+}

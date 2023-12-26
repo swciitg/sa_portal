@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_announcements_announcements",
+  "info": {
+    "displayName": "Announcements"
+  },
+  "options": {},
+  "attributes": {
+    "Heading": {
+      "type": "string",
+      "required": true
+    },
+    "Date": {
+      "type": "datetime",
+      "required": true
+    },
+    "Link": {
+      "type": "string",
+      "required": true
+    }
+  }
+}
