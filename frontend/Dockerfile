@@ -1,17 +1,8 @@
-FROM node:16-alpine AS builder
-
-# Set working directory
+FROM node:alpine
 WORKDIR /app
-RUN npm install -g serve
-# Copy our node module specification
-COPY package* ./
-
-
-# install node modules and build assets
-RUN npm install --legacy-peer-deps
-# Copy all files from current directory to working dir in image
-# Except the one defined in '.dockerignore'
-COPY . .
-
-# Create production build of React App
-RUN npm run dev
+COPY package.json ./
+COPY package-lock.json ./
+COPY ./ ./
+RUN npm i
+EXPOSE 3000
+CMD ["npm", "run", "dev"]
