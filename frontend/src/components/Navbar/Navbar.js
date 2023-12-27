@@ -3,10 +3,10 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 import { useState } from "react";
 
-const Navbar = () => {
-  const router = useRouter();
-  const [search, setSearch] = useState(false);
-  const [hamburger, setHamburger] = useState(false);
+  const Navbar = () => {
+    const router = useRouter();
+    const [search, setSearch] = useState(false);
+    const [hamburger, setHamburger] = useState(false);
   return (
     <>
       <div className="rounded-[30px] bg-[#1E2532] w-[83vw] flex flex-col items-center justify-evenly  p-3 pr-4 pl-4">
