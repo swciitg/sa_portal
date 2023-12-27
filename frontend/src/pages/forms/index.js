@@ -6,12 +6,14 @@ import React from 'react';
 
 const index = () => {
   return (
-    <div className='min-h-full absolute w-full'>
+    < div className='flex flex-col min-h-screen '>
+      
       <Navbar/>
+      <div className='flex-1'>
       <Form></Form>
-      <div className='absolute bottom-0 w-full'>
+     </div>
         <Footer/>
-      </div>
+    
     </div>
     
   )
