@@ -48,7 +48,7 @@ const Form = () => {
                   key={item.attributes.Name}
                   className={`${
                     index == activeTab ? "bg-[#1e2532] text-white" : "bg-white"
-                  } ${"p-2 flex items-center justify-center w-24 shadow-lg rounded-xl box-border"}`}
+                  } ${"sm:p-2 p-3 font font-medium font-Manrope w-32 text-sm sm:text-base flex items-center justify-center  shadow-lg rounded-xl box-border"}`}
                   onClick={() => handletabchange(index)}
                 >
                   {item.attributes.Name}
@@ -68,11 +68,11 @@ const Form = () => {
                   {item.attributes.Forms.map((form) => {
                     return (
                       <div className=" flex shadow-md rounded-xl w-full bg-[#FCFCFD]   px-1 py-4 box-border font-medium sm:p-6">
-                        <div className="flex flex-col items-center justify-center px-2 box-border border-r-2 border-[#1e2532]">
-                          <div className="text-xs sm:text-base">
+                        <div className="flex flex-col items-center justify-center px-2 box-border border-r-2 border-[#1e2532] w-40">
+                          <div className="text-xs sm:text-base text-[#2e2e2fbf]">
                             {item.attributes.Name}
                           </div>
-                          <div className="text-xs">{form.Date}</div>
+                          <div className="text-xs text-[#2e2e2fbf]">{form.Date}</div>
                         </div>
                         <div className="flex justify-between  w-full px-4 box-border items-center sm:pl-8">
                           <div className="text-xs sm:text-lg">

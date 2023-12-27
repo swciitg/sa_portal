@@ -1,7 +1,7 @@
 import React ,{useEffect,useState} from 'react';
 import About from './About/about';
 import SACard from './Card/SACard';
-
+import Carousel from "@/components/Home/Events/Carousel/Carousel";
 const Index = () => {
   const [data, setData] = useState("");
 
@@ -15,7 +15,7 @@ const Index = () => {
     
     const json = await response.json();
     setData(json.data[0]);
-    console.log(json.data[0].attributes.SA_course[0].Image.data[0].attributes.url,"hello");
+    console.log(json.data[0].attributes.Event_Gallery,"hello");
   }
 
   useEffect(()=>{
@@ -39,6 +39,14 @@ const Index = () => {
         }
             
         </div>
+         <div className=' py-10 mb-20 bg-[#1E2532]'>
+          <div className='text-3xl sm:text-4xl leading-10 py-6 md:py-8  font-medium pl-[10%] sm:pl-[10%]   text-[#f6f4f4]'>
+            Events at IIT Guwahati
+        </div>
+        {data&&<Carousel prop={data.attributes}></Carousel>}
+  
+        </div>
+
     </div>
   )
 }

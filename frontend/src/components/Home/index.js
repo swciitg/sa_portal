@@ -80,7 +80,12 @@ export default function Home() {
             </div>
           </div>
           <ImageGallery prop={data.data[0].attributes}></ImageGallery>
+            <div className=' py-10 mb-20 bg-[#1E2532]'>
+              <div className='text-2xl sm:text-4xl leading-10 py-6 md:py-8  font-medium  pl-[8%] sm:pl-[10%]   text-[#f6f4f4]'>
+            Upcoming Events at IIT Guwahati
+        </div>
           <Carousel prop={data.data[0].attributes}></Carousel>
+          </div>
         </>
       )}
     </>
