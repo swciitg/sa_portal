@@ -37,8 +37,8 @@ const HomePage = () => {
                 </nav>
                 {/* /Mobile View ---Hamburger Menu */}
                 <nav className="flex md:mr-auto md:ml-auto md:hidden flex-wrap items-center justify-center font-medium text-xl text-[#FFFFFF] leading-10 transition-all duration-150">
-                    <button className={"block md:hidden " + (isOpen?"text-blue":"text-purple")} onClick={toggleMenu}>
-                        <svg viewBox="0 0 20 20" className={"w-6 h-6 fill-current "+ (isOpen?"text-blue":"text-purple")}>
+                    <button className="block md:hidden" onClick={toggleMenu}>
+                        <svg viewBox="0 0 20 20" className={"w-6 h-6 fill-current text-white "+ (isOpen?"text-blue":"text-purple")}>
                             <path
                                 fillRule="evenodd"
                                 d="M18 4H2a1 1 0 100 2h16a1 1 0 100-2zM18 9H2a1 1 0 100 2h16a1 1 0 100-2zM18 14H2a1 1 0 100 2h16a1 1 0 100-2z"
