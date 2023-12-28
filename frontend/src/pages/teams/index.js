@@ -2,350 +2,38 @@ import React from 'react'
 import Teams from '../../components/teams/teams'
 import Footer from '@/components/Footer/Footer.js'
 import Navbar from '@/components/Navbar/Navbar'
+import { useState,useEffect } from 'react'
 
-
-const props = {
-    "buttons":[
-        "SA Functionaries",
-        "Board Functionaries",
-        "Students' Gymkhana",
-        "SA Staff",
-        "Gymkhana Staff"
-    ],
-    "SAFunctionaries":[
-        {
-            "image":"https://images.pexels.com/photos/1261728/pexels-photo-1261728.jpeg?auto=compress&cs=tinysrgb&w=600",
-        "phone":"9797997979",
-        "link":"/teams",
-        "designation":"efaeaefawf",
-        "name":"aefaefaef",
-        "buttons":[
-            {
-                "id":1,
-                "value":"efewfe"
-            },
-            {
-                "id":2,
-                "value":"efewfe"
-            },
-            {
-                "id":3,
-                "value":"efewfe"
-            }
-        ]
-        },
-        {
-            "image":"https://images.pexels.com/photos/1261728/pexels-photo-1261728.jpeg?auto=compress&cs=tinysrgb&w=600",
-            "phone":"9797997979",
-            "link":"/teams",
-            "designation":"efaeaefawf",
-            "name":"aefaefaef",
-            "buttons":[
-                {
-                    "id":1,
-                    "value":"efewfe"
-                },
-                {
-                    "id":2,
-                    "value":"efewfe"
-                },
-                {
-                    "id":3,
-                    "value":"efewfe"
-                }
-            ]
-            },
-            {
-                "image":"https://images.pexels.com/photos/1261728/pexels-photo-1261728.jpeg?auto=compress&cs=tinysrgb&w=600",
-                "phone":"9797997979",
-                "link":"/teams",
-                "designation":"efaeaefawf",
-                "name":"aefaefaef",
-                "buttons":[
-                    {
-                        "id":1,
-                        "value":"efewfe"
-                    },
-                    {
-                        "id":2,
-                        "value":"efewfe"
-                    },
-                    {
-                        "id":3,
-                        "value":"efewfe"
-                    }
-                ]
-                },        
-    ],
-    "BoardFunctionaries":[
-        {
-            "image":"https://images.pexels.com/photos/1261728/pexels-photo-1261728.jpeg?auto=compress&cs=tinysrgb&w=600",
-        "phone":"9797997979",
-        "link":"/teams",
-        "designation":"efaeaefawf",
-        "name":"aefaefaef",
-        "buttons":[
-            {
-                "id":1,
-                "value":"efewfe"
-            },
-            {
-                "id":2,
-                "value":"efewfe"
-            },
-            {
-                "id":3,
-                "value":"efewfe"
-            }
-        ]
-        },
-        {
-            "image":"https://images.pexels.com/photos/1261728/pexels-photo-1261728.jpeg?auto=compress&cs=tinysrgb&w=600",
-            "phone":"9797997979",
-            "link":"/teams",
-            "designation":"efaeaefawf",
-            "name":"aefaefaef",
-            "buttons":[
-                {
-                    "id":1,
-                    "value":"efewfe"
-                },
-                {
-                    "id":2,
-                    "value":"efewfe"
-                },
-                {
-                    "id":3,
-                    "value":"efewfe"
-                }
-            ]
-            },
-            {
-                "image":"https://images.pexels.com/photos/1261728/pexels-photo-1261728.jpeg?auto=compress&cs=tinysrgb&w=600",
-                "phone":"9797997979",
-                "link":"/teams",
-                "designation":"efaeaefawf",
-                "name":"aefaefaef",
-                "buttons":[
-                    {
-                        "id":1,
-                        "value":"efewfe"
-                    },
-                    {
-                        "id":2,
-                        "value":"efewfe"
-                    },
-                    {
-                        "id":3,
-                        "value":"efewfe"
-                    }
-                ]
-                },        
-    ],
-    "StudentsGymkhana":[
-        {
-            "image":"https://images.pexels.com/photos/1261728/pexels-photo-1261728.jpeg?auto=compress&cs=tinysrgb&w=600",
-        "phone":"9797997979",
-        "link":"/teams",
-        "designation":"efaeaefawf",
-        "name":"aefaefaef",
-        "buttons":[
-            {
-                "id":1,
-                "value":"efewfe"
-            },
-            {
-                "id":2,
-                "value":"efewfe"
-            },
-            {
-                "id":3,
-                "value":"efewfe"
-            }
-        ]
-        },
-        {
-            "image":"https://images.pexels.com/photos/1261728/pexels-photo-1261728.jpeg?auto=compress&cs=tinysrgb&w=600",
-            "phone":"9797997979",
-            "link":"/teams",
-            "designation":"efaeaefawf",
-            "name":"aefaefaef",
-            "buttons":[
-                {
-                    "id":1,
-                    "value":"efewfe"
-                },
-                {
-                    "id":2,
-                    "value":"efewfe"
-                },
-                {
-                    "id":3,
-                    "value":"efewfe"
-                }
-            ]
-            },
-            {
-                "image":"https://images.pexels.com/photos/1261728/pexels-photo-1261728.jpeg?auto=compress&cs=tinysrgb&w=600",
-                "phone":"9797997979",
-                "link":"/teams",
-                "designation":"efaeaefawf",
-                "name":"aefaefaef",
-                "buttons":[
-                    {
-                        "id":1,
-                        "value":"efewfe"
-                    },
-                    {
-                        "id":2,
-                        "value":"efewfe"
-                    },
-                    {
-                        "id":3,
-                        "value":"efewfe"
-                    }
-                ]
-                },        
-    ],
-    "SAStaff":[
-        {
-            "image":"https://images.pexels.com/photos/1261728/pexels-photo-1261728.jpeg?auto=compress&cs=tinysrgb&w=600",
-        "phone":"9797997979",
-        "link":"/teams",
-        "designation":"efaeaefawf",
-        "name":"aefaefaef",
-        "buttons":[
-            {
-                "id":1,
-                "value":"efewfe"
-            },
-            {
-                "id":2,
-                "value":"efewfe"
-            },
-            {
-                "id":3,
-                "value":"efewfe"
-            }
-        ]
-        },
-        {
-            "image":"https://images.pexels.com/photos/1261728/pexels-photo-1261728.jpeg?auto=compress&cs=tinysrgb&w=600",
-            "phone":"9797997979",
-            "link":"/teams",
-            "designation":"efaeaefawf",
-            "name":"aefaefaef",
-            "buttons":[
-                {
-                    "id":1,
-                    "value":"efewfe"
-                },
-                {
-                    "id":2,
-                    "value":"efewfe"
-                },
-                {
-                    "id":3,
-                    "value":"efewfe"
-                }
-            ]
-            },
-            {
-                "image":"https://images.pexels.com/photos/1261728/pexels-photo-1261728.jpeg?auto=compress&cs=tinysrgb&w=600",
-                "phone":"9797997979",
-                "link":"/teams",
-                "designation":"efaeaefawf",
-                "name":"aefaefaef",
-                "buttons":[
-                    {
-                        "id":1,
-                        "value":"efewfe"
-                    },
-                    {
-                        "id":2,
-                        "value":"efewfe"
-                    },
-                    {
-                        "id":3,
-                        "value":"efewfe"
-                    }
-                ]
-                },        
-    ],
-    "GymkhanaStaff":[
-        {
-            "image":"https://images.pexels.com/photos/1261728/pexels-photo-1261728.jpeg?auto=compress&cs=tinysrgb&w=600",
-        "phone":"9797997979",
-        "link":"/teams",
-        "designation":"efaeaefawf",
-        "name":"aefaefaef",
-        "buttons":[
-            {
-                "id":1,
-                "value":"efewfe"
-            },
-            {
-                "id":2,
-                "value":"efewfe"
-            },
-            {
-                "id":3,
-                "value":"efewfe"
-            }
-        ]
-        },
-        {
-            "image":"https://images.pexels.com/photos/1261728/pexels-photo-1261728.jpeg?auto=compress&cs=tinysrgb&w=600",
-            "phone":"9797997979",
-            "link":"/teams",
-            "designation":"efaeaefawf",
-            "name":"aefaefaef",
-            "buttons":[
-                {
-                    "id":1,
-                    "value":"efewfe"
-                },
-                {
-                    "id":2,
-                    "value":"efewfe"
-                },
-                {
-                    "id":3,
-                    "value":"efewfe"
-                }
-            ]
-            },
-            {
-                "image":"https://images.pexels.com/photos/1261728/pexels-photo-1261728.jpeg?auto=compress&cs=tinysrgb&w=600",
-                "phone":"9797997979",
-                "link":"/teams",
-                "designation":"efaeaefawf",
-                "name":"aefaefaef",
-                "buttons":[
-                    {
-                        "id":1,
-                        "value":"efewfe"
-                    },
-                    {
-                        "id":2,
-                        "value":"efewfe"
-                    },
-                    {
-                        "id":3,
-                        "value":"efewfe"
-                    }
-                ]
-                },        
-    ]
-}
 
 const index = () => {
+    const [data, setData] = useState("");
+  
+    const getItem = async () => {
+      const response = await fetch(`https://swc.iitg.ac.in/saPortal/api/teams?populate=deep`, {
+          method: 'GET',
+          headers: {
+              'Content-Type': 'application/json',
+          }
+      });
+      
+      const json = await response.json();
+      setData(json);
+    }
+  
+    useEffect(()=>{
+      getItem();
+
+    },[])
+
+        // console.log(data);
   return (
+    <>
     <div>
         <Navbar/>
-        <Teams prop = {props} />
+        <Teams prop = {data} />
         <Footer/>
     </div>
+    </>
   )
 }
 
