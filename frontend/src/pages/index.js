@@ -5,28 +5,20 @@ import Footer from "@/components/Footer/Footer.js";
 import Home from "@/components/Home";
 
 const home = () => {
-  const otherSectionsRef = useRef(null);
-
-  const handleScroll = () => {
-    const homePageContainer = document.getElementById('homePageContainer');
-    const scrollDistance = 0.3 * homePageContainer.scrollHeight; // Scroll 30% of the section
-
-    if (homePageContainer.scrollTop >= scrollDistance) {
-      otherSectionsRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-  };
+ 
 
   return (
     <>
-      <div id="homePageContainer" style={{ height: '100vh', overflow: 'auto' }} onScroll={handleScroll}>
+    <div className='snap-y snap-mandatory overflow-y-scroll h-screen'>
+      <div className='snap-start h-screen'>
         <HomePage />
       </div>
-
-      <div ref={otherSectionsRef}>
+      <div className='snap-start'>
         <Navbar />
         <Home />
         <Footer />
       </div>
+    </div>
     </>
   );
 };
