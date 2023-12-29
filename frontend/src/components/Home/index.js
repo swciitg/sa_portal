@@ -51,20 +51,22 @@ export default function Home() {
                       <div className="text-gray font-semibold">Content</div>
                     </div>
                     <div className="border-l-2 px-2 text-xs border-gray-400 ">
-                      <div>Quick links</div>
-                      <div className="text-gray">Achievement</div>
-                      <div className="text-gray">Announcement</div>
+                      <div ><a href="#QuickLinks">Quick links</a></div>
+                      <div className="text-gray"><a href="#Achievements">Achievement</a></div>
+                      <div className="text-gray"><a href="#Announcements">Announcement</a></div>
                     </div>
                   </div>
                 </div>
               </div>
 
               <div className="w-[83vw]">
+                <div id="QuickLinks">
                 <QuickLinksAndLatestUpdates
                   prop={data.data[0].attributes}
                 ></QuickLinksAndLatestUpdates>
+                </div>
                 <div className="flex flex-col w-full md:w-2/3">
-                  <div className="text-3xl font-semibold mb-8">
+                  <div className="text-3xl font-semibold mb-8" id="Achievements">
                     Achievements
                   </div>
                   <div className=" columns-1 md:columns-2">
@@ -72,7 +74,9 @@ export default function Home() {
                       <Achievements props={item}></Achievements>
                     ))}
                   </div>
-                  <Announcements prop={data.data[0].attributes}></Announcements>
+                  <div id="Announcements">
+                  <Announcements prop={data.data[0].attributes} ></Announcements>
+                  </div>
                   <FAQ prop={data.data[0].attributes}></FAQ>
                 </div>
               </div>
@@ -80,7 +84,7 @@ export default function Home() {
             </div>
           </div>
           <ImageGallery prop={data.data[0].attributes}></ImageGallery>
-            <div className=' py-10 mb-20 bg-[#1E2532]'>
+            <div className=' py-10 bg-[#1E2532]'>
               <div className='text-2xl sm:text-4xl leading-10 py-6 md:py-8  font-medium  pl-[8%] sm:pl-[10%]   text-[#f6f4f4]'>
             Upcoming Events at IIT Guwahati
         </div>

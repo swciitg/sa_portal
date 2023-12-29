@@ -5,7 +5,7 @@ import { Splide, SplideSlide } from 'splide-nextjs/react-splide';
 import 'splide-nextjs/splide/dist/css/themes/splide-default.min.css';
 
 const Carousel = ({ props }) => {
-  console.log(props);
+  console.log(props[0]);
 
   const getWindowWidth = () => {
     if (typeof window !== 'undefined') {
@@ -42,6 +42,7 @@ const Carousel = ({ props }) => {
                 title={prop.Title}
                 icon={'https://swc.iitg.ac.in/saPortal' + prop.Icon.data[0].attributes.url}
                 description={prop.description}
+                link={prop.Link}
               />
             </SplideSlide>
           );

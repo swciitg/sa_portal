@@ -39,7 +39,7 @@ const Index = () => {
         }
             
         </div>
-         <div className=' py-10 mb-20 bg-[#1E2532]'>
+         <div className=' py-10  bg-[#1E2532]'>
           <div className='text-3xl sm:text-4xl leading-10 py-6 md:py-8  font-medium pl-[10%] sm:pl-[10%]   text-[#f6f4f4]'>
             Events at IIT Guwahati
         </div>
