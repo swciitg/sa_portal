@@ -10,7 +10,7 @@ const teams = ({prop}) => {
                 <div className="flex-col sm:flex-row justify-between mx-[10%] mt-[2%] " >
                     {prop.data.map((button)=>{
                         return(
-                            <button className="rounded-2xl mx-[2%] hover:bg-black hover:text-white p-2 shadow-lg" onClick={()=>{setOpt(`${button.id}`)}}>
+                            <button className="rounded-2xl mx-[2%] hover:bg-[#1E2532]  hover:text-white p-2 shadow-lg" onClick={()=>{setOpt(`${button.id}`)}}>
                                 {`${button.attributes.Name}`}
                             </button>
                         )

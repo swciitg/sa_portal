@@ -28,10 +28,14 @@ const index = () => {
         // console.log(data);
   return (
     <>
-    <div>
-        <Navbar/>
-        <Teams prop = {data} />
+   <div className='flex flex-col min-h-screen '>
+      <Navbar/>
+      <div className='flex-1'>
+        <Teams prop={data}></Teams>
+      </div>
+      <div>
         <Footer/>
+      </div>
     </div>
     </>
   )
