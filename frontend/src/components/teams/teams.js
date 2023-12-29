@@ -7,17 +7,17 @@ const teams = ({prop}) => {
     if (prop.data && prop.data.length > 0 && prop.data[0].attributes && prop.data[0].attributes.Team_Members && prop.data[0].attributes.Team_Members.length > 0) {
         return (
             <>
-                <div className="flex-col sm:flex-row sm:justify-between mx-[10%] mt-[2%] " >
+                <div className="flex-col sm:flex-row justify-between mx-[10%] mt-[2%] " >
                     {prop.data.map((button)=>{
                         return(
-                            <button className="rounded-2xl hover:bg-black hover:text-white p-2 shadow-lg" onClick={()=>{setOpt(`${button.id}`)}}>
+                            <button className="rounded-2xl mx-[2%] hover:bg-black hover:text-white p-2 shadow-lg" onClick={()=>{setOpt(`${button.id}`)}}>
                                 {`${button.attributes.Name}`}
                             </button>
                         )
                     })}
                 </div>
                 
-                <div className="mx-[5%] gap-x-5 grid sm:grid-cols-4 flex p-4" >
+                <div className="mx-[5%] gap-x-5 grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 flex p-4" >
                     {prop.data[opt-1].attributes.Team_Members.map((item)=>{
                         return(
                             <>

@@ -35,14 +35,15 @@ export default function Card ({prop}) {
                     <p className="font-bold text-2xl px-4 py-2">{prop.name}</p>
                     <p className="text-xl-mb-2 text-gray-400 px-4 py-2">{prop.Designation}</p>
                 </div>
-                <div className=" pb-2 px-4 " >
+                <div className=" pb-2 px-4 min-h-[3em] " >
                     {prop.Issues.map((button)=>{
                         return (
-                            <button key={button.id} style={{backgroundColor:"rgb(167 139 250)"}} className=" hover:cursor-pointer rounded-full px-3 py-0.5 text-xs font-base mx-0.5 mb-px">{button.Value}</button>
+                            <button key={button.id} style={{backgroundColor:"rgb(167 139 250)"}} className="hover:cursor-pointer rounded-full px-3 py-0.5 text-xs font-base mx-0.5 mb-px">{button.Value}</button>
                         )
                     })}
-                    <hr className="solid text-gray-500 my-1 " />
+                    
                 </div>
+                <hr className="solid text-gray-500 my-1 " />
                 <div>   
                     <div className="flex" >
                         <span className="text-gray-400 px-4 " >{prop.Email}</span>
