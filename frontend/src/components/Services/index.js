@@ -32,7 +32,7 @@ const Index = (props) => {
 
   return (
     <div>
-        <div className='md:ml-28 my-4 md:my-12'>
+        <div className='min-h-[190px] md:ml-28 my-4 md:my-12'>
             {data.length
             ?
             data.map((services) => {

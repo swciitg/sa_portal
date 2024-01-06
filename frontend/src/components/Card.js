@@ -23,7 +23,7 @@ export default function Card ({prop}) {
         <>
             <div className="rounded overflow-hidden shadow-lg max-w-sm">
                 <Image
-                src="https://images.pexels.com/photos/1261728/pexels-photo-1261728.jpeg?auto=compress&cs=tinysrgb&w=600"
+                src={prop.img}
                 alt="image"
                 className="w-full"
                 width = "300"

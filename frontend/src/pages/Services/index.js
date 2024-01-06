@@ -5,10 +5,12 @@ import React from 'react';
 
 const index = () => {
   return (
-    <div className='min-h-full absolute w-full'>
+    <div className='flex flex-col min-h-screen '>
       <Navbar/>
-      <ServicesList/>
-      <div className='absolute bottom-0 w-full'>
+      <div className='flex-1'>
+        <ServicesList/>
+      </div>
+      <div>
         <Footer/>
       </div>
     </div>

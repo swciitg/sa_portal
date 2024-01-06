@@ -5,9 +5,11 @@ import Navbar from '@/components/Navbar/Navbar'
 
 const index = () => {
   return (
-    <div>
+    <div  className='flex flex-col min-h-screen'>
         <Navbar/>
-        <Gymkhana/>
+        <div className='flex-1'>
+          <Gymkhana/>
+        </div>
         <Footer/>
     </div>
   )

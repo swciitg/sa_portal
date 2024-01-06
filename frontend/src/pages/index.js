@@ -1,11 +1,26 @@
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
-import HomePage from '../components/HomePage'
+import React, { useRef } from 'react';
+import HomePage from '../components/HomePage';
+import Navbar from "@/components/Navbar/Navbar";
+import Footer from "@/components/Footer/Footer.js";
+import Home from "@/components/Home";
 
-const inter = Inter({ subsets: ['latin'] });
+const home = () => {
+ 
 
-export default function Home() {
   return (
-     <HomePage></HomePage>
-  )
-}
+    <>
+    <div className='snap-y snap-mandatory overflow-y-scroll h-screen'>
+      <div className='snap-start h-screen'>
+        <HomePage />
+      </div>
+      <div className='snap-start'>
+        <Navbar />
+        <Home />
+        <Footer />
+      </div>
+    </div>
+    </>
+  );
+};
+
+export default home;

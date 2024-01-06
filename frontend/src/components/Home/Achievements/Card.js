@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const Card = ({ props }) => {
   return (
-    <div className="max-w-sm text-center rounded-2xl shadow-3xl p-6 md:p-7 mb-10 w-full">
+    <div className="max-w-sm text-center rounded-2xl shadow-3xl p-6 md:p-7 mb-10 w-full font-[Manrope]">
       {/* image if there */}
       {props.Image.data ? (
         <img

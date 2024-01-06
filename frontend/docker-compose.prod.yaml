@@ -5,6 +5,7 @@ services:
     image: sa_portal_frontend
     container_name: sa_portal_frontend
     restart: always
-    build: .
+    build:
+        context: .
     ports:
-      - "3026:3000"
+      - "3028:3000"
