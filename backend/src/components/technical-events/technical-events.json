@@ -1,19 +1,21 @@
 {
   "collectionName": "components_technical_events_technical_events",
   "info": {
-    "displayName": "Technical_Events"
+    "displayName": "Technical_Events",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "Image": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": true
+      ]
     },
     "Title": {
       "type": "richtext"
@@ -22,14 +24,18 @@
       "type": "richtext"
     },
     "Icon": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": true
+      ]
+    },
+    "Link": {
+      "type": "text"
     }
   }
 }
