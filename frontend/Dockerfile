@@ -1,8 +1,9 @@
-FROM node:alpine
-WORKDIR /app
-COPY package.json ./
-COPY package-lock.json ./
-COPY ./ ./
-RUN npm i
-EXPOSE 3000
-CMD ["npm", "run", "dev"]
+FROM node:18-alpine
+WORKDIR  /app
+COPY package*.json ./
+RUN npm ci --production
+
+COPY . ./
+
+RUN npm run build
+CMD ["npm","run","start"]
