@@ -83,25 +83,25 @@ export default function Announcement({ prop }) {
           </Transition>
         </Menu>
       </div>
-      {prop.Announcements.map((item) => {
-        return (
-          <div className="flex grid w-full rounded-3xl shadow-xl  p-3 border-solid">
-            <div className="col-start-2 col-end-9">
-              <p className="ps-3 pl-3 pt-3 text-md">{item.Date}</p>
-              <p className="p-3 text-sm font-semibold break-all  ">
-                {item.Heading}
-              </p>
-            </div>
-            <div className="flex col-start-10 col-end-12 text-2xl">
-              <button className="inline-block allign-middle">
-                <Link href={item.Link} className="text-darkblue">
-                  <BsFillArrowRightSquareFill className="rounded-lg" />
-                </Link>
-              </button>
-            </div>
-          </div>
-        );
-      })}
+     {prop.Announcements.map((item) => {
+  return (
+    <div key={item.id} className="flex grid w-full rounded-3xl shadow-xl p-3 border-solid">
+      <div className="col-start-2 col-end-9">
+        <p className="ps-3 pl-3 pt-3 text-md">{item.Date}</p>
+        <p className="p-3 text-sm font-semibold break-all">
+          {item.Heading}
+        </p>
+      </div>
+      <div className="flex col-start-10 col-end-12 text-2xl">
+        <button className="inline-block align-middle">
+          <Link href={item.Link} className="text-darkblue">
+            <BsFillArrowRightSquareFill className="rounded-lg" />
+          </Link>
+        </button>
+      </div>
+    </div>
+  );
+})}
     </>
   );
 }

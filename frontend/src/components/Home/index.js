@@ -70,9 +70,10 @@ export default function Home() {
                     Achievements
                   </div>
                   <div className=" columns-1 md:columns-2">
-                    {data.data[0].attributes.Achievements.map((item) => (
-                      <Achievements props={item}></Achievements>
-                    ))}
+                   {data.data[0].attributes.Achievements.map((item) => (
+  <Achievements key={item.id} props={item}></Achievements>
+))}
+
                   </div>
                   <div id="Announcements">
                   <Announcements prop={data.data[0].attributes} ></Announcements>

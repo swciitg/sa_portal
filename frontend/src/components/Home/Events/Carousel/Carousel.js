@@ -60,10 +60,11 @@ console.log(prop.Event_Gallery)
         className="flex flex-col"
       >
         {prop.Event_Gallery.map((item) => (
-          <SwiperSlide>
-            <Card data={item} />
-          </SwiperSlide>
-        ))}
+  <SwiperSlide key={item.id}>
+    <Card data={item} />
+  </SwiperSlide>
+))}
+
       </Swiper>
 
       <div className="flex justify-center align-middle mt-3">

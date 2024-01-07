@@ -7,8 +7,9 @@ export default function Latest({ prop }) {
         </div>
         <div className="border-l-2 px-2 text-xs border-gray-400 ">
           {prop.Latest_Updates.map((item) => (
-            <div className="text-blue mb-2">{`${item.Text}`}</div>
-          ))}
+  <div key={item.id} className="text-blue mb-2">{`${item.Text}`}</div>
+))}
+
         </div>
       </div>
     </>

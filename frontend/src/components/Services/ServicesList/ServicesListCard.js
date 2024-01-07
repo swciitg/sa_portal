@@ -21,13 +21,13 @@ const ServicesListCard = (props) => {
         </div>
         {!dropDown && props.subHeader?
         <div className='mx-8 md:mx-12 text-sm mt-2 text-darkblue'>
-          {props.subHeader.map((subheader) => {
-            return <Link href={subheader.URL} className='my-2 md:my-3 flex items-center cursor-pointer'>
-                      <div className='mr-2 md:mr-3 capitalize font-normal tracking-wide'>{subheader.Sub_Header}</div>
-                      <BsChevronRight/>
-                  </Link>
-            })
-          }
+          {props.subHeader.map((subheader) => (
+  <Link key={subheader.id} href={subheader.URL} className='my-2 md:my-3 flex items-center cursor-pointer'>
+    <div className='mr-2 md:mr-3 capitalize font-normal tracking-wide'>{subheader.Sub_Header}</div>
+    <BsChevronRight/>
+  </Link>
+))}
+
         
         </div>
         :

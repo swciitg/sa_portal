@@ -65,28 +65,29 @@ const Form = () => {
                     index == activeTab ? "block" : "hidden"
                   } ${"flex flex-col gap-4 w-full"}`}
                 >
-                  {item.attributes.Forms.map((form) => {
-                    return (
-                      <div className=" flex shadow-md rounded-xl w-full bg-[#FCFCFD]   px-1 py-4 box-border font-medium sm:p-6">
-                        <div className="flex flex-col items-center justify-center px-2 box-border border-r-2 border-[#1e2532] w-40">
-                          <div className="text-xs sm:text-base text-[#2e2e2fbf]">
-                            {item.attributes.Name}
-                          </div>
-                          <div className="text-xs text-[#2e2e2fbf]">{form.Date}</div>
-                        </div>
-                        <div className="flex justify-between  w-full px-4 box-border items-center sm:pl-8">
-                          <div className="text-xs sm:text-lg">
-                            {form.Header}
-                          </div>
-                          <Link href={`https://intranet.iitg.ac.in/sa/api/rules/`+ `${form.URL}`}>
-                          <div className="bg-[#efefef]  rounded-xl text-xs sm:text-base  p-2 sm:px-6 py-2">
-                            PDF
-                          </div>
-                          </Link>
-                        </div>
-                      </div>
-                    );
-                  })}
+           {item.attributes.Forms.map((form) => {
+  return (
+    <div key={form.id} className="flex shadow-md rounded-xl w-full bg-[#FCFCFD] px-1 py-4 box-border font-medium sm:p-6">
+      <div className="flex flex-col items-center justify-center px-2 box-border border-r-2 border-[#1e2532] w-40">
+        <div className="text-xs sm:text-base text-[#2e2e2fbf]">
+          {item.attributes.Name}
+        </div>
+        <div className="text-xs text-[#2e2e2fbf]">{form.Date}</div>
+      </div>
+      <div className="flex justify-between w-full px-4 box-border items-center sm:pl-8">
+        <div className="text-xs sm:text-lg">
+          {form.Header}
+        </div>
+        <Link href={`https://intranet.iitg.ac.in/sa/api/rules/` + `${form.URL}`}>
+          <div className="bg-[#efefef] rounded-xl text-xs sm:text-base p-2 sm:px-6 py-2">
+            PDF
+          </div>
+        </Link>
+      </div>
+    </div>
+  );
+})}
+
                 </div>
               );
             })}

@@ -11,8 +11,8 @@ export default function FAQs({ prop }) {
         <p className="text-4xl  mt-4 font-semibold font-Manrope">FAQ</p>
 
         {prop.FAQs.map((item) => (
-          <FAQcard prop={item} />
-        ))}
+  <FAQcard key={item.id} prop={item} />
+))}
       </div>
     </>
   );

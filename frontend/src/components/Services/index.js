@@ -35,9 +35,13 @@ const Index = (props) => {
         <div className='min-h-[190px] md:ml-28 my-4 md:my-12'>
             {data.length
             ?
-            data.map((services) => {
-                return <ServicesListCard header={services.Header} subHeader={services.SubServices}/>
-            })
+            data.map((services) => (
+  <ServicesListCard
+    key={services.id}
+    header={services.Header}
+    subHeader={services.SubServices}
+  />
+))
         :
         ""
         }

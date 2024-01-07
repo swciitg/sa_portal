@@ -69,10 +69,11 @@ console.log(prop)
         onSwiper={(swiper) => console.log(swiper)}
       >
         {prop.Image_Gallery.map((item) => (
-          <SwiperSlide>
-            <ImageCard data={item} />
-          </SwiperSlide>
-        ))}
+  <SwiperSlide key={item.id}>
+    <ImageCard data={item}/>
+  </SwiperSlide>
+))}
+
       </Swiper>
 
       <div className="flex justify-center align-middle mt-3">
