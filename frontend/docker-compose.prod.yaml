@@ -8,4 +8,4 @@ services:
     build:
         context: .
     ports:
-      - "3028:3000"
+      - "3026:3000"
