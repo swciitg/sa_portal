@@ -1,7 +1,7 @@
 import Card from './Card'
 import { useState,useEffect } from 'react'
 
-const teams = () => {
+const Teams = () => {
         const [prop, setProp] = useState("");
 
     const getItem = async () => {
@@ -57,4 +57,4 @@ const teams = () => {
     
 }
 
-export default teams
+export default Teams

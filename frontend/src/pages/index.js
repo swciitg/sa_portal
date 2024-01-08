@@ -4,7 +4,7 @@ import Navbar from "@/components/Navbar/Navbar";
 import Footer from "@/components/Footer/Footer.js";
 import Home from "@/components/Home";
 
-const home = () => {
+const Root = () => {
  
 
   return (
@@ -23,4 +23,4 @@ const home = () => {
   );
 };
 
-export default home;
+export default Root;
