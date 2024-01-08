@@ -76,7 +76,7 @@ const HomePage = () => {
                     <div   className={`${isOpen ? 'hidden' : 'flex'
                             } flex-col justify-start`} >
                 <div className=" font-medium text-xl md:text-2xl tracking-wider leading-8 mt-8 mx-4 text-center text-white">INDIAN INSTITUTE OF TECHNOLOGY GUWAHATI</div>
-                <div className=" font-semibold  text-2xl md:text-3xl tracking-tight leading-6 mt-4 text-center pt-2 text-white">STUDENTS' AFFAIRS</div>
+              <div className=' font-semibold  text-2xl md:text-3xl tracking-tight leading-6 mt-4 text-center pt-2 text-white'>STUDENTS&apos; AFFAIRS</div>
                 </div>
             </div>
         </header>
