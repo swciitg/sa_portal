@@ -1,10 +1,10 @@
 # path: ./docker-compose.yml
-version: '3'
+version: '3.2'
 services:
   strapi:
     container_name: SA_portal_backend_strapi
     build: .
-    image: strapi:latest
+    image: sa_portal_strapi_image
     restart: unless-stopped
     env_file: .env
     environment:
@@ -28,32 +28,12 @@ services:
     extra_hosts:
       - "host.docker.internal:host-gateway"
     ports:
-      - '1337:1337'
+      - '1338:1337'
     networks:
       - strapi
-    # depends_on:
-    #   - strapiDB
-
-  # strapiDB:
-  #   container_name: sportsBoard_strapiDB
-  #   restart: unless-stopped
-  #   env_file: .env
-  #   image: postgres:12.0-alpine
-  #   environment:
-  #     POSTGRES_USER: ${DATABASE_USERNAME}
-  #     POSTGRES_PASSWORD: ${DATABASE_PASSWORD}
-  #     POSTGRES_DB: ${DATABASE_NAME}
-  #   volumes:
-  #     - strapi-data:/var/lib/postgresql/data/ #using a volume
-  #     #- ./data:/var/lib/postgresql/data/ # if you want to use a bind folder
-
-  #   ports:
-  #     - '5432:5432'
-  #   networks:
-  #     - strapi
 
 volumes:
-  strapi-data:
+  SAPortal_strapi-data:
 
 networks:
   strapi:
