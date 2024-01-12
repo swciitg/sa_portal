@@ -11,7 +11,7 @@ const Form = () => {
   const [data, setData] = useState(null);
 
   const getItem = async () => {
-    const response = await fetch(`https://swc.iitg.ac.in/saPortal/api/forms?populate=deep`, {
+    const response = await fetch(`https://swc.iitg.ac.in/sa_portal_backend/api/forms?populate=deep`, {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',

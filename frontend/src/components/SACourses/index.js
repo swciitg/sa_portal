@@ -6,7 +6,7 @@ const Index = () => {
   const [data, setData] = useState("");
 
   const getItem = async () => {
-    const response = await fetch(`https://swc.iitg.ac.in/saPortal/api/courses?populate=deep`, {
+    const response = await fetch(`https://swc.iitg.ac.in/sa_portal_backend/api/courses?populate=deep`, {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
@@ -32,7 +32,7 @@ const Index = () => {
           data
           ?
           data.attributes.SA_course.map((entry,key) => {
-            return <SACard key={key} title={entry.Title} id={entry.Number}  url={"https://swc.iitg.ac.in/saPortal" + entry.Image.data[0].attributes.url}/>
+            return <SACard key={key} title={entry.Title} id={entry.Number}  url={"https://swc.iitg.ac.in/sa_portal_backend" + entry.Image.data[0].attributes.url}/>
           })
           :
           ""

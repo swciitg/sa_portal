@@ -5,7 +5,7 @@ const Teams = () => {
         const [prop, setProp] = useState("");
 
     const getItem = async () => {
-      const response = await fetch(`https://swc.iitg.ac.in/saPortal/api/teams?populate=deep`, {
+      const response = await fetch(`https://swc.iitg.ac.in/sa_portal_backend/api/teams?populate=deep`, {
           method: 'GET',
           headers: {
               'Content-Type': 'application/json',

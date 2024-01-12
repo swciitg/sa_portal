@@ -18,7 +18,7 @@ const ImageCard = ({ data }) => {
     <div className="p-8">
       <div
         style={{
-          backgroundImage: `url(https://swc.iitg.ac.in/saPortal/${data.Image.data.attributes.url})`,
+          backgroundImage: `url(https://swc.iitg.ac.in/sa_portal_backend/${data.Image.data.attributes.url})`,
         }}
         className="hover:scale-110 ease-in duration-300 h-96 mx-auto text-center rounded-[40px]  shadow-3xl bg-cover"
       ></div>

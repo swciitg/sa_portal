@@ -21,8 +21,8 @@ const Card = ({data}) => {
         <div 
         style={{ 
         backgroundImage: `url(${data.Image.data[0] ? 
-            `https://swc.iitg.ac.in/saPortal/${data.Image.data[0].attributes.url}` : 
-            'https://swc.iitg.ac.in/saPortal/' + 
+            `https://swc.iitg.ac.in/sa_portal_backend/${data.Image.data[0].attributes.url}` : 
+            'https://swc.iitg.ac.in/sa_portal_backend/' + 
             (data.Image.data && data.Image.data.attributes ? 
                 data.Image.data.attributes.url : '')})` 
     }}  

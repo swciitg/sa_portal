@@ -38,9 +38,9 @@ const Carousel = ({ props }) => {
           return (
             <SplideSlide key={prop.id}>
               <Card
-                image={'https://swc.iitg.ac.in/saPortal' + prop.Image.data[0].attributes.url}
+                image={'https://swc.iitg.ac.in/sa_portal_backend' + prop.Image.data[0].attributes.url}
                 title={prop.Title}
-                icon={'https://swc.iitg.ac.in/saPortal' + prop.Icon.data[0].attributes.url}
+                icon={'https://swc.iitg.ac.in/sa_portal_backend' + prop.Icon.data[0].attributes.url}
                 description={prop.description}
                 link={prop.Link}
               />

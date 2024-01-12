@@ -25,7 +25,7 @@ export default function Card ({prop}) {
         <>
             <div className="rounded overflow-hidden shadow-lg max-w-sm">
                 <Image
-                src={`https://swc.iitg.ac.in/saPortal${prop.Profile_Photo.data.attributes.formats.medium.url}`}
+                src={`https://swc.iitg.ac.in/sa_portal_backend${prop.Profile_Photo.data.attributes.formats.medium.url}`}
                 alt="image"
                 className="w-full"
                 width = "300"

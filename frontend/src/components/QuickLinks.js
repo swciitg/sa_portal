@@ -12,7 +12,7 @@ function QuickLinks({ prop }) {
     href={link.Link}
     className="w-36 sm:w-40 h-32 bg-lightgray p-2 border-solid rounded-xl shadow-xl flex flex-col items-center justify-center mb-7 mr-4"
   >
-    <Image src={`https://swc.iitg.ac.in/saPortal${link.Icon.data.attributes.url}`} width={link.Icon.data.attributes.width} height={link.Icon.data.attributes.height} />
+    <Image src={`https://swc.iitg.ac.in/sa_portal_backend${link.Icon.data.attributes.url}`} width={link.Icon.data.attributes.width} height={link.Icon.data.attributes.height} />
     <span className="text-skyblue text-lg mt-2">{link.Label}</span>
   </Link>
 ))}

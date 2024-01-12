@@ -8,7 +8,7 @@ const Index = (props) => {
   const [data, setData] = useState("");
 
   const getItem = async () => {
-    const response = await fetch(`https://swc.iitg.ac.in/saPortal/api/services?populate=deep`, {
+    const response = await fetch(`https://swc.iitg.ac.in/sa_portal_backendl_backend/api/services?populate=deep`, {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
