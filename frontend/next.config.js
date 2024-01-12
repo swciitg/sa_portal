@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  basePath: '/saportalnew',
+  basePath: '/saportal',
   reactStrictMode: true
 };
 
