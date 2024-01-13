@@ -1,7 +1,7 @@
 # path: ./docker-compose.yml
-version: '3.2'
+version: '3.3'
 services:
-  strapi:
+  sa_portal_strapi:
     container_name: SA_portal_backend_strapi
     build: .
     image: sa_portal_strapi_image

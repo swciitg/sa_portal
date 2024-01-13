@@ -2,13 +2,13 @@ const path = require('path');
 
 module.exports = ({ env }) => ({
   connection: {
-    client: 'postgres',
+    client: env.array('DATABASE_CLIENT'),
     connection: {
-      host: 'host.docker.internal',
-      port: 5432,
-      database: 'sports_board',
-      user: 'sports_board_user',
-      password: 'KHU4VUOZuRiwLyv',
+      host: env.array('DATABASE_HOST'),
+      port: env.array('DATABASE_PORT'),
+      database: env.array('DATABASE_NAME'),
+      user: env.array('DATABASE_USERNAME'),
+      password: env.array('DATABASE_PASSWORD'),
       schema: 'public', // Not required
       ssl:  false,
     },
