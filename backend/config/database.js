@@ -10,14 +10,9 @@ module.exports = ({ env }) => ({
       user: env('DATABASE_USERNAME'),
       password: env('DATABASE_PASSWORD'),
       schema: 'public', // Not required
-      ssl: {
-        rejectUnauthorized: env.bool('DATABASE_SSL_SELF', false), // For self-signed certificates
-      },
+      ssl: false, // Not required
     },
     useNullAsDefault: true,
     acquireConnectionTimeout: env.int('DATABASE_CONNECTION_TIMEOUT', 60000),
-    options: {
-      ssl: env.bool('DATABASE_SSL', false),
-    },
   },
 });
