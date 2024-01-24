@@ -1,5 +1,5 @@
 # path: ./docker-compose.yml
-version: '3.3'
+version: '3.8'
 services:
   sa_portal_strapi:
     container_name: SA_portal_backend_strapi
@@ -30,11 +30,11 @@ services:
     ports:
       - '1338:1337'
     networks:
-      - strapi
+      - strapi_sa_portal
 
 volumes:
   SAPortal_strapi-data:
 
 networks:
-  strapi:
+  strapi_sa_portal:
     driver: bridge
