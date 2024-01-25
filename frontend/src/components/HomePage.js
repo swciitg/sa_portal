@@ -70,7 +70,7 @@ const HomePage = () => {
             </div>
             {/* Common view in both things starts from here */}
             <div className={`flex flex-col justify-center items-center transition duration-700  ${isOpen ? 'h-[20vh]': 'h-[65vh]'} `}>
-                <div><Image src="/Images/IITG_logo.png"
+                <div><Image src="/images/IITG_logo.png"
                     width={120}
                     height={120} alt="Icon not found" /></div>
                     <div   className={`${isOpen ? 'hidden' : 'flex'
