@@ -39,7 +39,7 @@ const Card = ({data}) => {
                     </div>
                     <Link href={data.Redirect_url}>
                         <Image
-                            src = "/icons/RightArrow.png"
+                            src = "icons/RightArrow.png"
                             width={2}
                             height={2}
                             className="flex w-4 h-4"

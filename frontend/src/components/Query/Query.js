@@ -10,7 +10,7 @@ const Query = () => {
         onClick={() => setPopup(!popup)}
       >
         <Image
-          src="/icons/Query.svg"
+          src="icons/Query.svg"
           width={20}
           height={20}
           // className="w-4/5 h-4/5"

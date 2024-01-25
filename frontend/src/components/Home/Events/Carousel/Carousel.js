@@ -70,7 +70,7 @@ console.log(prop.Event_Gallery)
       <div className="flex justify-center align-middle mt-3">
         <div className="flex p-2 rounded-full">
           <Image
-            src="/icons/left.svg"
+            src="icons/left.svg"
             width={1}
             height={1}
             className="flex w-8 h-8 button-prev-slide"
@@ -78,7 +78,7 @@ console.log(prop.Event_Gallery)
         </div>
         <div className="flex p-2 rounded-full">
           <Image
-            src="/icons/right.svg"
+            src="icons/right.svg"
             width={1}
             height={1}
             className="flex w-8 h-8 button-next-slide"
