@@ -16,7 +16,7 @@ const Navbar = () => {
           <div className="w-full flex items-center justify-evenly transition ease-in delay-150">
             {/* Mobile Hamburger Icon */}
             <Image
-              src="/icons/hamburger.svg"
+              src="/saportal/icons/hamburger.svg"
               width={32}
               height={32}
               className="md:hidden"
@@ -148,7 +148,7 @@ const Navbar = () => {
             </div>
             <div>
               <Image
-                src="/icons/Search.svg"
+                src="/saportal/icons/Search.svg"
                 width={24}
                 height={24}
                 onClick={() => {
@@ -164,7 +164,7 @@ const Navbar = () => {
           <div className="absolute top-0 w-screen h-screen flex flex-col bg-[#1E2532] items-center p-2">
             <div className="flex w-screen justify-end p-2">
               <Image
-                src="/icons/cross.png"
+                src="/saportal/icons/cross.png"
                 width={32}
                 height={32}
                 className="w-[7vw] h-[7vw]"

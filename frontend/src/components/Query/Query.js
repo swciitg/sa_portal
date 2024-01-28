@@ -10,7 +10,7 @@ const Query = () => {
         onClick={() => setPopup(!popup)}
       >
         <Image
-          src="/icons\Query.svg"
+          src="/saportal/icons\Query.svg"
           width={20}
           height={20}
           // className="w-4/5 h-4/5"
@@ -86,7 +86,7 @@ const Query = () => {
           >
             <div>Submit</div>
             <Image
-              src="icon/arrow.svg"
+              src="/saportal/icon/arrow.svg"
               width={6}
               height={6}
               className="ml-2"
