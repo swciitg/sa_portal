@@ -57,13 +57,13 @@ const Footer = () => {
             Get Connected
             <div className="flex flex-row mt-1">
               <Image
-                src="public\icons/Twitter.svg"
+                src="/icons/Twitter.svg"
                 width={1}
                 height={1}
                 className="flex lg:w-7 lg:h-7 md:w-6 md:h-6 w-7 h-7  md:mr-5 mr-3 "
               />
               <Image
-                src="public\icons/Linkedin.svg"
+                src="/icons/Linkedin.svg"
                 width={1}
                 height={1}
                 className="flex lg:w-7 lg:h-7 md:w-6 md:h-6 h-7 w-7 md:p-0.5 p-1"
@@ -96,7 +96,7 @@ const Footer = () => {
       <div className="flex flex-row bg-[#101323] h-16 items-center">
         <div className="flex lg:ml-20 md:ml-16 ml-10">
           <Image
-            src="public\icons/SWC_Logo.svg"
+            src="/icons/SWC_Logo.svg"
             width={1}
             height={1}
             className="flex md:h-6 md:w-6 h-5 w-5"
