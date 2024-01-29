@@ -29,7 +29,7 @@ const Index = () => {
   return (
     <div className={manrope.className}>
         <Content id={data.id} content={data?data.attributes.About:""}/>
-        <div className='pl-[10%] pr-[15%] py-12'>
+        <div className='pl-[4%] md:pl-[10%] pr-[8%] md:pr-[15%] py-12'>
         {
           data
           ?
