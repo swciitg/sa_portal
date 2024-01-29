@@ -17,7 +17,7 @@ const Card = ({data}) => {
    
 
     return (
-        <div className="p-12">
+        <div className="">
         <div 
         style={{ 
         backgroundImage: `url(${data.Image.data[0] ? 
@@ -26,8 +26,8 @@ const Card = ({data}) => {
             (data.Image.data && data.Image.data.attributes ? 
                 data.Image.data.attributes.url : '')})` 
     }}  
-        className="hover:scale-110 ease-in duration-300 h-96 mx-auto text-center rounded-[40px] shadow-3xl overflow-hidden">
-            <div className='flex h-64'>
+        className="hover:scale-105 ease-in duration-300 h-80   mx-auto text-center rounded-[40px] shadow-3xl overflow-hidden bg-no-repeat object-cover bg-cover">
+            <div className='flex h-56'>
 
             </div>
             <div className='flex-col h-32 pt-5 pb-5 px-2 md:px-12 bg-[#182133C2] bg-opacity-1000'>
