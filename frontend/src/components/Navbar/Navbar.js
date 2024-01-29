@@ -3,7 +3,7 @@ import Image from "next/image";
 import { Manrope } from "next/font/google";
 import { useRouter } from "next/router";
 import { useState } from "react";
-import Query from "../Query/Query";
+// import Query from "../Query/Query";
 const manrope = Manrope({ subsets: ["latin"], weight: ["500"] });
 const Navbar = () => {
   const router = useRouter();
@@ -128,34 +128,33 @@ const Navbar = () => {
                   <div className="h-1 "></div>
                 )}
               </Link>
-              <div className="text-white">
+              {/* <div className="text-white">
                 |<div className="h-1"></div>
-              </div>
+              </div> */}
             </div>
             {/* Search Section */}
             <div
-              className={
-                search ? "flex justify-end w-10/12 items-center " : "hidden"
-              }
+              
+              
             >
-              <input
+              {/* <input
                 type="text"
                 name=""
                 id=""
                 placeholder="Search"
                 className="bg-[#1E2532] outline-none border-b-2 w-2/5 min-w-[128px] max-w-[256px]"
-              />
+              /> */}
             </div>
             <div>
-              <Image
+              {/* <Image
                 src="/saportal/icons/Search.svg"
                 width={24}
                 height={24}
                 onClick={() => {
                   setSearch(!search);
                 }}
-              ></Image>
-              <div className="h-1"></div>
+              ></Image> */}
+              {/* <div className="h-1"></div> */}
             </div>
           </div>
         </div>
@@ -187,7 +186,7 @@ const Navbar = () => {
         ) : (
           <></>
         )}
-        <Query />
+        {/* <Query /> */}
       </div>
     </div>
   );

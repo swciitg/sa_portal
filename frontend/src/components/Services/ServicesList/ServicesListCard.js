@@ -7,7 +7,7 @@ const ServicesListCard = (props) => {
   
 
   return (
-    <div className="rounded-lg md:rounded-xl w-3/4 py-4 md:py-5 my-6 md:my-8 mx-auto font-Manrope md:ml-0" style={{"box-shadow" : "rgba(0, 0, 0, 0.24) 0px 3px 8px","backgroundColor":"rgba(252, 252, 253, 1)"}}>
+    <div className="rounded-lg md:rounded-xl w-3/4 py-4 md:py-5 my-6 md:my-8 mx-auto  md:ml-0" style={{"box-shadow" : "rgba(0, 0, 0, 0.24) 0px 3px 8px","backgroundColor":"rgba(252, 252, 253, 1)"}}>
         <div className='flex justify-between items-center mx-8 md:mx-12 font-semibold tracking-wide text-[16px]'>
             <div>{props.header}</div>
             <div className='cursor-pointer p-2' onClick={()=>{setDropDown(!dropDown)}}>

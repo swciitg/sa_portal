@@ -1,6 +1,7 @@
 import Card from './Card'
 import { useState,useEffect } from 'react'
-
+import { Manrope } from "next/font/google";
+const manrope = Manrope({ subsets: ["latin"], weight: ["600", "400"] });
 const Teams = () => {
         const [prop, setProp] = useState("");
 

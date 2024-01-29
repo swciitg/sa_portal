@@ -18,7 +18,7 @@ const Boardcard = (props) => {
 
                     {/* name and role  */}
                     <div className='absolute md:bg-black/[0.3] py-1 lg:py-2 px-4 lg:px-6 bottom-0 w-full flex flex-col leading-0 lg:rounded-bl-xl'>
-                        <div className=' text-white font-Manrope text-[19px] md:text-[22px] md:text-md font-[500] text-start pl-2'>
+                        <div className=' text-white text-[19px] md:text-[22px] md:text-md font-[500] text-start pl-2'>
                             {props.name}
                         </div>
                         <div className=' text-white font-raleway text-[11px] md:text-[13px] font-small text-start pl-2 pb-1 uppercase'>
@@ -29,7 +29,7 @@ const Boardcard = (props) => {
                 {/* left part ends */}
 
                 {/* Right part starts */}
-                <div className='bg-blue flex flex-col pt-2 pb-10 md:pb-2 px-6 md:px-4 lg:px-6 md:min-h-[420px] w-92 px-auto relative lg:flex-[4] rounded-b-2xl lg:rounded-bl-none lg:rounded-r-xl font-Manrope'>
+                <div className='bg-blue flex flex-col pt-2 pb-10 md:pb-2 px-6 md:px-4 lg:px-6 md:min-h-[420px] w-92 px-auto relative lg:flex-[4] rounded-b-2xl lg:rounded-bl-none lg:rounded-r-xl'>
 
                     {/* board name */}
                     <div className='text-white pt-4 pb-2 text-[32px] leading-9 md:text-[45px] font-semibold text-start'>
@@ -42,7 +42,7 @@ const Boardcard = (props) => {
                     </div>
                     <div className={styles.hoverButton}>
                         <Link href={props.link} className='absolute right-6 md:right-auto text-md bottom-4 lg:bottom-6 bg-white/[0.9] font-medium px-2 lg:px-5 py-1 flex justify-end md:justify-between items-center rounded-xl'>
-                            <div className='text-sm md:text-lg px-1 font-Manrope'>Link</div>
+                            <div className='text-sm md:text-lg px-1 '>Link</div>
                             <div className='text-sm md:text-lg'>
                                 <BsChevronRight className={styles.bsChevronRight}/> 
                             </div>

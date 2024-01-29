@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import RulesListCard from "./RulesCard/RulesListCard";
-
+import { Manrope } from "next/font/google";
+const manrope = Manrope({ subsets: ["latin"], weight: ["600", "400","500"] });
 
 const RulesList = () => {
   const [data, setData] = useState([]);
@@ -27,7 +28,7 @@ const RulesList = () => {
   };
   return (
     <div className="my-4">
-      <div className='min-h-[274px] font-Manrope'>
+      <div className={`min-h-[274px] ${manrope.className} `}>
         <div className="flex flex-col w-full gap-8 items-center py-2">
           <div className="flex flex-wrap w-[80%] gap-6 text-xs py-2">
             {
@@ -39,7 +40,7 @@ const RulesList = () => {
                   key={item.attributes.Name}
                   className={`${
                     index == activeTab ? "bg-[#1e2532] text-white" : "bg-white"
-                  } ${"p-2 flex items-center justify-center w-24 shadow-lg rounded-xl box-border"}`}
+                  } ${"sm:p-2 p-3 font font-medium  w-32 text-xs sm:text-sm flex items-center justify-center  shadow-lg rounded-xl box-border"}`}
                   onClick={() => handletabchange(index)}
                 >
                   {item.attributes.Name}

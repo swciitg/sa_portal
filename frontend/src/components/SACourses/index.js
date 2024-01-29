@@ -2,6 +2,8 @@ import React ,{useEffect,useState} from 'react';
 import About from './About/about';
 import SACard from './Card/SACard';
 import Carousel from "@/components/Home/Events/Carousel/Carousel";
+import { Manrope } from "next/font/google";
+const manrope = Manrope({ subsets: ["latin"], weight: ["600", "400","700"] });
 const Index = () => {
   const [data, setData] = useState("");
 
@@ -25,7 +27,7 @@ const Index = () => {
     
 
   return (
-    <div className='font-Manrope'>
+    <div className={manrope.className}>
         { <About id={data.id} content={data?data.attributes.About:""}/> }
         <div className='pl-[10%] pr-[15%] py-12'>
         {

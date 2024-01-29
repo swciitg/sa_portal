@@ -48,7 +48,7 @@ const Form = () => {
                   key={item.attributes.Name}
                   className={`${
                     index == activeTab ? "bg-[#1e2532] text-white" : "bg-white"
-                  } ${"sm:p-2 p-3 font font-medium font-Manrope w-32 text-sm sm:text-base flex items-center justify-center  shadow-lg rounded-xl box-border"}`}
+                  } ${"sm:p-2 p-3 font font-medium  w-32 text-xs sm:text-sm flex items-center justify-center  shadow-lg rounded-xl box-border"}`}
                   onClick={() => handletabchange(index)}
                 >
                   {item.attributes.Name}
@@ -72,14 +72,14 @@ const Form = () => {
         <div className="text-xs sm:text-base text-[#2e2e2fbf]">
           {item.attributes.Name}
         </div>
-        <div className="text-xs text-[#2e2e2fbf]">{form.Date}</div>
+        <div className="text-xs sm:text-base text-[#2e2e2fbf]">{form.Date}</div>
       </div>
       <div className="flex justify-between w-full px-4 box-border items-center sm:pl-8">
-        <div className="text-xs sm:text-lg">
+        <div className="text-xs sm:text-base">
           {form.Header}
         </div>
         <Link href={`https://intranet.iitg.ac.in/sa/api/rules/` + `${form.URL}`}>
-          <div className="bg-[#efefef] rounded-xl text-xs sm:text-base p-2 sm:px-6 py-2">
+          <div className="bg-[#efefef] rounded-xl text-xs sm:text-base p-2 px-4 sm:px-6 py-2">
             PDF
           </div>
         </Link>

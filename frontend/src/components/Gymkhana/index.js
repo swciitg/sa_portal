@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import GymkhanaCard from './BoardCard3/BoardCard3.js'
 import Content from './BoardCard3/content.js'
+import { Manrope } from "next/font/google";
+const manrope = Manrope({ subsets: ["latin"], weight: ["600", "400","700"] });
 
 const Index = () => {
   const [data, setData] = useState("");
@@ -25,7 +27,7 @@ const Index = () => {
     
 
   return (
-    <div>
+    <div className={manrope.className}>
         <Content id={data.id} content={data?data.attributes.About:""}/>
         <div className='pl-[10%] pr-[15%] py-12'>
         {
