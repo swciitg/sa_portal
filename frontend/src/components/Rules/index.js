@@ -40,10 +40,10 @@ const RulesList = () => {
                   key={item.attributes.Name}
                   className={`${
                     index == activeTab ? "bg-[#1e2532] text-white" : "bg-white"
-                  } ${"sm:p-2 p-3 font font-medium  w-32 text-xs sm:text-sm flex items-center justify-center  shadow-lg rounded-xl box-border"}`}
+                  } ${"sm:py-2 py-3 px-[3%] font font-medium  text-xs sm:text-sm flex items-center justify-center  shadow-lg rounded-xl box-border"}`}
                   onClick={() => handletabchange(index)}
                 >
-                  {item.attributes.Name}
+                  {item.attributes.Name} 
                 </button>
               );
               })

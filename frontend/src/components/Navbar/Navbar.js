@@ -160,7 +160,7 @@ const Navbar = () => {
         </div>
         {/* Mobile Responsive View */}
         {hamburger ? (
-          <div className="absolute top-0 w-screen h-screen flex flex-col bg-[#1E2532] items-center p-2">
+          <div className="absolute top-0 w-screen h-screen flex flex-col bg-[#1E2532] items-center p-2 z-10">
             <div className="flex w-screen justify-end p-2">
               <Image
                 src="/saportal/icons/cross.png"

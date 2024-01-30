@@ -6,7 +6,7 @@ const About = (props) => {
         <div className='text-3xl leading-10 py-6 md:py-8  font-bold  text-[#231F20]'>
             SA Course
         </div>
-        <div className='text-[18px] font-[400]  tracking-[0.6%] md:tracking-wide leading-[40px]'>
+        <div className='text-[16px] font-[400]  tracking-[0.6%] md:tracking-wide leading-7'>
         {props.content}
         </div>
     </div>

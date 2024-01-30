@@ -28,14 +28,14 @@ const Index = () => {
   return (
     <div className={manrope.className}>
         { <About id={data.id} content={data?data.attributes.About:""}/> }
-       <div className='text-3xl leading-10 py-6 md:py-8 mx-[15%]  font-bold text-[#231F20]'>
+       <div className=' mx-[15%]    text-3xl  py-6 md:py-8 font-bold text-[#231F20]'>
             Technical 
         </div>
 
         {data && data.attributes.Technical_Events && (
   <EventCarousel props={data.attributes.Technical_Events} />
 )}
-  <div className='text-3xl leading-10 py-6 md:py-8 mx-[15%]  font-bold  text-[#231F20]'>
+  <div className='text-3xl  py-6 md:py-8 mx-[15%]  font-bold  text-[#231F20] '>
             Cultural 
         </div>
 

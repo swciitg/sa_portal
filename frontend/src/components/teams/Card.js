@@ -1,7 +1,9 @@
 import Image from "next/image"
 import {MdOutlineContentCopy} from 'react-icons/md'
 import {BsCheck2} from 'react-icons/bs'
-import {  useState } from "react"
+import {  useState } from "react";
+import { Manrope } from "next/font/google";
+const manrope = Manrope({ subsets: ["latin"], weight: ["600", "400","500","700","800","200"] });
 
 export default function Card ({prop}) {
 
@@ -23,22 +25,22 @@ export default function Card ({prop}) {
 
     return (
         <>
-            <div className="rounded overflow-hidden shadow-lg max-w-sm">
+            <div className={`rounded overflow-hidden shadow-lg max-w-sm ${manrope.className}`}>
                 <Image
                 src={`https://swc.iitg.ac.in/sa_portal_backend${prop.Profile_Photo.data.attributes.formats.medium.url}`}
-                alt="image"
                 className="w-full"
-                width = "300"
-                height="200"
+                alt="image"
+                width = "100"
+                height="50"
                 ></Image>
                 <div className="px-6-py-4">
-                    <p className="font-bold text-2xl px-4 py-2">{prop.name}</p>
-                    <p className="text-xl-mb-2 text-gray-400 px-4 py-2">{prop.Designation}</p>
+                    <p className="font-semibold text-2xl px-2 pt-2 ">{prop.Name}</p>
+                    <p className="text-xl-mb-2 text-gray-400 pt-1 pb-0.5 text-[#0000008f]  px-2 font-semibold">{prop.Designation}</p>
                 </div>
-                <div className=" pb-2 px-4 min-h-[3em] " >
+                <div className=" pb-2 px-2 min-h-[3em] " >
                     {prop.Issues.map((button)=>{
                         return (
-                            <button key={button.id} style={{backgroundColor:"rgb(167 139 250)"}} className="hover:cursor-pointer rounded-full px-3 py-0.5 text-xs font-base mx-0.5 mb-px">{button.Value}</button>
+                            <button key={button.id} style={{backgroundColor:"rgb(167 139 250)"}} className="hover:cursor-pointer rounded-full px-2 py-0.5 text-xs font-base mx-0.5 mb-px">{button.Value}</button>
                         )
                     })}
                     
@@ -46,12 +48,12 @@ export default function Card ({prop}) {
                 <hr className="solid text-gray-500 my-1 " />
                 <div>   
                     <div className="flex" >
-                        <span className="text-gray-400 px-4 " >{prop.Email}</span>
-                        <span className="hover:cursor-pointer" onClick={clickHandler} >{icon}</span>
+                        <span className="text-[#0000008f] px-4 " >{prop.Email}</span>
+                        <span className="hover:cursor-pointer text-[#0000008f]" onClick={clickHandler} >{icon}</span>
                     </div>                    
                     <div className="flex" >
-                        <span className="text-gray-400 px-4 " >{`+91 ${prop.Phone_Number}`}</span>
-                        <span className="hover:cursor-pointer" onClick={clickHandler2} >{icon2}</span>
+                        <span className="text-[#0000008f] px-4 " >{`+91 ${prop.Phone_Number}`}</span>
+                        <span className="hover:cursor-pointer text-[#0000008f]" onClick={clickHandler2} >{icon2}</span>
                     </div>
                 </div>
             </div>
