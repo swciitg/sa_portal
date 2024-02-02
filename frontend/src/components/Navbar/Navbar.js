@@ -15,8 +15,22 @@ const Navbar = () => {
         <div className="drop-shadow-lg rounded-full bg-[#1E2532] w-[83vw] flex flex-col items-center justify-evenly  p-4 pr-4 pl-4">
           <div className="w-full flex items-center justify-evenly transition ease-in delay-150">
             {/* Mobile Hamburger Icon */}
+            <div className="flex flex-row ">
+              <div className="flex-1 pr-[3%] w-10 h-7 ">
             <Image
               src="/saportal/icons/hamburger.svg"
+              width={36}
+              height={36}
+              className="md:hidden"
+              onClick={() => {
+                setHamburger(!hamburger);
+              }}
+            />
+         </div>
+            <div className="md:hidden flex flex-row justify-between flex-3 md:w-0 w-64 ">
+               <div className="w-10 h-7">
+                <Image
+              src="/saportal/images/IITG_logo.png"
               width={32}
               height={32}
               className="md:hidden"
@@ -24,13 +38,18 @@ const Navbar = () => {
                 setHamburger(!hamburger);
               }}
             />
-            <div
+              </div>
+              <div className="text-white text-xl pr-[2%]">IITG</div>
+             
+            </div>
+            </div>
+            {/* <div
               className={
                 search
                   ? "hidden"
                   : "flex items-center w-10/12 justify-start md:hidden "
               }
-            ></div>
+            ></div> */}
             <div
               className={
                 search

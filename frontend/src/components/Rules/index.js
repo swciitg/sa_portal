@@ -16,6 +16,7 @@ const RulesList = () => {
     
     const json = await response.json();
     setData(json.data);
+    console.log(json.data[0].attributes.Rules[0]);
   }
 
   useEffect(()=>{
@@ -64,7 +65,7 @@ const RulesList = () => {
                 >
                   {item.attributes.Rules.map((form,key) => {
                     return (
-                      <RulesListCard key={key} num={key+1} header={form.Header} link={form.URL}/>
+                      <RulesListCard key={key} num={key+1} header={form.Header} link={form.URL} wordlink={form.WordURL}/>
                     );
                   })}
                 </div>

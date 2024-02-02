@@ -39,9 +39,9 @@ export default function Home() {
               <div className="w-[83vw]">
                 <div className="flex justify-between items-center  gap-[20vw]  md:pt-12">
                   <div className="flex flex-col">
-                    <div className=" text-3xl  font-semibold">
+                    <div className=" text-4xl  font-semibold">
                       Welcome To The <br />
-                      Students Affairs Board
+                      Students' Affairs
                     </div>
                     <div className="text-sm md:text-md pt-6 text-[16px] font-[400]  tracking-[0.6%] md:tracking-wide leading-7">
                       {data.data[0].attributes.About}

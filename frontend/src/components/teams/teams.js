@@ -25,12 +25,12 @@ const Teams = () => {
     if (prop.data && prop.data.length > 0 && prop.data[0].attributes && prop.data[0].attributes.Team_Members && prop.data[0].attributes.Team_Members.length > 0) {
         return (
             <>
-                <div className={`flex-col sm:flex-row justify-between mx-[10%] mt-[2%] ${manrope.className} `} >
+                <div className={`flex flex-wrap w-[80%] gap-6 text-xs py-2 ${manrope.className} mx-[8%] `} >
                     {prop.data.map((button) => {
     return (
         <button
             key={button.id} 
-            className=" mx-[2%] hover:bg-[#1E2532] hover:text-white  sm:p-2 p-3 font font-medium  text-xs sm:text-sm flex items-center justify-center  shadow-lg rounded-xl box-border"
+            className=" hover:bg-[#1E2532] hover:text-white  sm:py-2 py-3 px-[3%] font font-medium  text-xs sm:text-sm flex items-center justify-center  shadow-lg rounded-xl box-border"
             onClick={() => { setOpt(`${button.id}`) }}
         >
             {`${button.attributes.Name}`}
@@ -40,7 +40,7 @@ const Teams = () => {
 
                 </div>
                 
-                <div className={`mx-[5%] gap-x-5 grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 flex p-4 ${manrope.className}`} >
+                <div className={`mx-[7%] my-[5%] gap-x-8 grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 flex p-4 ${manrope.className}`} >
                    {prop.data[opt - 1].attributes.Team_Members.map((item) => {
     return (
         <div key={item.id} className="mt-[5%]">

@@ -5,8 +5,9 @@
     background: linear-gradient(0deg, rgba(1, 0, 12, 0.27), rgba(1, 0, 12, 0.27)), url('../../public/images/BackgroundImageHome.png');
     opacity: 0.8;
     border-radius: 0px 0px 105px 105px;
-    background-size: 100% 100%;
+    background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
     font-family: 'Manrope' sans-serif;
 }
 
