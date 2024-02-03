@@ -3,7 +3,7 @@ import Image from "next/image";
 import { Manrope } from "next/font/google";
 import { useRouter } from "next/router";
 import { useState } from "react";
-import Query from "../Query/Query";
+// import Query from "../Query/Query";
 const manrope = Manrope({ subsets: ["latin"], weight: ["500"] });
 const Navbar = () => {
   const router = useRouter();
@@ -15,8 +15,22 @@ const Navbar = () => {
         <div className="drop-shadow-lg rounded-full bg-[#1E2532] w-[83vw] flex flex-col items-center justify-evenly  p-4 pr-4 pl-4">
           <div className="w-full flex items-center justify-evenly transition ease-in delay-150">
             {/* Mobile Hamburger Icon */}
+            <div className="flex flex-row ">
+              <div className="flex-1 pr-[3%] w-10 h-7 ">
             <Image
               src="/saportal/icons/hamburger.svg"
+              width={36}
+              height={36}
+              className="md:hidden"
+              onClick={() => {
+                setHamburger(!hamburger);
+              }}
+            />
+         </div>
+            <div className="md:hidden flex flex-row justify-between flex-3 md:w-0 w-64 ">
+               <div className="w-10 h-7">
+                <Image
+              src="/saportal/images/IITG_logo.png"
               width={32}
               height={32}
               className="md:hidden"
@@ -24,13 +38,18 @@ const Navbar = () => {
                 setHamburger(!hamburger);
               }}
             />
-            <div
+              </div>
+              <div className="text-white text-xl pr-[2%]">IITG</div>
+             
+            </div>
+            </div>
+            {/* <div
               className={
                 search
                   ? "hidden"
                   : "flex items-center w-10/12 justify-start md:hidden "
               }
-            ></div>
+            ></div> */}
             <div
               className={
                 search
@@ -57,6 +76,17 @@ const Navbar = () => {
               >
                 Gymkhana
                 {router.pathname == "/gymkhana" ? (
+                  <div className="h-1 bg-white w-4 rounded-full"></div>
+                ) : (
+                  <div className="h-1"></div>
+                )}
+              </Link>
+                 <Link
+                href="/sac"
+                className="flex flex-col text-white hover:text-[#afb5d9]"
+              >
+                SAC
+                {router.pathname == "/sac" ? (
                   <div className="h-1 bg-white w-4 rounded-full"></div>
                 ) : (
                   <div className="h-1"></div>
@@ -128,40 +158,39 @@ const Navbar = () => {
                   <div className="h-1 "></div>
                 )}
               </Link>
-              <div className="text-white">
+              {/* <div className="text-white">
                 |<div className="h-1"></div>
-              </div>
+              </div> */}
             </div>
             {/* Search Section */}
             <div
-              className={
-                search ? "flex justify-end w-10/12 items-center " : "hidden"
-              }
+              
+              
             >
-              <input
+              {/* <input
                 type="text"
                 name=""
                 id=""
                 placeholder="Search"
                 className="bg-[#1E2532] outline-none border-b-2 w-2/5 min-w-[128px] max-w-[256px]"
-              />
+              /> */}
             </div>
             <div>
-              <Image
+              {/* <Image
                 src="/saportal/icons/Search.svg"
                 width={24}
                 height={24}
                 onClick={() => {
                   setSearch(!search);
                 }}
-              ></Image>
-              <div className="h-1"></div>
+              ></Image> */}
+              {/* <div className="h-1"></div> */}
             </div>
           </div>
         </div>
         {/* Mobile Responsive View */}
         {hamburger ? (
-          <div className="absolute top-0 w-screen h-screen flex flex-col bg-[#1E2532] items-center p-2">
+          <div className="absolute top-0 w-screen h-screen flex flex-col bg-[#1E2532] items-center p-2 z-10">
             <div className="flex w-screen justify-end p-2">
               <Image
                 src="/saportal/icons/cross.png"
@@ -176,6 +205,7 @@ const Navbar = () => {
             <div className="flex flex-col items-center justify-evenly h-4/5 text-white">
               <Link href="/">Home</Link>
               <Link href="/gymkhana">Gymkhana</Link>
+               <Link href="/sac">SAC</Link>
               <Link href="/services">Services</Link>
               <Link href="/rules">Rules</Link>
               <Link href="/forms">Forms</Link>
@@ -187,7 +217,7 @@ const Navbar = () => {
         ) : (
           <></>
         )}
-        <Query />
+        {/* <Query /> */}
       </div>
     </div>
   );

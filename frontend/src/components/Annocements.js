@@ -14,11 +14,11 @@ export default function Announcement({ prop }) {
   return (
     <>
       <div
-        className=" w-full flex  mr-10 mt-5"
+        className=" w-full flex flex-wrap  mr-10 mt-5 py-4 md:py-8 "
         style={{ justifyContent: "space-between" }}
       >
         <p className="text-3xl text-darkblue font-semibold">Announcements</p>
-        <Menu as="div" className="relative inline-block text-left">
+        {/* <Menu as="div" className="relative inline-block text-left mt-2 sm:mt-0">
           <div>
             <Menu.Button className="inline-flex border-none w-full justify-center gap-x-1.5 rounded-md bg-gray-200 px-3 py-2 text-sm font-semibold text-gray-500 shadow-sm   hover:bg-gray-50">
               {opt}
@@ -77,18 +77,18 @@ export default function Announcement({ prop }) {
                       Old
                     </button>
                   )}
-                </Menu.Item>
-              </div>
+                </Menu.Item> */}
+              {/* </div>
             </Menu.Items>
           </Transition>
-        </Menu>
+        </Menu> */}
       </div>
      {prop.Announcements.map((item) => {
   return (
-    <div key={item.id} className="flex grid w-full rounded-3xl shadow-xl p-3 border-solid">
+    <div key={item.id} className="flex justify-between items-center w-full rounded-3xl shadow-xl px-8 py-3 border-solid"   style={{"box-shadow" : "rgba(0, 0, 0, 0.24) 0px 3px 8px","backgroundColor":"rgba(252, 252, 253, 1)"}}>
       <div className="col-start-2 col-end-9">
-        <p className="ps-3 pl-3 pt-3 text-md">{item.Date}</p>
-        <p className="p-3 text-sm font-semibold break-all">
+        <p className="pl-3 pt-3 text-md tracking-wide">{item.Date.substr(0,10)}</p>
+        <p className="px-3 py-2 text-md font-semibold break-all tracking-wide">
           {item.Heading}
         </p>
       </div>

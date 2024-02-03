@@ -2,9 +2,8 @@ import Link from 'next/link';
 import React, { useState } from 'react'
 import { BsChevronDown ,  BsChevronUp ,BsChevronRight } from 'react-icons/bs'
 
-const ServicesListCard = (props) => {
+const SACListCard = (props) => {
   const [dropDown,setDropDown] = useState(true);
-  
 
   return (
     <div className="rounded-lg md:rounded-xl w-3/4 py-4 md:py-5 my-6 md:my-8 mx-auto  md:ml-0" style={{"box-shadow" : "rgba(0, 0, 0, 0.24) 0px 3px 8px","backgroundColor":"rgba(252, 252, 253, 1)"}}>
@@ -23,7 +22,7 @@ const ServicesListCard = (props) => {
         <div className='mx-8 md:mx-12 text-sm mt-2 text-darkblue'>
           {props.subHeader.map((subheader) => (
   <Link key={subheader.id} href={subheader.URL} className='my-2 md:my-3 flex items-center cursor-pointer'>
-    <div className='mr-2 md:mr-3 capitalize font-normal tracking-wide'>{subheader.Sub_Header}</div>
+    <div className='mr-2 md:mr-3 capitalize font-normal tracking-wide'>{subheader.Sub_header}</div>
     <BsChevronRight/>
   </Link>
 ))}
@@ -36,4 +35,4 @@ const ServicesListCard = (props) => {
   )
 }
 
-export default ServicesListCard
+export default SACListCard
