@@ -38,7 +38,7 @@ export default function Card ({prop}) {
                     <p className="font-semibold text-2xl px-2 pt-2 ">{prop.Name}</p>
                     <p className="text-xl-mb-2 text-gray-400 pt-1 pb-0.5 text-[#0000008f]  px-2 font-semibold">{prop.Designation}</p>
                 </div>
-                <div className=" pb-2 px-2 min-h-[3em] " >
+                <div className=" pb-2 px-2 h-[2em] overflow-auto " >
                     {prop.Issues.map((button)=>{
                         return (
                             <button key={button.id} style={{backgroundColor:"rgb(167 139 250)"}} className="hover:cursor-pointer rounded-full px-2 py-0.5 text-xs font-base mx-0.5 mb-px">{button.Value}</button>

@@ -81,6 +81,17 @@ const Navbar = () => {
                   <div className="h-1"></div>
                 )}
               </Link>
+                 <Link
+                href="/sac"
+                className="flex flex-col text-white hover:text-[#afb5d9]"
+              >
+                SAC
+                {router.pathname == "/sac" ? (
+                  <div className="h-1 bg-white w-4 rounded-full"></div>
+                ) : (
+                  <div className="h-1"></div>
+                )}
+              </Link>
               <Link
                 href="/services"
                 className="flex flex-col text-white hover:text-[#afb5d9]"
@@ -194,6 +205,7 @@ const Navbar = () => {
             <div className="flex flex-col items-center justify-evenly h-4/5 text-white">
               <Link href="/">Home</Link>
               <Link href="/gymkhana">Gymkhana</Link>
+               <Link href="/sac">SAC</Link>
               <Link href="/services">Services</Link>
               <Link href="/rules">Rules</Link>
               <Link href="/forms">Forms</Link>

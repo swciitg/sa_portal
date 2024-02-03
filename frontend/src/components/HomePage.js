@@ -18,15 +18,16 @@ const HomePage = () => {
         <header className={`font-Manrope body-font h-screen ${styles.back} ${styles.blur} `}>
             <div className="container md:mx-auto flex flex-wrap p-5 flex-col md:flex-row md:items-center md:justify-center">
                      {/* Large Screen View */}
-                     <nav className="hidden md:mr-auto md:ml-auto md:flex flex-wrap items-center justify-center font-medium text-lg text-[#FFFFFF] leading-10 transition-all duration-150">
-                        <Link href="/" className="mr-5 lg:mr-20 duration-200  hover:text-[#2596BE]">Home</Link>
-                        <Link href="/gymkhana" className="mr-5 lg:mr-20 duration-200  hover:text-[#2596BE]">Gymkhana</Link>
-                        <Link href="/services" className="mr-5 lg:mr-20 duration-200  hover:text-[#2596BE]">Services</Link>
-                        <Link href="/rules" className="mr-5 lg:mr-20 duration-200  hover:text-[#2596BE]">Rules</Link>
-                        <Link href="/forms" className="mr-5 lg:mr-20 duration-200  hover:text-[#2596BE]">Forms</Link>
-                        <Link href="/sacourses" className="mr-5 lg:mr-20 duration-200  hover:text-[#2596BE]">SA Courses</Link>
-                        <Link href="/events" className="mr-5 lg:mr-20 duration-200  hover:text-[#2596BE]">Events</Link>
-                        <Link href="/team" className="mr-5 lg:mr-20 duration-200  hover:text-[#2596BE]">Team</Link>
+                     <nav className="hidden md:mr-auto md:ml-auto md:flex flex-wrap items-center justify-center font-medium text-lg text-[#FFFFFF] leading-10 transition-all duration-150 w-[90%]">
+                        <Link href="/" className="mr-5 lg:mr-[5%] duration-200  hover:text-[#2596BE]">Home</Link>
+                        <Link href="/gymkhana" className="mr-5 lg:mr-[5%] duration-200  hover:text-[#2596BE]">Gymkhana</Link>
+                        <Link href="/sac" className="mr-5 lg:mr-[5%] duration-200  hover:text-[#2596BE]">SAC</Link>
+                        <Link href="/services" className="mr-5 lg:mr-[5%] duration-200  hover:text-[#2596BE]">Services</Link>
+                        <Link href="/rules" className="mr-5 lg:mr-[5%] duration-200  hover:text-[#2596BE]">Rules</Link>
+                        <Link href="/forms" className="mr-5 lg:mr-[5%] duration-200  hover:text-[#2596BE]">Forms</Link>
+                        <Link href="/sacourses" className="mr-5 lg:mr-[5%] duration-200  hover:text-[#2596BE]">SA Courses</Link>
+                        <Link href="/events" className="mr-5 lg:mr-[5%] duration-200  hover:text-[#2596BE]">Events</Link>
+                        <Link href="/team" className="mr-5 lg:mr-[5%] duration-200  hover:text-[#2596BE]">Team</Link>
                         {/* <div className={`justify-center flex`}>
                             <form>
                                 <label className={`${styles.searchbutton} cursor-pointer`} htmlFor="searchright"><span className={`${styles.mglass} text-2xl p-4 `}>&#9906;</span>
@@ -59,6 +60,7 @@ const HomePage = () => {
                     >
                     <Link href="/" className=" lg:mr-16 duration-200  hover:text-[#2596BE]">Home</Link>
                     <Link href="/gymkhana" className="mr-5 lg:mr-16 duration-200  hover:text-[#2596BE]">Gymkhana</Link>
+                     <Link href="/sac" className="mr-5 lg:mr-16 duration-200  hover:text-[#2596BE]">SAC</Link>
                     <Link href="/services" className="mr-5 lg:mr-16 duration-200  hover:text-[#2596BE]">Services</Link>
                     <Link href="/rules" className="mr-5 lg:mr-16 duration-200  hover:text-[#2596BE]">Rules</Link>
                     <Link href="/forms" className="mr-5 lg:mr-16 duration-200  hover:text-[#2596BE]">Forms</Link>

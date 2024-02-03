@@ -18,7 +18,7 @@ export default function Announcement({ prop }) {
         style={{ justifyContent: "space-between" }}
       >
         <p className="text-3xl text-darkblue font-semibold">Announcements</p>
-        <Menu as="div" className="relative inline-block text-left mt-2 sm:mt-0">
+        {/* <Menu as="div" className="relative inline-block text-left mt-2 sm:mt-0">
           <div>
             <Menu.Button className="inline-flex border-none w-full justify-center gap-x-1.5 rounded-md bg-gray-200 px-3 py-2 text-sm font-semibold text-gray-500 shadow-sm   hover:bg-gray-50">
               {opt}
@@ -77,11 +77,11 @@ export default function Announcement({ prop }) {
                       Old
                     </button>
                   )}
-                </Menu.Item>
-              </div>
+                </Menu.Item> */}
+              {/* </div>
             </Menu.Items>
           </Transition>
-        </Menu>
+        </Menu> */}
       </div>
      {prop.Announcements.map((item) => {
   return (

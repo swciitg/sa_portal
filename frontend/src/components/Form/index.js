@@ -22,7 +22,7 @@ const Form = () => {
     
     setData(json.data);
     console.log(data);
-    // console.log(json.data[0].attributes.SA_course[0].Image.data[0].attributes.url,"hello");
+    console.log(json.data[0].attributes.Forms[0].URL,"hello");
   }
 
   useEffect(()=>{
@@ -78,11 +78,18 @@ const Form = () => {
         <div className="text-xs sm:text-base">
           {form.Header}
         </div>
+        <div className="flex flex-wrap justify-between w-24 md:w-40 lg:w-64 gap-y-2 ml-[2%]">
         <Link href={`https://intranet.iitg.ac.in/sa/api/rules/` + `${form.URL}`}>
           <div className="bg-[#efefef] rounded-xl text-xs sm:text-base p-2 px-4 sm:px-6 py-2">
             PDF
           </div>
         </Link>
+        <Link href={`https://intranet.iitg.ac.in/sa/api/rules/` + `${form.WordURL}`}>
+          <div className="bg-[#efefef] rounded-xl text-xs sm:text-base p-2 px-4 sm:px-6 py-2">
+            Word
+          </div>
+        </Link>
+        </div>
       </div>
     </div>
   );

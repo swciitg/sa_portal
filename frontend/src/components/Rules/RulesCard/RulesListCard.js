@@ -12,12 +12,12 @@ const RulesListCard = (props) => {
      
         <div className=' text-xs sm:text-base  font-medium w-[80%] px-[2%]'>{props.header}</div>
         <div className='flex flex-wrap gap-y-3 md:gap-x-3 w-16 lg:w-48'>  
-        <div className="bg-[#efefef] rounded-xl text-xs sm:text-base p-2 px-4 sm:px-6 py-2 ">
+        <div className="bg-[#efefef] rounded-xl text-xs sm:text-base p-2  px-4 sm:px-6 py-2 ">
           <Link href={`https://intranet.iitg.ac.in/sa/api/rules/`+ `${props.link}`}>
             PDF
             </Link>
           </div>
-           <div className="bg-[#efefef] rounded-xl text-xs sm:text-base p-2 px-4 sm:px-6 py-2">
+           <div className="bg-[#efefef] rounded-xl text-xs sm:text-base p-2  px-4 sm:px-6 py-2">
           <Link href={`https://intranet.iitg.ac.in/sa/api/rules/`+ `${props.wordlink}`}>
            Word
             </Link>
