@@ -28,7 +28,7 @@ export default function Card ({prop}) {
             <div className={`rounded overflow-hidden shadow-lg  ${manrope.className}`}>
                 <Image
                 src={`https://swc.iitg.ac.in/sa_portal_backend${prop.Profile_Photo.data.attributes.formats.medium.url}`}
-                className="h-48 w-full"
+                className="h-48 w-full object-cover"
                 alt="image"
                 width={300}
                 height={50}
@@ -38,7 +38,7 @@ export default function Card ({prop}) {
                     <p className="font-semibold text-2xl px-2 pt-2 ">{prop.Name}</p>
                     <p className="text-xl-mb-2 text-gray-400 pt-1 pb-0.5 text-[#0000008f]  px-2 font-semibold">{prop.Designation}</p>
                 </div>
-                <div className=" pb-2 px-2 h-[2em] overflow-auto " >
+                <div className=" pb-2 px-2 h-[2.5em] overflow-auto " >
                     {prop.Issues.map((button)=>{
                         return (
                             <button key={button.id} style={{backgroundColor:"rgb(167 139 250)"}} className="hover:cursor-pointer rounded-full px-2 py-0.5 text-xs font-base mx-0.5 mb-px">{button.Value}</button>

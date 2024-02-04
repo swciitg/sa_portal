@@ -29,6 +29,10 @@ export default function Home() {
   useEffect(()=>{
     getItem();
   },[])
+  const achievements = data?.data[0]?.attributes?.Achievements || [];
+  const totalItems = achievements.length;
+  const itemsPerColumn = Math.ceil(totalItems / 2);
+
 
   return (
     <>
@@ -69,16 +73,19 @@ export default function Home() {
                 <div id="Announcements" className="md:my-8 w-full md:w-2/3 md:mb-12 mb-20">
                   <Announcements prop={data.data[0].attributes} ></Announcements>
                   </div>
-                <div className="flex flex-col w-full md:w-2/3">
+                <div className="flex flex-col w-full md:w-[70%]">
                   <div className="text-3xl font-semibold mb-8" id="Achievements">
                     Achievements
                   </div>
-                  <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
-                   {data.data[0].attributes.Achievements.map((item) => (
-  <Achievements key={item.id} props={item}></Achievements>
-))}
-
-                  </div>
+                  <div className="flex flex-wrap justify-between">
+  {[...Array(2)].map((_, columnIndex) => (
+    <div key={columnIndex} className="flex flex-col">
+      {achievements.slice(columnIndex * itemsPerColumn, (columnIndex + 1) * itemsPerColumn).map((item) => (
+        <Achievements key={item.id} props={item}></Achievements>
+      ))}
+    </div>
+  ))}
+</div>
                   
                   <FAQ prop={data.data[0].attributes}></FAQ>
                 </div>

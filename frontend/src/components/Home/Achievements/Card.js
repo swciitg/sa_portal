@@ -29,12 +29,12 @@ const Card = ({ props }) => {
       </div>
 
       {/* detail of card */}
-      <div className={`text-start text-xs md:text-sm text-greyblue font-catamaran overflow-hidden ${expanded ? 'h-8' : ''}`}>
+      <div className={`text-start text-xs md:text-sm text-greyblue font-catamaran overflow-hidden ${expanded ? 'h-10' : ''}`}>
         {props.Paragraph}
       </div>
 
       {/* read more link */}
-      {props.Paragraph.split(" ").length > 40 && (
+      {props.Paragraph.split(" ").length > 15 && (
         <div onClick={toggleReadMore} className="flex justify-end items-center gap-2 pt-2 cursor-pointer">
           <div className="font-mono text-sm text-darkblue font-medium pb-0.5">
             {expanded ? 'Read more' : 'Read less'}

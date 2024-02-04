@@ -27,7 +27,7 @@ const Navbar = () => {
               }}
             />
          </div>
-            <div className="md:hidden flex flex-row justify-between flex-3 md:w-0 w-64 ">
+            <div className="md:hidden flex flex-row justify-between flex-3 md:w-0 max-[350px]:w-48 w-64">
                <div className="w-10 h-7">
                 <Image
               src="/saportal/images/IITG_logo.png"
