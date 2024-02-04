@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_sac_sacs",
+  "info": {
+    "displayName": "SAC",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Header": {
+      "type": "string"
+    },
+    "SubSections": {
+      "displayName": "SubSections",
+      "type": "component",
+      "repeatable": true,
+      "component": "section.sub-sections"
+    }
+  }
+}

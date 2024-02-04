@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "sacs",
+  "info": {
+    "singularName": "sac",
+    "pluralName": "sacs",
+    "displayName": "SAC",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "SAC": {
+      "displayName": "SAC",
+      "type": "component",
+      "repeatable": true,
+      "component": "sac.sac"
+    }
+  }
+}
