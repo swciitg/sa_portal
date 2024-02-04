@@ -10,7 +10,7 @@ export default function Announcement({ prop }) {
 
   return (
     <>
-      <div className="rounded-xl w-full   font-[Manrope] shadow-xl mt-4 mb-4 p-3 border-solid ">
+      <div className="rounded-xl w-full   font-[Manrope] shadow-xl mt-4 mb-4 p-3 py-5 border-solid  " style={{"box-shadow" : "rgba(0, 0, 0, 0.24) 0px 3px 8px","backgroundColor":"rgba(252, 252, 253, 1)"}}>
         <div className="flex grid justify-between ">
           <div className="col-start-1 col-end-2 p-2">
             <span className="inline-block allign-middle font-medium ">{`Q ${prop.id}`}</span>
