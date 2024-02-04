@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_section_sub_sections",
+  "info": {
+    "displayName": "SubSections"
+  },
+  "options": {},
+  "attributes": {
+    "Sub_header": {
+      "type": "text"
+    },
+    "URL": {
+      "type": "text"
+    }
+  }
+}
