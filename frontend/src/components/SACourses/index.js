@@ -2,8 +2,6 @@ import React ,{useEffect,useState} from 'react';
 import About from './About/about';
 import SACard from './Card/SACard';
 import Carousel from "@/components/Home/Events/Carousel/Carousel";
-import { Manrope } from "next/font/google";
-const manrope = Manrope({ subsets: ["latin"], weight: ["600", "400","700"] });
 const Index = () => {
   const [data, setData] = useState("");
 
@@ -27,7 +25,7 @@ const Index = () => {
     
 
   return (
-    <div className={manrope.className}>
+    <div className='font-Manrope'>
         { <About id={data.id} content={data?data.attributes.About:""}/> }
         <div className='pl-[10%] pr-[15%] py-12'>
         {
@@ -41,12 +39,14 @@ const Index = () => {
         }
             
         </div>
-         <div className={`py-5 bg-[#1E2532] mb-16 ${manrope.className}`}>
-          <div className='text-3xl  font-medium  pl-[8%] sm:pl-[8%]   text-[#f6f4f4]'>
+         <div className=' py-10  bg-[#1E2532]'>
+          <div className='text-3xl sm:text-4xl leading-10 py-6 md:py-8  font-medium pl-[10%] sm:pl-[10%]   text-[#f6f4f4]'>
             Events at IIT Guwahati
         </div>
         {data&&<Carousel prop={data.attributes}></Carousel>}
+  
         </div>
+
     </div>
   )
 }

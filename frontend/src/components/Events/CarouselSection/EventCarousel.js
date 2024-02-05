@@ -18,7 +18,6 @@ const Carousel = ({ props }) => {
 
   return (
     <>
-    <div className=' mx-[4%] sm:mx-[8%]'>
       <Splide
         options={{
           fixedWidth: 600,
@@ -28,8 +27,10 @@ const Carousel = ({ props }) => {
           lazyLoad: 'nearby',
           autowidth: true,
           autpheight: true,
-         
-          
+          padding: {
+            right: 10,
+            left: 15,
+          },
           isLoop: true,
         }}
       >
@@ -47,7 +48,6 @@ const Carousel = ({ props }) => {
           );
         })}
       </Splide>
-      </div>
     </>
   );
 };

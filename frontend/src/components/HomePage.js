@@ -16,30 +16,29 @@ const HomePage = () => {
     };
     return (
         <header className={`font-Manrope body-font h-screen ${styles.back} ${styles.blur} `}>
-            <div className="container md:mx-auto flex flex-wrap p-5 flex-col md:flex-row md:items-center md:justify-center">
+            <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center justify-center">
                      {/* Large Screen View */}
-                     <nav className="hidden md:mr-auto md:ml-auto md:flex flex-wrap items-center justify-center font-medium text-lg text-[#FFFFFF] leading-10 transition-all duration-150 w-[90%]">
-                        <Link href="/" className="mr-5 lg:mr-[5%] duration-200  hover:text-[#2596BE]">Home</Link>
-                        <Link href="/gymkhana" className="mr-5 lg:mr-[5%] duration-200  hover:text-[#2596BE]">Gymkhana</Link>
-                        <Link href="/sac" className="mr-5 lg:mr-[5%] duration-200  hover:text-[#2596BE]">SAC</Link>
-                        <Link href="/services" className="mr-5 lg:mr-[5%] duration-200  hover:text-[#2596BE]">Services</Link>
-                        <Link href="/rules" className="mr-5 lg:mr-[5%] duration-200  hover:text-[#2596BE]">Rules</Link>
-                        <Link href="/forms" className="mr-5 lg:mr-[5%] duration-200  hover:text-[#2596BE]">Forms</Link>
-                        <Link href="/sacourses" className="mr-5 lg:mr-[5%] duration-200  hover:text-[#2596BE]">SA Courses</Link>
-                        <Link href="/events" className="mr-5 lg:mr-[5%] duration-200  hover:text-[#2596BE]">Events</Link>
-                        <Link href="/team" className="mr-5 lg:mr-[5%] duration-200  hover:text-[#2596BE]">Team</Link>
-                        {/* <div className={`justify-center flex`}>
+                     <nav className="hidden md:mr-auto md:ml-auto md:flex flex-wrap items-center justify-center font-medium text-lg text-[#FFFFFF] leading-10 transition-all duration-150">
+                        <Link href="/" className="mr-5 lg:mr-16 duration-200  hover:text-[#2596BE]">Home</Link>
+                        <Link href="/gymkhana" className="mr-5 lg:mr-16 duration-200  hover:text-[#2596BE]">Gymkhana</Link>
+                        <Link href="/services" className="mr-5 lg:mr-16 duration-200  hover:text-[#2596BE]">Services</Link>
+                        <Link href="/rules" className="mr-5 lg:mr-16 duration-200  hover:text-[#2596BE]">Rules</Link>
+                        <Link href="/forms" className="mr-5 lg:mr-16 duration-200  hover:text-[#2596BE]">Forms</Link>
+                        <Link href="/sacourses" className="mr-5 lg:mr-16 duration-200  hover:text-[#2596BE]">SA Courses</Link>
+                        <Link href="/events" className="mr-5 lg:mr-16 duration-200  hover:text-[#2596BE]">Events</Link>
+                        <Link href="/team" className="mr-5 lg:mr-16 lg:pr-16 duration-200  hover:text-[#2596BE]  border-[#FFFFFF] border-r-0 lg:border-r-2">Team</Link>
+                        <div className={`justify-center flex`}>
                             <form>
                                 <label className={`${styles.searchbutton} cursor-pointer`} htmlFor="searchright"><span className={`${styles.mglass} text-2xl p-4 `}>&#9906;</span>
                                     <input className={`${styles.search} text-black  text-xl`} id="searchright" type="search" name="q" placeholder="Search" onKeyDown={handleKeyDown} />
                                 </label>
                             </form>
-                        </div> */}
+                        </div>
                 </nav>
                 {/* /Mobile View ---Hamburger Menu */}
-                <nav className="flex flex-col md:mr-auto md:ml-auto md:hidden flex-wrap items-start justify-start font-medium text-xl text-[#FFFFFF] leading-10 transition-all duration-150">
-                    <button className=" md:hidden" onClick={toggleMenu}>
-                        <svg viewBox="0 0 20 20" className={"w-6 h-6 fill-current "+ (isOpen?"text-blue-400":"text-red-800")}>
+                <nav className="flex md:mr-auto md:ml-auto md:hidden flex-wrap items-center justify-center font-medium text-xl text-[#FFFFFF] leading-10 transition-all duration-150">
+                    <button className="block md:hidden" onClick={toggleMenu}>
+                        <svg viewBox="0 0 20 20" className={"w-6 h-6 fill-current text-white "+ (isOpen?"text-blue":"text-purple")}>
                             <path
                                 fillRule="evenodd"
                                 d="M18 4H2a1 1 0 100 2h16a1 1 0 100-2zM18 9H2a1 1 0 100 2h16a1 1 0 100-2zM18 14H2a1 1 0 100 2h16a1 1 0 100-2z"
@@ -47,20 +46,19 @@ const HomePage = () => {
                             />
                         </svg>
                     </button>
-                    {/* <div className={`justify-center flex`}>
+                    <div className={`justify-center flex`}>
                         <form>
                             <label className={`${styles.searchbutton} cursor-pointer flex items-center`} htmlFor="searchright"><span className={`${styles.mglass} text-2xl p-4 `}>&#9906;</span>
                                 <input className={`${styles.search} text-black  text-xl`} id="searchright" type="search" name="q" placeholder="Search" onKeyDown={handleKeyDown} />
                             </label>
                         </form>
-                    </div> */}
+                    </div>
                     <div
-                        className={`${isOpen ? 'grid grid-cols-2 gap-2 text-lg mb-4 mx-auto' : 'hidden'
+                        className={`${isOpen ? 'grid grid-cols-2 gap-2 text-lg mb-4' : 'hidden'
                             } `}
                     >
                     <Link href="/" className=" lg:mr-16 duration-200  hover:text-[#2596BE]">Home</Link>
                     <Link href="/gymkhana" className="mr-5 lg:mr-16 duration-200  hover:text-[#2596BE]">Gymkhana</Link>
-                     <Link href="/sac" className="mr-5 lg:mr-16 duration-200  hover:text-[#2596BE]">SAC</Link>
                     <Link href="/services" className="mr-5 lg:mr-16 duration-200  hover:text-[#2596BE]">Services</Link>
                     <Link href="/rules" className="mr-5 lg:mr-16 duration-200  hover:text-[#2596BE]">Rules</Link>
                     <Link href="/forms" className="mr-5 lg:mr-16 duration-200  hover:text-[#2596BE]">Forms</Link>

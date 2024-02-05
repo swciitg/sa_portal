@@ -9,7 +9,6 @@ import Carousel from "@/components/Home/Events/Carousel/Carousel";
 import { Manrope } from "next/font/google";
 const manrope = Manrope({ subsets: ["latin"], weight: ["600", "400"] });
 
-
 export default function Home() {
   const [data, setData] = useState(null);
 
@@ -29,10 +28,6 @@ export default function Home() {
   useEffect(()=>{
     getItem();
   },[])
-  const achievements = data?.data[0]?.attributes?.Achievements || [];
-  const totalItems = achievements.length;
-  const itemsPerColumn = Math.ceil(totalItems / 2);
-
 
   return (
     <>
@@ -41,52 +36,48 @@ export default function Home() {
           <div className={manrope.className}>
             <div className="w-full flex flex-col justify-center items-center gap-4 p-6 ">
               <div className="w-[83vw]">
-                <div className="flex justify-between items-center  gap-[20vw]  md:pt-12">
+                <div className="flex  gap-[20vw]">
                   <div className="flex flex-col">
-                    <div className=" text-4xl  font-semibold">
+                    <div className="text-3xl font-semibold">
                       Welcome To The <br />
-                      Students' Affairs
+                      Students Affairs Board
                     </div>
-                    <div className="text-sm md:text-md pt-6 text-[16px] font-[400]  tracking-[0.6%] md:tracking-wide leading-7">
+                    <div className="text-sm pt-6">
                       {data.data[0].attributes.About}
                     </div>
                   </div>
-                  <div className=" hidden md:flex flex-col py-6 px-10 bg-[#FBFBFB] rounded-lg h-fit w-60 my-auto" style={{"box-shadow" : "rgba(0, 0, 0, 0.24) 0px 3px 8px","backgroundColor":"rgba(252, 252, 253, 1)"}}>
+                  <div className=" hidden md:flex flex-col p-8 bg-[#FBFBFB] rounded-lg h-fit w-60">
                     <div>
-                      <div className="text-gray font-semibold pb-1">Content</div>
+                      <div className="text-gray font-semibold">Content</div>
                     </div>
                     <div className="border-l-2 px-2 text-xs border-gray-400 ">
-                      <div className="py-0.5" ><a href="#QuickLinks">Quick Links</a></div>
-                      <div className="text-gray py-0.5"><a href="#Achievements">Achievement</a></div>
-                      <div className="text-gray py-0.5"><a href="#Announcements">Announcement</a></div>
+                      <div ><a href="#QuickLinks">Quick links</a></div>
+                      <div className="text-gray"><a href="#Achievements">Achievement</a></div>
+                      <div className="text-gray"><a href="#Announcements">Announcement</a></div>
                     </div>
                   </div>
                 </div>
               </div>
 
               <div className="w-[83vw]">
-                <div id="QuickLinks" className="my-8">
+                <div id="QuickLinks">
                 <QuickLinksAndLatestUpdates
                   prop={data.data[0].attributes}
                 ></QuickLinksAndLatestUpdates>
                 </div>
-                <div id="Announcements" className="md:my-8 w-full md:w-2/3 md:mb-12 mb-20">
-                  <Announcements prop={data.data[0].attributes} ></Announcements>
-                  </div>
-                <div className="flex flex-col w-full md:w-[70%]">
+                <div className="flex flex-col w-full md:w-2/3">
                   <div className="text-3xl font-semibold mb-8" id="Achievements">
                     Achievements
                   </div>
-                  <div className="flex flex-wrap justify-between">
-  {[...Array(2)].map((_, columnIndex) => (
-    <div key={columnIndex} className="flex flex-col">
-      {achievements.slice(columnIndex * itemsPerColumn, (columnIndex + 1) * itemsPerColumn).map((item) => (
-        <Achievements key={item.id} props={item}></Achievements>
-      ))}
-    </div>
-  ))}
-</div>
-                  
+                  <div className=" columns-1 md:columns-2">
+                   {data.data[0].attributes.Achievements.map((item) => (
+  <Achievements key={item.id} props={item}></Achievements>
+))}
+
+                  </div>
+                  <div id="Announcements">
+                  <Announcements prop={data.data[0].attributes} ></Announcements>
+                  </div>
                   <FAQ prop={data.data[0].attributes}></FAQ>
                 </div>
               </div>
@@ -94,11 +85,11 @@ export default function Home() {
             </div>
           </div>
           <ImageGallery prop={data.data[0].attributes}></ImageGallery>
-            <div className={`py-5 bg-[#1E2532] mb-16 ${manrope.className}`}>
-              <div className='text-3xl  font-medium  pl-[8%] sm:pl-[8%]   text-[#f6f4f4]'>
+            <div className=' py-10 bg-[#1E2532]'>
+              <div className='text-2xl sm:text-4xl leading-10 py-6 md:py-8  font-medium  pl-[8%] sm:pl-[10%]   text-[#f6f4f4]'>
             Upcoming Events at IIT Guwahati
         </div>
-          <Carousel prop={data.data[0].attributes} ></Carousel>
+          <Carousel prop={data.data[0].attributes}></Carousel>
           </div>
         </>
       )}

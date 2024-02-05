@@ -22,7 +22,7 @@ const Form = () => {
     
     setData(json.data);
     console.log(data);
-    console.log(json.data[0].attributes.Forms[0].URL,"hello");
+    // console.log(json.data[0].attributes.SA_course[0].Image.data[0].attributes.url,"hello");
   }
 
   useEffect(()=>{
@@ -48,10 +48,10 @@ const Form = () => {
                   key={item.attributes.Name}
                   className={`${
                     index == activeTab ? "bg-[#1e2532] text-white" : "bg-white"
-                  } ${"sm:py-2 py-3 px-[2%] font font-medium  text-xs sm:text-sm flex items-center justify-center  shadow-lg rounded-xl box-border"}`}
+                  } ${"sm:p-2 p-3 font font-medium font-Manrope w-32 text-sm sm:text-base flex items-center justify-center  shadow-lg rounded-xl box-border"}`}
                   onClick={() => handletabchange(index)}
                 >
-                  {item.attributes.Name} 
+                  {item.attributes.Name}
                 </button>
               );
             })}
@@ -72,24 +72,17 @@ const Form = () => {
         <div className="text-xs sm:text-base text-[#2e2e2fbf]">
           {item.attributes.Name}
         </div>
-        <div className="text-xs sm:text-base text-[#2e2e2fbf]">{form.Date}</div>
+        <div className="text-xs text-[#2e2e2fbf]">{form.Date}</div>
       </div>
       <div className="flex justify-between w-full px-4 box-border items-center sm:pl-8">
-        <div className="text-xs sm:text-base">
+        <div className="text-xs sm:text-lg">
           {form.Header}
         </div>
-        <div className="flex flex-wrap justify-between w-24 md:w-40 lg:w-64 gap-y-2 ml-[2%]">
         <Link href={`https://intranet.iitg.ac.in/sa/api/rules/` + `${form.URL}`}>
-          <div className="bg-[#efefef] rounded-xl text-xs sm:text-base p-2 px-4 sm:px-6 py-2">
+          <div className="bg-[#efefef] rounded-xl text-xs sm:text-base p-2 sm:px-6 py-2">
             PDF
           </div>
         </Link>
-        <Link href={`https://intranet.iitg.ac.in/sa/api/rules/` + `${form.WordURL}`}>
-          <div className="bg-[#efefef] rounded-xl text-xs sm:text-base p-2 px-4 sm:px-6 py-2">
-            Word
-          </div>
-        </Link>
-        </div>
       </div>
     </div>
   );

@@ -2,14 +2,13 @@ import Link from 'next/link';
 import React, { useEffect, useState } from 'react'
 import { BsChevronDown ,  BsChevronUp ,BsChevronRight } from 'react-icons/bs'
 import ServicesListCard from './ServicesList/ServicesListCard';
-import { Manrope } from "next/font/google";
-const manrope = Manrope({ subsets: ["latin"], weight: ["600", "400"] });
+
 const Index = (props) => {
   const [dropDown,setDropDown] = useState(true);
   const [data, setData] = useState("");
 
   const getItem = async () => {
-    const response = await fetch(`https://swc.iitg.ac.in/sa_portal_backend/api/services?populate=deep`, {
+    const response = await fetch(`https://swc.iitg.ac.in/sa_portal_backendl_backend/api/services?populate=deep`, {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
@@ -32,8 +31,8 @@ const Index = (props) => {
   
 
   return (
-    <div className={manrope.className}>
-        <div className='min-h-[190px] ml-0 md:ml-24 lg:ml-40 my-4 md:my-12'>
+    <div>
+        <div className='min-h-[190px] md:ml-28 my-4 md:my-12'>
             {data.length
             ?
             data.map((services) => (

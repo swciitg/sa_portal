@@ -1,16 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import { BsFillArrowRightSquareFill } from "react-icons/bs";
 import Link from "next/link";
 
 const Card = ({ props }) => {
-  const [expanded, setExpanded] = useState(true);
-
-  const toggleReadMore = () => {
-    setExpanded(!expanded);
-  };
-
   return (
-    <div className={`max-w-sm text-center rounded-2xl shadow-3xl p-6 md:p-7 mb-10 w-full font-[Manrope]  `}>
+    <div className="max-w-sm text-center rounded-2xl shadow-3xl p-6 md:p-7 mb-10 w-full font-[Manrope]">
       {/* image if there */}
       {props.Image.data ? (
         <img
@@ -29,22 +23,22 @@ const Card = ({ props }) => {
       </div>
 
       {/* detail of card */}
-      <div className={`text-start text-xs md:text-sm text-greyblue font-catamaran overflow-hidden ${expanded ? 'h-10' : ''}`}>
-        {props.Paragraph}
+      <div>
+        <div className="text-start text-xs md:text-sm text-greyblue font-catamaran">
+          {props.Paragraph}
+        </div>
       </div>
 
       {/* read more link */}
-      {props.Paragraph.split(" ").length > 15 && (
-        <div onClick={toggleReadMore} className="flex justify-end items-center gap-2 pt-2 cursor-pointer">
-          <div className="font-mono text-sm text-darkblue font-medium pb-0.5">
-            {expanded ? 'Read more' : 'Read less'}
-          </div>
-
-          <div>
-            <BsFillArrowRightSquareFill className="text-darkblue" />
-          </div>
+      <Link href="/" className="flex justify-end items-center gap-2 pt-2">
+        <div className="font-mono text-sm text-darkblue font-medium pb-0.5">
+          Read more
         </div>
-      )}
+
+        <div>
+          <BsFillArrowRightSquareFill className="text-darkblue " />
+        </div>
+      </Link>
     </div>
   );
 };

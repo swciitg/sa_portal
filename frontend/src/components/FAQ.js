@@ -8,10 +8,10 @@ export default function FAQs({ prop }) {
   return (
     <>
       <div className="flex flex-col w-full">
-        <p className="text-3xl md:mt-8 mt-12 font-semibold font-Manrope">FAQ</p>
+        <p className="text-4xl  mt-4 font-semibold font-Manrope">FAQ</p>
 
         {prop.FAQs.map((item) => (
-  <FAQcard key={item.id} prop={item}    />
+  <FAQcard key={item.id} prop={item} />
 ))}
       </div>
     </>
