@@ -21,13 +21,13 @@ export default function Card ({prop}) {
         setTimeout(() => {setIcon2(<MdOutlineContentCopy/>)},"3000")
     } 
 
-
+       console.log(prop.Profile_Photo.data.attributes.formats.thumbnail.url,"hhhh")
 
     return (
         <>
             <div className={`rounded overflow-hidden shadow-lg  ${manrope.className}`}>
                 <Image
-                src={`https://swc.iitg.ac.in/sa_portal_backend${prop.Profile_Photo.data.attributes.formats.medium.url}`}
+                src={`https://swc.iitg.ac.in/sa_portal_backend${prop.Profile_Photo.data.attributes.url}`}
                 className="h-48 w-full object-cover"
                 alt="image"
                 width={300}
