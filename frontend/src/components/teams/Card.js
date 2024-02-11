@@ -27,7 +27,7 @@ export default function Card ({prop}) {
         <>
             <div className={`rounded overflow-hidden shadow-lg  ${manrope.className}`}>
                 <Image
-                src={`https://swc.iitg.ac.in/sa_portal_backend${prop.Profile_Photo.data.attributes.url}`}
+                src={`${process.env.NEXT_PUBLIC_API_ENDPOINT}${prop.Profile_Photo.data.attributes.url}`}
                 className="h-48 w-full object-cover"
                 alt="image"
                 width={300}

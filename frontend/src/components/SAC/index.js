@@ -9,7 +9,7 @@ const Index = (props) => {
   const [data, setData] = useState("");
 
   const getItem = async () => {
-    const response = await fetch(`https://swc.iitg.ac.in/sa_portal_backend/api/sacs?populate=deep`, {
+    const response = await fetch(`${process.env.NEXT_PUBLIC_API_ENDPOINT}api/sacs?populate=deep`, {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',

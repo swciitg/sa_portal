@@ -10,7 +10,7 @@ const Teams = () => {
   const [opt, setOpt] = useState(1);
 
   const getItem = async () => {
-    const response = await fetch(`https://swc.iitg.ac.in/sa_portal_backend/api/teams?populate=deep`, {
+    const response = await fetch(`${process.env.NEXT_PUBLIC_API_ENDPOINT}/api/teams?populate=deep`, {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
