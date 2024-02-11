@@ -15,7 +15,7 @@ const Card = ({ props }) => {
       {props.Image.data ? (
         <img
           className="h-32 md:h-36 w-full mb-5 object-cover rounded-2xl"
-          src={`https://swc.iitg.ac.in/sa_portal_backend/${props.Image.data.attributes.url}`}
+          src={`${process.env.NEXT_PUBLIC_API_ENDPOINT}/${props.Image.data.attributes.url}`}
         />
       ) : (
         ""

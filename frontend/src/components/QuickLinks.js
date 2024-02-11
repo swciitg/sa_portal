@@ -15,7 +15,7 @@ function QuickLinks({ prop }) {
     style={{"box-shadow" : "rgba(0, 0, 0, 0.24) 0px 3px 8px","backgroundColor":"rgba(252, 252, 253, 1)"}}
   >
     <div className="w-24 h-24">
-    <Image src={`https://swc.iitg.ac.in/sa_portal_backend${link.Icon.data.attributes.url}`}  style={{ objectFit: 'cover' }} width={1000} height={1000} className="rounded-md object-cover w-32 h-24" />
+    <Image src={`${process.env.NEXT_PUBLIC_API_ENDPOINT}${link.Icon.data.attributes.url}`}  style={{ objectFit: 'cover' }} width={1000} height={1000} className="rounded-md object-cover w-32 h-24" />
     </div>
     <span className="text-skyblue text-sm font-semibold mt-1">{link.Label}</span>
   </Link>
