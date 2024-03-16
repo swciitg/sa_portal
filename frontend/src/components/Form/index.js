@@ -3,6 +3,7 @@ import Navbar from "../Navbar/Navbar";
 import { Manrope } from "next/font/google";
 import Image from "next/image";
 import Link from "next/link";
+import { BsDownload } from "react-icons/bs";
 
 const manrope = Manrope({ subsets: ["latin"], weight: ["600", "500"] });
 
@@ -22,7 +23,7 @@ const Form = () => {
     
     setData(json.data);
     console.log(data);
-    console.log(json.data[0].attributes.Forms[0].URL,"hello");
+    console.log(json.data[0].attributes.Forms[0].URL.data.attributes.url,"hellodd");
   }
 
   useEffect(()=>{
@@ -79,12 +80,12 @@ const Form = () => {
           {form.Header}
         </div>
         <div className="flex flex-wrap justify-between w-24 md:w-40 lg:w-64 gap-y-2 ml-[2%]">
-        <Link href={`https://intranet.iitg.ac.in/sa/api/rules/` + `${form.URL}`}>
+        <Link href={`${process.env.NEXT_PUBLIC_API_ENDPOINT}${form?.URL?.data?.attributes?.url}`}>
           <div className="bg-[#efefef] rounded-xl text-xs sm:text-base p-2 px-4 sm:px-6 py-2">
             PDF
           </div>
         </Link>
-        <Link href={`https://intranet.iitg.ac.in/sa/api/rules/` + `${form.WordURL}`}>
+        <Link href={`${process.env.NEXT_PUBLIC_API_ENDPOINT}${form?.WordURL?.data?.attributes?.url}`} download={true}>
           <div className="bg-[#efefef] rounded-xl text-xs sm:text-base p-2 px-4 sm:px-6 py-2">
             Word
           </div>

@@ -4,7 +4,7 @@ import { BsChevronDown ,  BsChevronUp ,BsChevronRight } from 'react-icons/bs'
 
 const RulesListCard = (props) => {
   const [dropDown,setDropDown] = useState(true);
-
+  console.log(props.link?.data[0].attributes.url,"hellod");
   return (
     <div className="w-full rounded-lg md:rounded-xl shadow-lg py-0 my-2 font-Manrope flex" style={{"box-shadow" : "rgba(0, 0, 0, 0.25)"}}>
       <div className='w-24 md:w-28 flex justify-center items-center border-r-2 py-auto text-xs sm:text-base font-medium' style={{"border-color" : "#D9D9D9"}}>{props.num}</div>
@@ -13,12 +13,12 @@ const RulesListCard = (props) => {
         <div className=' text-xs sm:text-base  font-medium w-[80%] px-[2%]'>{props.header}</div>
         <div className='flex flex-wrap gap-y-3 md:gap-x-3 w-16 lg:w-48'>  
         <div className="bg-[#efefef] rounded-xl text-xs sm:text-base p-2  px-4 sm:px-6 py-2 ">
-          <Link href={`https://intranet.iitg.ac.in/sa/api/rules/`+ `${props.link}`}>
+          <Link href={`${process.env.NEXT_PUBLIC_API_ENDPOINT}`+ `${props.link?.data[0]?.attributes?.url}`}>
             PDF
             </Link>
           </div>
            <div className="bg-[#efefef] rounded-xl text-xs sm:text-base p-2  px-4 sm:px-6 py-2">
-          <Link href={`https://intranet.iitg.ac.in/sa/api/rules/`+ `${props.wordlink}`}>
+          <Link href={`${process.env.NEXT_PUBLIC_API_ENDPOINT}`+ `${props.wordlink?.data[0]?.attributes?.url}`}>
            Word
             </Link>
           </div>

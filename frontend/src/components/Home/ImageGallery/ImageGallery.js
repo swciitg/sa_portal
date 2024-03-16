@@ -27,6 +27,7 @@ console.log(prop)
           nextEl: ".button-next-slide",
           prevEl: ".button-prev-slide",
         }}
+        loop={true}
         breakpoints={{
           320: {
             slidesPerView: 1,

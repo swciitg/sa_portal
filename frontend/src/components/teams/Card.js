@@ -26,14 +26,16 @@ export default function Card ({prop}) {
     return (
         <>
             <div className={`rounded overflow-hidden shadow-lg  ${manrope.className}`}>
+                <div className="bg-gray-200 rounded-md">
                 <Image
                 src={`${process.env.NEXT_PUBLIC_API_ENDPOINT}${prop.Profile_Photo.data.attributes.url}`}
-                className="h-48 w-full object-cover"
+                className="h-[250px] w-full object-contain rounded-md"
                 alt="image"
                 width={300}
                 height={50}
                 layout="fixed"
                 ></Image>
+                </div>
                 <div className="px-6-py-4">
                     <p className="font-semibold text-2xl px-2 pt-2 ">{prop.Name}</p>
                     <p className="text-xl-mb-2 text-gray-400 pt-1 pb-0.5 text-[#0000008f]  px-2 font-semibold">{prop.Designation}</p>
