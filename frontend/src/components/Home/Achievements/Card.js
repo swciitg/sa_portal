@@ -13,10 +13,14 @@ const Card = ({ props }) => {
     <div className={`max-w-sm text-center rounded-2xl shadow-3xl p-6 md:p-7 mb-10 w-full font-[Manrope]  `}>
       {/* image if there */}
       {props.Image.data ? (
+        <>
+        <div className="bg-gray-200 rounded-md ">
         <img
-          className="h-32 md:h-36 w-full mb-5 object-cover rounded-2xl"
+          className="h-32 md:h-36  w-full object-contain rounded-md"
           src={`${process.env.NEXT_PUBLIC_API_ENDPOINT}/${props.Image.data.attributes.url}`}
         />
+        </div>
+        </>
       ) : (
         ""
       )}

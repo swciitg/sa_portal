@@ -11,12 +11,12 @@ const Navbar = () => {
   const [hamburger, setHamburger] = useState(false);
   return (
     <div className={manrope.className}>
-      <div className="w-full flex justify-center items-center gap-4 p-6 ">
-        <div className="drop-shadow-lg rounded-full bg-[#1E2532] w-[83vw] flex flex-col items-center justify-evenly  p-4 pr-4 pl-4">
+      <div className="w-full flex justify-center items-center gap-2 p-2 py-4 lg:gap-4 lg:p-6 ">
+        <div className="drop-shadow-lg rounded-full bg-[#1E2532] w-[90vw] lg:w-[83vw] flex flex-col items-center justify-evenly  p-4 pr-4 pl-4">
           <div className="w-full flex items-center justify-evenly transition ease-in delay-150">
             {/* Mobile Hamburger Icon */}
             <div className="flex flex-row ">
-              <div className="flex-1 pr-[3%] w-10 h-7 ">
+              <div className="">
             <Image
               src="/saportal/icons/hamburger.svg"
               width={36}
@@ -54,7 +54,7 @@ const Navbar = () => {
               className={
                 search
                   ? "hidden"
-                  : "hidden md:flex items-center w-10/12 justify-between"
+                  : "hidden md:flex items-center w-full lg:w-10/12 justify-between"
               }
             >
               {/* If link href matches current path underline pill will be on the link */}
@@ -158,6 +158,20 @@ const Navbar = () => {
                   <div className="h-1 "></div>
                 )}
               </Link>
+                <Link
+                href="https://online.iitg.ac.in/sa/"
+                className="flex flex-col text-white hover:text-[#afb5d9]"
+              >
+                SA Portal
+                  <div className="h-1 "></div>
+              </Link>
+                <Link
+                href="https://online.iitg.ac.in/sso/"
+                className="flex flex-col text-white hover:text-[#afb5d9]"
+              >
+                SSO Portal
+                  <div className="h-1 "></div>
+              </Link>
               {/* <div className="text-white">
                 |<div className="h-1"></div>
               </div> */}
@@ -212,6 +226,8 @@ const Navbar = () => {
               <Link href="/sacourses">SA Courses</Link>
               <Link href="/events">Events</Link>
               <Link href="/team">Team</Link>
+              <Link href="https://online.iitg.ac.in/sa/">SA Portal</Link>
+              <Link href="https://online.iitg.ac.in/sso/">SSO Portal</Link>
             </div>
           </div>
         ) : (

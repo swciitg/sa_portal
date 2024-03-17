@@ -16,7 +16,9 @@ const Boardcard = (props) => {
                 <div className='relative lg:flex-[3]'>
 
                     {/* image */}
-                    <img className='w-full lg:w-76 h-[200px] lg:h-[420px] object-fit rounded-t-2xl lg:rounded-tr-none lg:rounded-l-xl' src={props.url} alt='User Profile'/>
+                    <div className='bg-gray-200 rounded-md'>
+                    <img className='w-full lg:w-76 h-[200px] lg:h-[420px] object-contain rounded-md ' src={props.url} alt='User Profile'/>
+                    </div>
 
                     {/* name and role  */}
                     <div className='absolute bg-black/[0.3] py-1 lg:py-2 px-4 lg:px-6 bottom-0 w-full flex flex-col leading-0 lg:rounded-bl-xl capitalize'>
