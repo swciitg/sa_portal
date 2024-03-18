@@ -69,7 +69,7 @@ console.log(prop)
         onSlideChange={() => console.log("slide change")}
         onSwiper={(swiper) => console.log(swiper)}
       >
-        {prop.Image_Gallery.map((item) => (
+        {prop?.Image_Gallery.map((item) => (
   <SwiperSlide key={item.id}>
     <ImageCard data={item}/>
   </SwiperSlide>

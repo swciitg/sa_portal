@@ -7,7 +7,7 @@ const About = (props) => {
             Events
         </div>
         <div className=' text-[16px] font-[400]  tracking-[0.6%] md:tracking-wide leading-7'>
-        {props.content}
+        {props?.content}
         </div>
     </div>
   )

@@ -10,7 +10,7 @@ export default function FAQs({ prop }) {
       <div className="flex flex-col w-full">
         <p className="text-3xl md:mt-8 mt-12 font-semibold font-Manrope">FAQ</p>
 
-        {prop.FAQs.map((item) => (
+        {prop?.FAQs.map((item) => (
   <FAQcard key={item.id} prop={item}    />
 ))}
       </div>

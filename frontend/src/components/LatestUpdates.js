@@ -6,7 +6,7 @@ export default function Latest({ prop }) {
           <div className="text-gray font-semibold pb-1">Latest Updates</div>
         </div>
         <div className="border-l-2 px-2 text-xs border-gray-400 ">
-          {prop.Latest_Updates.map((item) => (
+          {prop?.Latest_Updates.map((item) => (
   <div key={item.id} className="text-blue py-0.5 font-semibold">{`${item.Text}`}</div>
 ))}
 

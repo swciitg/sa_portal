@@ -48,7 +48,7 @@ export default function Home() {
                       Students&apos; Affairs
                     </div>
                     <div className="text-sm md:text-md pt-6 text-[16px] font-[400]  tracking-[0.6%] md:tracking-wide leading-7">
-                      {data.data[0].attributes.About}
+                      {data?.data[0]?.attributes?.About}
                     </div>
                   </div>
                   <div className=" hidden md:flex flex-col py-6 px-10 bg-[#FBFBFB] rounded-lg h-fit w-60 my-auto" style={{"box-shadow" : "rgba(0, 0, 0, 0.24) 0px 3px 8px","backgroundColor":"rgba(252, 252, 253, 1)"}}>
@@ -67,11 +67,11 @@ export default function Home() {
               <div className="w-[83vw]">
                 <div id="QuickLinks" className="my-8">
                 <QuickLinksAndLatestUpdates
-                  prop={data.data[0].attributes}
+                  prop={data?.data[0]?.attributes}
                 ></QuickLinksAndLatestUpdates>
                 </div>
                 <div id="Announcements" className="md:my-8 w-full md:w-2/3 md:mb-12 mb-20">
-                  <Announcements prop={data.data[0].attributes} ></Announcements>
+                  <Announcements prop={data?.data[0]?.attributes} ></Announcements>
                   </div>
                 <div className="flex flex-col w-full md:w-[70%]">
                   <div className="text-3xl font-semibold mb-8" id="Achievements">
@@ -87,18 +87,18 @@ export default function Home() {
   ))}
 </div>
                   
-                  <FAQ prop={data.data[0].attributes}></FAQ>
+                  <FAQ prop={data?.data[0]?.attributes}></FAQ>
                 </div>
               </div>
               {/* <Achievements prop={data.data[0].attributes}></Achievements> */}
             </div>
           </div>
-          <ImageGallery prop={data.data[0].attributes}></ImageGallery>
+          <ImageGallery prop={data?.data[0]?.attributes}></ImageGallery>
             <div className={`py-5 bg-[#1E2532] mb-16 ${manrope.className}`}>
               <div className='text-3xl  font-medium  pl-[8%] sm:pl-[8%]   text-[#f6f4f4]'>
             Upcoming Events at IIT Guwahati
         </div>
-          <Carousel prop={data.data[0].attributes} ></Carousel>
+          <Carousel prop={data?.data[0]?.attributes} ></Carousel>
           </div>
         </>
       )}

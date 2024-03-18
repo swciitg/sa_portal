@@ -21,7 +21,7 @@ const Index = (props) => {
     if(json.data && json.data[0])
     setData(json.data[0].attributes.SAC);
     // console.log("1111",data.attributes.BoardMembers[0].Logo.data.attributes.url)
-    console.log(json.data[0].attributes.SAC,"hhhh")
+    // console.log(json.data[0].attributes.SAC,"hhhh")
   }
 
   useEffect(()=>{

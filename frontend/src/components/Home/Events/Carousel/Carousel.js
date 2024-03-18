@@ -20,7 +20,7 @@ const data = {
 const Carousel = ({ prop }) => {
   const swiper = useSwiper();
   SwiperCore.use(Autoplay);
-console.log(prop.Event_Gallery)
+
   return (
     <div className="p-8">
       <Swiper
@@ -59,7 +59,7 @@ console.log(prop.Event_Gallery)
         onSwiper={(swiper) => console.log(swiper)}
         className="flex flex-col"
       >
-        {prop.Event_Gallery.map((item) => (
+        {prop?.Event_Gallery.map((item) => (
   <SwiperSlide key={item.id}>
     <Card data={item} />
   </SwiperSlide>

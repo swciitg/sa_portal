@@ -83,7 +83,7 @@ export default function Announcement({ prop }) {
           </Transition>
         </Menu> */}
       </div>
-     {prop.Announcements.map((item) => {
+     {prop?.Announcements.map((item) => {
   return (
     <div key={item.id} className="flex justify-between items-center w-full rounded-3xl shadow-xl px-8 py-3 border-solid"   style={{"box-shadow" : "rgba(0, 0, 0, 0.24) 0px 3px 8px","backgroundColor":"rgba(252, 252, 253, 1)"}}>
       <div className="col-start-2 col-end-9">

@@ -17,8 +17,8 @@ const Index = (props) => {
     });
     
     const json = await response.json();
-    console.log(json.data)
-    console.log(json.data[0])
+    // console.log(json.data)
+    // console.log(json.data[0])
     if(json.data && json.data[0])
     setData(json.data[0].attributes.Services);
     // console.log("1111",data.attributes.BoardMembers[0].Logo.data.attributes.url)
