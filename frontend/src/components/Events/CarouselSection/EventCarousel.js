@@ -5,7 +5,7 @@ import { Splide, SplideSlide } from 'splide-nextjs/react-splide';
 import 'splide-nextjs/splide/dist/css/themes/splide-default.min.css';
 
 const Carousel = ({ props }) => {
-  console.log(props[0]);
+  // console.log(props[0]);
 
   const getWindowWidth = () => {
     if (typeof window !== 'undefined') {
@@ -35,13 +35,13 @@ const Carousel = ({ props }) => {
       >
         {props.map((prop) => {
           return (
-            <SplideSlide key={prop.id}>
+            <SplideSlide key={prop?.id}>
               <Card
-                image={`${process.env.NEXT_PUBLIC_API_ENDPOINT}` + prop.Image.data[0].attributes.url}
-                title={prop.Title}
-                icon={`${process.env.NEXT_PUBLIC_API_ENDPOINT}` + prop.Icon.data[0].attributes.url}
-                description={prop.description}
-                link={prop.Link}
+                image={`${process.env.NEXT_PUBLIC_API_ENDPOINT}` + prop?.Image?.data[0]?.attributes?.url}
+                title={prop?.Title}
+                icon={`${process.env.NEXT_PUBLIC_API_ENDPOINT}` + prop?.Icon?.data[0]?.attributes?.url}
+                description={prop?.description}
+                link={prop?.Link}
               />
             </SplideSlide>
           );

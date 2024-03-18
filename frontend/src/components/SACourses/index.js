@@ -16,8 +16,8 @@ const Index = () => {
     });
     
     const json = await response.json();
-    setData(json.data[0]);
-    console.log(json.data[0].attributes.Event_Gallery,"hello");
+    setData(json?.data[0]);
+    
   }
 
   useEffect(()=>{
@@ -28,7 +28,7 @@ const Index = () => {
 
   return (
     <div className={manrope.className}>
-        { <About id={data.id} content={data?data.attributes.About:""}/> }
+        { <About id={data?.id} content={data?data.attributes.About:""}/> }
         <div className='pl-[10%] pr-[15%] py-12'>
         {
           data

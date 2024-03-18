@@ -6,7 +6,7 @@ function QuickLinks({ prop }) {
     <div >
       <h1 className="text-black text-3xl mb-4 font-semibold">Quick Links</h1>
       <div className="flex flex-wrap justify-between sm:justify-start">
-        {prop.Quick_link.map((link) => (
+        {prop?.Quick_link.map((link) => (
           
   <Link
     key={link.id}

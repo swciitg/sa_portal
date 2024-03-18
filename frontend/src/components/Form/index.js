@@ -23,7 +23,7 @@ const Form = () => {
     
     setData(json.data);
     console.log(data);
-    console.log(json.data[0].attributes.Forms[0].URL.data.attributes.url,"hellodd");
+    // console.log(json.data[0].attributes.Forms[0].URL.data.attributes.url,"hellodd");
   }
 
   useEffect(()=>{
@@ -31,7 +31,7 @@ const Form = () => {
   },[])
   //active tab
   data&&data.map((item,index)=>{
-    console.log(item.attributes.Forms[0],"item");
+    // console.log(item.attributes.Forms[0],"item");
 
   })
   const [activeTab, setActiveTab] = useState(0);
