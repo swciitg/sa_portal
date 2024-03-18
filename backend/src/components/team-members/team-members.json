@@ -24,18 +24,19 @@
       "type": "email",
       "required": true
     },
-    "Phone_Number": {
-      "type": "integer"
-    },
     "Profile_Photo": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
+    },
+    "Phone_Number": {
+      "type": "text"
     }
   }
 }

@@ -13,10 +13,18 @@
       "type": "date"
     },
     "URL": {
-      "type": "string"
+      "allowedTypes": [
+        "files"
+      ],
+      "type": "media",
+      "multiple": false
     },
     "WordURL": {
-      "type": "string"
+      "allowedTypes": [
+        "files"
+      ],
+      "type": "media",
+      "multiple": false
     }
   }
 }

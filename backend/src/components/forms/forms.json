@@ -11,11 +11,18 @@
       "required": true
     },
     "URL": {
-      "type": "string",
-      "required": true
+      "allowedTypes": [
+        "files"
+      ],
+      "type": "media",
+      "multiple": false
     },
     "WordURL": {
-      "type": "string"
+      "allowedTypes": [
+        "files"
+      ],
+      "type": "media",
+      "multiple": false
     }
   }
 }
