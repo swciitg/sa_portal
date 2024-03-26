@@ -11,6 +11,21 @@ function classNames(...classes) {
 
 export default function Announcement({ prop }) {
   const [opt, setopt] = useState("options");
+  const [isVisible, setIsVisibile] = useState(5);
+  const [allData, setAllData] = useState(false);
+
+  const handleShowMore = () => {
+    setIsVisibile((count) => count + 5);
+    if (isVisible + 5 >= prop?.Announcements.length) {
+      setAllData(true);
+    }
+  };
+
+  const handleShowLess = () => {
+    setIsVisibile(5);
+    setAllData(false);
+  };
+
   return (
     <>
       <div
@@ -78,30 +93,58 @@ export default function Announcement({ prop }) {
                     </button>
                   )}
                 </Menu.Item> */}
-              {/* </div>
+        {/* </div>
             </Menu.Items>
           </Transition>
         </Menu> */}
       </div>
-     {prop?.Announcements.map((item) => {
-  return (
-    <div key={item.id} className="flex justify-between items-center w-full rounded-3xl shadow-xl px-8 py-3 border-solid"   style={{"box-shadow" : "rgba(0, 0, 0, 0.24) 0px 3px 8px","backgroundColor":"rgba(252, 252, 253, 1)"}}>
-      <div className="col-start-2 col-end-9">
-        <p className="pl-3 pt-3 text-md tracking-wide">{item.Date.substr(0,10)}</p>
-        <p className="px-3 py-2 text-md font-semibold break-all tracking-wide">
-          {item.Heading}
-        </p>
-      </div>
-      <div className="flex col-start-10 col-end-12 text-2xl">
-        <button className="inline-block align-middle">
-          <Link href={item.Link} className="text-darkblue">
-            <BsFillArrowRightSquareFill className="rounded-lg" />
-          </Link>
-        </button>
-      </div>
-    </div>
-  );
-})}
+      {prop?.Announcements.slice(0, isVisible).map((item) => {
+        return (
+          <div
+            key={item.id}
+            className="flex justify-between items-center w-full rounded-3xl shadow-xl px-8 py-3 border-solid mb-[10px]"
+            style={{
+              "box-shadow": "rgba(0, 0, 0, 0.24) 0px 3px 8px",
+              backgroundColor: "rgba(252, 252, 253, 1)",
+            }}
+          >
+            <div className="col-start-2 col-end-9">
+              <p className="pl-3 pt-3 text-md tracking-wide">
+                {item.Date.substr(0, 10)}
+              </p>
+              <p className="px-3 py-2 text-md font-semibold break-all tracking-wide">
+                {item.Heading}
+              </p>
+            </div>
+            <div className="flex col-start-10 col-end-12 text-2xl">
+              <button className="inline-block align-middle">
+                <Link href={item.Link} className="text-darkblue">
+                  <BsFillArrowRightSquareFill className="rounded-lg" />
+                </Link>
+              </button>
+            </div>
+          </div>
+        );
+      })}
+      {prop?.Announcements.length > isVisible && (
+        <div className="flex justify-end">
+          {!allData ? (
+            <button
+              onClick={handleShowMore}
+              className="mt-4 mr-4 text-black font-bold py-2 px-4 rounded"
+            >
+              Show More
+            </button>
+          ) : (
+            <button
+              onClick={handleShowLess}
+              className="mt-4 mr-4 text-black font-bold py-2 px-4 rounded"
+            >
+              Show Less
+            </button>
+          )}
+        </div>
+      )}
     </>
   );
 }
