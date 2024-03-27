@@ -16,7 +16,7 @@ const Footer = () => {
   return (
     <>
       <div
-        className={`flex md:flex-row flex-col md:h-32 h-48  bg-[#101323] md:items-center md:pt-10 pt-5 `}
+        className={`w-[27rem] sm:w-full flex md:flex-row flex-col md:h-32 h-48  bg-[#101323] md:items-center md:pt-10 pt-5 `}
         style={{ overflow: `hidden` }}
       >
         <div className="flex items-center ml-6 md:ml-14 lg:ml-16 md:w-7/12 w-full">
@@ -31,7 +31,7 @@ const Footer = () => {
               style={{
                 color: `white`,
                 fontWeight: `500`,
-                letterSpacing: `0.025rem`
+                letterSpacing: `0.025rem`,
               }}
               className="lg:text-[22px] md:text-[17px] text-[22px] lg:mt-1 lg:mb-0 md:mb-0.5 md:mt-1.5 mt-1 mb-0 font-Manrope"
             >
@@ -41,7 +41,7 @@ const Footer = () => {
               style={{
                 color: `white`,
                 fontWeight: `100`,
-                letterSpacing: `0.025rem`
+                letterSpacing: `0.025rem`,
               }}
               className="font-Manrope lg:text-[13px] md:text-[10px] text-[13px]"
             >
@@ -93,7 +93,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="flex flex-row bg-[#101323] h-16 items-center">
+      <div className="w-[27rem] sm:w-full flex flex-row bg-[#101323] h-16 items-center">
         <div className="flex lg:ml-20 md:ml-16 ml-10">
           <Image
             src="/saportal/icons/SWC_Logo.svg"

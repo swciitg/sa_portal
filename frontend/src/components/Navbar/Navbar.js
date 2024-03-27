@@ -11,37 +11,36 @@ const Navbar = () => {
   const [hamburger, setHamburger] = useState(false);
   return (
     <div className={manrope.className}>
-      <div className="w-full flex justify-center items-center gap-2 p-2 py-4 lg:gap-4 lg:p-6 ">
-        <div className="drop-shadow-lg rounded-full bg-[#1E2532] w-[90vw] lg:w-[83vw] flex flex-col items-center justify-evenly  p-4 pr-4 pl-4">
-          <div className="w-full flex items-center justify-evenly transition ease-in delay-150">
+      <div className="w-[27rem] sm:w-full flex justify-center items-center gap-2 p-2 py-4 lg:gap-4 lg:p-6 ">
+        <div className="drop-shadow-lg rounded-full bg-[#1E2532] w-full lg:w-[83vw] flex flex-col items-center justify-evenly  p-4 pr-4 pl-4">
+          <div className="w-full flex items-center justify-between transition ease-in delay-150">
             {/* Mobile Hamburger Icon */}
-            <div className="flex flex-row ">
+            <div className="flex flex-row items-center justify-center ">
               <div className="">
-            <Image
-              src="/saportal/icons/hamburger.svg"
-              width={36}
-              height={36}
-              className="md:hidden"
-              onClick={() => {
-                setHamburger(!hamburger);
-              }}
-            />
-         </div>
-            <div className="md:hidden flex flex-row justify-between flex-3 md:w-0 max-[350px]:w-48 w-64">
-               <div className="w-10 h-7">
                 <Image
-              src="/saportal/images/IITG_logo.png"
-              width={32}
-              height={32}
-              className="md:hidden"
-              onClick={() => {
-                setHamburger(!hamburger);
-              }}
-            />
+                  src="/saportal/icons/hamburger.svg"
+                  width={28}
+                  height={28}
+                  className="md:hidden"
+                  onClick={() => {
+                    setHamburger(!hamburger);
+                  }}
+                />
               </div>
-              <div className="text-white text-xl pr-[2%]">IITG</div>
-             
-            </div>
+              <div className="md:hidden flex flex-row justify-between flex-3 md:w-0 max-[350px]:w-[20rem] w-[20rem]">
+                <div className="w-10 h-7 ml-[3px] mb-[3px]">
+                  <Image
+                    src="/saportal/images/IITG_logo.png"
+                    width={32}
+                    height={32}
+                    className="md:hidden"
+                    onClick={() => {
+                      setHamburger(!hamburger);
+                    }}
+                  />
+                </div>
+                <div className="text-white text-xl pr-[2%]">IITG</div>
+              </div>
             </div>
             {/* <div
               className={
@@ -81,7 +80,7 @@ const Navbar = () => {
                   <div className="h-1"></div>
                 )}
               </Link>
-                 <Link
+              <Link
                 href="/sac"
                 className="flex flex-col text-white hover:text-[#afb5d9]"
               >
@@ -158,29 +157,26 @@ const Navbar = () => {
                   <div className="h-1 "></div>
                 )}
               </Link>
-                <Link
+              <Link
                 href="https://online.iitg.ac.in/sa/"
                 className="flex flex-col text-white hover:text-[#afb5d9]"
               >
                 SA Portal
-                  <div className="h-1 "></div>
+                <div className="h-1 "></div>
               </Link>
-                <Link
+              <Link
                 href="https://online.iitg.ac.in/sso/"
                 className="flex flex-col text-white hover:text-[#afb5d9]"
               >
                 SSO Portal
-                  <div className="h-1 "></div>
+                <div className="h-1 "></div>
               </Link>
               {/* <div className="text-white">
                 |<div className="h-1"></div>
               </div> */}
             </div>
             {/* Search Section */}
-            <div
-              
-              
-            >
+            <div>
               {/* <input
                 type="text"
                 name=""
@@ -219,7 +215,7 @@ const Navbar = () => {
             <div className="flex flex-col items-center justify-evenly h-4/5 text-white">
               <Link href="/">Home</Link>
               <Link href="/gymkhana">Gymkhana</Link>
-               <Link href="/sac">SAC</Link>
+              <Link href="/sac">SAC</Link>
               <Link href="/services">Services</Link>
               <Link href="/rules">Rules</Link>
               <Link href="/forms">Forms</Link>
