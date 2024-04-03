@@ -44,7 +44,7 @@ const Form = () => {
   return (
     <div>
       <div className={manrope.className}>
-        <div className="flex flex-col w-full gap-8 items-center py-6">
+        <div className="flex flex-col  w-full gap-8 items-center py-6">
           <div className="flex flex-wrap w-[80%] gap-6 text-xs">
             {data &&
               data.map((item, index) => {
@@ -71,13 +71,13 @@ const Form = () => {
                     key={item.attributes.Name}
                     className={`${
                       index == activeTab ? "block" : "hidden"
-                    } ${"flex flex-col gap-4 w-full"}`}
+                    } ${"flex flex-col gap-2 w-full"}`}
                   >
                     {item.attributes.Forms.map((form) => {
                       return (
                         <div
                           key={form.id}
-                          className="flex shadow-md rounded-xl w-[22rem] sm:w-full bg-[#FCFCFD] px-1 py-4 box-border font-medium sm:p-6"
+                          className="flex shadow-md rounded-xl w-[18rem] sm:w-full bg-[#FCFCFD]  py-4 box-border font-medium sm:p-6"
                         >
                           <div className="flex flex-col items-center justify-center px-2 box-border border-r-2 border-[#1e2532] w-40">
                             <div className="text-xs sm:text-base text-[#2e2e2fbf]">
@@ -88,7 +88,7 @@ const Form = () => {
                             </div>
                           </div>
                           <div className="flex justify-between w-full px-4 box-border items-center sm:pl-8">
-                            <div className="text-xs sm:text-base sm:w-full w-[10rem]">
+                            <div className="text-xs sm:text-base sm:w-full w-[9rem]">
                               {form.Header}
                             </div>
                             <div className="flex flex-wrap justify-between w-24 md:w-40 lg:w-64 gap-y-2 ml-[2%]">
