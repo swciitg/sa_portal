@@ -24,6 +24,7 @@ const Teams = () => {
     );
 
     const json = await response.json();
+    console.log(json,"ggg");
     setProp(json);
   };
 
@@ -35,12 +36,13 @@ const Teams = () => {
     prop.data &&
     prop.data.length > 0 &&
     prop.data[0].attributes &&
-    prop.data[0].attributes.Team_Members &&
-    prop.data[0].attributes.Team_Members.length > 0
+    prop.data[0].attributes.Position &&
+    prop.data[0].attributes.Position.length > 0
   ) {
     return (
       <>
-        <div
+      
+        {<div
           className={`flex flex-wrap w-[80%] gap-6 text-xs py-2 ${manrope.className} mx-[8%] `}
         >
           {prop.data.map((button, index) => (
@@ -58,9 +60,27 @@ const Teams = () => {
               {button.attributes.Name}
             </button>
           ))}
-        </div>
+        </div>}
+        
 
-        <div
+         {<div className={`mx-[7%] my-[5%] p-4 ${manrope.className} `} >
+            {prop.data[opt -1].attributes.Position.map((position, positionIndex) => (
+              <div key={positionIndex} className={'p-4 mt-10  font-thin leading-5 tracking-wide'}>
+              <p className="text-5xl text-center font-bold mb-12 mt-8 text-[#231F20] ">{position.Name}</p>
+              
+              <div className={` grid ${position.Team_Member.length === 1 ? 'grid-cols-1': position.Team_Member.length%2 === 0 ? 'sm:grid-cols-1 md:grid-cols-2' : 'sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3'} gap-8 justify-center`}>
+                {position.Team_Member.map((item) => (
+                  <div key={item.id} className={`p-1 flex justify-center `}>
+                    
+                    <Card prop={item} />
+                  </div>
+                ))}
+              </div>
+            </div>
+            
+            ))}
+          </div> }
+          {/* { <div
           className={`mx-[7%] my-[5%] gap-x-8 grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 p-4 ${manrope.className}`}
         >
           {prop.data[opt - 1].attributes.Team_Members.map((item) => (
@@ -69,12 +89,13 @@ const Teams = () => {
             </div>
           ))}
         </div>
+  } */}
       </>
-    );
-  } else {
-    console.log("Data structure is not as expected");
-    return null; // Add your error handling or loading indicator here if needed
-  }
+    );        
+  // } else {
+  //   console.log("Data structure is not as expected");
+  //   return null; // Add your error handling or loading indicator here if needed
+   }
 };
 
 export default Teams;
