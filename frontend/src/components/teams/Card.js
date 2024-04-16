@@ -36,14 +36,14 @@ export default function Card({ prop }) {
         <div className="bg-gray-200 rounded-md">
           <Image
             src={`${process.env.NEXT_PUBLIC_API_ENDPOINT}${prop.Profile_Photo.data.attributes.url}`}
-            className="h-[250px] w-full object-contain rounded-md"
+            className="h-[250px] sm:w-[68vw] lg:-[28vw] object-contain rounded-md"
             alt="image"
             width={300}
             height={50}
             layout="fixed"
           ></Image>
         </div>
-        <div className="px-6-py-4">
+        <div className="px-6-py-4 ">
           <p className="font-semibold text-3xl px-2 pt-2 ">{prop.Name}</p>
           <p className="text-2xl-mb-2 text-gray-300 pt-2 pb-2  leading-5 tracking-wide px-2 font-semibold">
             {prop.Designation}
