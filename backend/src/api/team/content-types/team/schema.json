@@ -18,11 +18,11 @@
       "unique": false,
       "minLength": 2
     },
-    "Team_Members": {
-      "displayName": "Team_Members",
+    "Position": {
+      "displayName": "Position",
       "type": "component",
       "repeatable": true,
-      "component": "team-members.team-members"
+      "component": "position.position"
     }
   }
 }

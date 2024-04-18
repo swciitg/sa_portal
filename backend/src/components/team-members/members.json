@@ -1,0 +1,36 @@
+{
+  "collectionName": "components_team_members_members",
+  "info": {
+    "displayName": "Members"
+  },
+  "options": {},
+  "attributes": {
+    "Name": {
+      "type": "text"
+    },
+    "Designation": {
+      "type": "text"
+    },
+    "Issues": {
+      "type": "component",
+      "repeatable": true,
+      "component": "issues.issues"
+    },
+    "Email": {
+      "type": "email"
+    },
+    "Profile_Photo": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "Phone_Number": {
+      "type": "text"
+    }
+  }
+}

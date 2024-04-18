@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_position_positions",
+  "info": {
+    "displayName": "Position",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Name": {
+      "type": "text"
+    },
+    "Team_Member": {
+      "displayName": "Members",
+      "type": "component",
+      "repeatable": true,
+      "component": "team-members.members"
+    }
+  }
+}
