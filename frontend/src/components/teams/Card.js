@@ -27,30 +27,29 @@ export default function Card({ prop }) {
     }, 3000);
   };
 
-  console.log(prop.Profile_Photo.data.attributes.formats.thumbnail.url, "hhhh");
+ /* console.log(prop.Profile_Photo.data.attributes.formats.thumbnail.url, "hhhh");*/
 
   return (
     <>
       <div
-        className={`rounded overflow-hidden shadow-lg  ${manrope.className}`}
-      >
+        className={`bg-gray-100 rounded overflow-hidden shadow-lg ${manrope.className} sm:w-[70vw] lg:w-[30vw] `}>
         <div className="bg-gray-200 rounded-md">
           <Image
             src={`${process.env.NEXT_PUBLIC_API_ENDPOINT}${prop.Profile_Photo.data.attributes.url}`}
-            className="h-[250px] w-full object-contain rounded-md"
+            className="h-[250px] sm:w-[68vw] lg:-[28vw] object-contain rounded-md"
             alt="image"
             width={300}
             height={50}
             layout="fixed"
           ></Image>
         </div>
-        <div className="px-6-py-4">
-          <p className="font-semibold text-2xl px-2 pt-2 ">{prop.Name}</p>
-          <p className="text-xl-mb-2 text-gray-400 pt-1 pb-0.5 text-[#0000008f]  px-2 font-semibold">
+        <div className="px-6-py-4 ">
+          <p className="font-semibold text-3xl px-2 pt-2 ">{prop.Name}</p>
+          <p className="text-2xl-mb-2 text-gray-300 pt-2 pb-2  leading-5 tracking-wide px-2 font-semibold">
             {prop.Designation}
           </p>
         </div>
-        <div className=" pb-2 px-2 h-[2.5em] overflow-auto ">
+         <div className=" pb-2 px-2 h-[2.5em] overflow-auto ">
           {prop.Issues.map((button) => {
             return (
               <button
@@ -62,22 +61,22 @@ export default function Card({ prop }) {
               </button>
             );
           })}
-        </div>
+        </div> 
         <hr className="solid text-gray-500 my-1 " />
         <div>
-          <div className="flex">
-            <span className="text-[#0000008f] px-4 ">{prop.Email}</span>
+          <div className="flex p-2">
+            <span className=" font-thin leading-5 tracking-wide px-4  ">{prop.Email}</span>
             <span
-              className="hover:cursor-pointer text-[#0000008f]"
+              className="hover:cursor-pointer"
               onClick={clickHandler}
             >
               {icon}
             </span>
           </div>
-          <div className="flex">
-            <span className="text-[#0000008f] px-4 ">{`+91 ${prop.Phone_Number}`}</span>
+          <div className="flex p-2">
+            <span className=" font-thin leading-5 tracking-wide px-4 ">{`+91 ${prop.Phone_Number}`}</span>
             <span
-              className="hover:cursor-pointer text-[#0000008f]"
+              className="hover:cursor-pointer"
               onClick={clickHandler2}
             >
               {icon2}
