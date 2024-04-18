@@ -26,26 +26,22 @@ const Teams = () => {
     const json = await response.json();
     console.log(json,"ggg");
     setProp(json);
+    
   };
 
   useEffect(() => {
     getItem();
   }, []);
-
+      // console.log(prop.data[0].attributes.Position,"hhed")
   if (
-    prop.data &&
-    prop.data.length > 0 &&
-    prop.data[0].attributes &&
-    prop.data[0].attributes.Position &&
-    prop.data[0].attributes.Position.length > 0
+  1 
   ) {
     return (
       <>
-      
         {<div
           className={`flex flex-wrap w-[80%] gap-6 text-xs py-2 ${manrope.className} mx-[8%] `}
         >
-          {prop.data.map((button, index) => (
+          {prop?.data?.map((button, index) => (
             <button
               key={button.id}
               className={`${
@@ -57,19 +53,19 @@ const Teams = () => {
                 setOpt(index + 1);
               }}
             >
-              {button.attributes.Name}
+              {button?.attributes?.Name}
             </button>
           ))}
         </div>}
         
 
          {<div className={`mx-[7%] my-[5%] p-4 ${manrope.className} `} >
-            {prop.data[opt -1].attributes.Position.map((position, positionIndex) => (
+            {prop.data&&prop?.data[opt -1]?.attributes?.Position?.map((position, positionIndex) => (
               <div key={positionIndex} className={'p-4 mt-10  font-thin leading-5 tracking-wide'}>
-              <p className="text-5xl text-center font-bold mb-12 mt-8 text-[#231F20] ">{position.Name}</p>
+              <p className="text-4xl text-center font-bold mb-12 mt-8 text-[#231F20] ">{position?.Name}</p>
               
-              <div className={` grid ${position.Team_Member.length === 1 ? 'grid-cols-1': position.Team_Member.length%2 === 0 ? 'sm:grid-cols-1 md:grid-cols-2' : 'sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3'} gap-8 justify-center`}>
-                {position.Team_Member.map((item) => (
+              <div className={`grid ${position?.Team_Member?.length === 1 ? 'grid-cols-1': position?.Team_Member?.length%2 === 0 ? 'sm:grid-cols-1 md:grid-cols-2' : 'sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3'} gap-8 justify-center`}>
+                {position?.Team_Member?.map((item) => (
                   <div key={item.id} className={`p-1 flex justify-center `}>
                     
                     <Card prop={item} />
