@@ -55,7 +55,7 @@ export default function Card({ prop }) {
               <button
                 key={button.id}
                 style={{ backgroundColor: "rgb(167 139 250)" }}
-                className="hover:cursor-pointer rounded-full px-2 py-0.5 text-xs font-base mx-0.5 mb-px"
+                className="hover:cursor-pointer rounded-full px-2 py-0.5 text-sm font-medium mx-0.5 mb-px"
               >
                 {button.Value}
               </button>
