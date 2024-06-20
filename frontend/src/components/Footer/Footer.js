@@ -104,7 +104,7 @@ const Footer = () => {
           <div
             className={`flex ${redhat.className}  text-white pl-3 items-center mt-0.5 text-[12px] md:text-[15px]`}
           >
-            ©2023
+            ©2024
           </div>
           <div
             className={`flex ${redhat.className} text-white pl-3 items-center text-[12px] md:text-[15px] `}

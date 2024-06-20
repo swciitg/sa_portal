@@ -29,7 +29,7 @@ const HomePage = () => {
                        
                         <Link href="/events" className="mr-5 lg:mr-[5%] duration-200  hover:text-[#2596BE]">Events</Link>
                         <Link href="/team" className="mr-5 lg:mr-[5%] duration-200  hover:text-[#2596BE]">Team</Link>
-                           <Link href="https://online.iitg.ac.in/sa/" className="mr-5 lg:mr-[5%] duration-200  hover:text-[#2596BE]">SA Portal</Link>
+                           <Link href="https://online.iitg.ac.in/sa/" className="mr-5 lg:mr-[5%] duration-200  hover:text-[#2596BE]">HAB Portal</Link>
                             <Link href="https://online.iitg.ac.in/sso/" className="mr-5 lg:mr-[5%] duration-200  hover:text-[#2596BE]">SSO Portal</Link>
                         {/* <div className={`justify-center flex`}>
                             <form>
@@ -70,7 +70,7 @@ const HomePage = () => {
                     <Link href="/sacourses" className="mr-5 lg:mr-16 duration-200  hover:text-[#2596BE]">SA Courses</Link>
                     <Link href="/events" className="mr-5 lg:mr-16 duration-200  hover:text-[#2596BE]">Events</Link>
                     <Link href="/team" className="mr-5 lg:mr-16 lg:pr-16 duration-200  hover:text-[#2596BE]  border-[#FFFFFF] border-r-0 lg:border-r-2">Team</Link>
-                    <Link href="https://online.iitg.ac.in/sa/" className="mr-5 lg:mr-16 duration-200  hover:text-[#2596BE]">SA Portal</Link>
+                    <Link href="https://online.iitg.ac.in/sa/" className="mr-5 lg:mr-16 duration-200  hover:text-[#2596BE]">HAB Portal</Link>
                    <Link href="https://online.iitg.ac.in/sso/" className="mr-5 lg:mr-16 duration-200  hover:text-[#2596BE]">SSO Portal</Link>
                    </div>
                  

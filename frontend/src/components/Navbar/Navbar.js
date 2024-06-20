@@ -17,31 +17,30 @@ const Navbar = () => {
             {/* Mobile Hamburger Icon */}
             <div className="flex flex-row ">
               <div className="">
-            <Image
-              src="/saportal/icons/hamburger.svg"
-              width={36}
-              height={36}
-              className="md:hidden"
-              onClick={() => {
-                setHamburger(!hamburger);
-              }}
-            />
-         </div>
-            <div className="md:hidden flex flex-row justify-between flex-3 md:w-0 max-[350px]:w-48 w-64">
-               <div className="w-10 h-7">
                 <Image
-              src="/saportal/images/IITG_logo.png"
-              width={32}
-              height={32}
-              className="md:hidden"
-              onClick={() => {
-                setHamburger(!hamburger);
-              }}
-            />
+                  src="/saportal/icons/hamburger.svg"
+                  width={36}
+                  height={36}
+                  className="md:hidden"
+                  onClick={() => {
+                    setHamburger(!hamburger);
+                  }}
+                />
               </div>
-              <div className="text-white text-xl pr-[2%]">IITG</div>
-             
-            </div>
+              <div className="md:hidden flex flex-row justify-between flex-3 md:w-0 max-[350px]:w-48 w-64">
+                <div className="w-10 h-7">
+                  <Image
+                    src="/saportal/images/IITG_logo.png"
+                    width={32}
+                    height={32}
+                    className="md:hidden"
+                    onClick={() => {
+                      setHamburger(!hamburger);
+                    }}
+                  />
+                </div>
+                <div className="text-white text-xl pr-[2%]">IITG</div>
+              </div>
             </div>
             {/* <div
               className={
@@ -81,7 +80,7 @@ const Navbar = () => {
                   <div className="h-1"></div>
                 )}
               </Link>
-                 <Link
+              <Link
                 href="/sac"
                 className="flex flex-col text-white hover:text-[#afb5d9]"
               >
@@ -158,29 +157,26 @@ const Navbar = () => {
                   <div className="h-1 "></div>
                 )}
               </Link>
-                <Link
+              <Link
                 href="https://online.iitg.ac.in/sa/"
                 className="flex flex-col text-white hover:text-[#afb5d9]"
               >
-                SA Portal
-                  <div className="h-1 "></div>
+                HAB Portal
+                <div className="h-1 "></div>
               </Link>
-                <Link
+              <Link
                 href="https://online.iitg.ac.in/sso/"
                 className="flex flex-col text-white hover:text-[#afb5d9]"
               >
                 SSO Portal
-                  <div className="h-1 "></div>
+                <div className="h-1 "></div>
               </Link>
               {/* <div className="text-white">
                 |<div className="h-1"></div>
               </div> */}
             </div>
             {/* Search Section */}
-            <div
-              
-              
-            >
+            <div>
               {/* <input
                 type="text"
                 name=""
@@ -219,14 +215,14 @@ const Navbar = () => {
             <div className="flex flex-col items-center justify-evenly h-4/5 text-white">
               <Link href="/">Home</Link>
               <Link href="/gymkhana">Gymkhana</Link>
-               <Link href="/sac">SAC</Link>
+              <Link href="/sac">SAC</Link>
               <Link href="/services">Services</Link>
               <Link href="/rules">Rules</Link>
               <Link href="/forms">Forms</Link>
               <Link href="/sacourses">SA Courses</Link>
               <Link href="/events">Events</Link>
               <Link href="/team">Team</Link>
-              <Link href="https://online.iitg.ac.in/sa/">SA Portal</Link>
+              <Link href="https://online.iitg.ac.in/sa/">HAB</Link>
               <Link href="https://online.iitg.ac.in/sso/">SSO Portal</Link>
             </div>
           </div>

@@ -47,7 +47,7 @@ export default function Card ({prop}) {
                         <span className="hover:cursor-pointer" onClick={clickHandler} >{icon}</span>
                     </div>                    
                     <div className="flex" >
-                        <span className="text-gray-400 px-4 " >{`+91 ${prop.phone}`}</span>
+                        <span className="text-gray-400 px-4 " >{`${prop.phone}`}</span>
                         <span className="hover:cursor-pointer" onClick={clickHandler2} >{icon2}</span>
                     </div>
                 </div>
