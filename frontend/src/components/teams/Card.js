@@ -74,7 +74,7 @@ export default function Card({ prop }) {
             </span>
           </div>
           <div className="flex p-2">
-            <span className=" font-thin leading-5 tracking-wide px-4 ">{`+91 ${prop.Phone_Number}`}</span>
+            <span className=" font-thin leading-5 tracking-wide px-4 ">{`${prop.Phone_Number}`}</span>
             <span
               className="hover:cursor-pointer"
               onClick={clickHandler2}
