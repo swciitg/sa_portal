@@ -88,7 +88,7 @@ const Footer = () => {
               }}
               className="lg:text-[14px] md:text-[12px] text-[14px] mt-0.4"
             >
-              4553678654
+              0361-2582926
             </div>
           </div>
         </div>
